@@ -1,5 +1,5 @@
 structChapterDataTableEntry 0,TilesetGraphics,TilesetConfig,TilesetPalette,Map,MapChanges,StartingPositions,ObjectiveMarkers,VisionRange,PrepScreen,MinUnits,MaxUnits,PlayerAllegiance,EnemyAllegiance,NPCAllegiance,Unknown,PlayerPhaseMusic,EnemyPhaseMusic,NPCPhaseMusic,AlternateGraphics,TilesetAnimations
-Chapter1ChapterData,$F6A500,$FAD82F,$F68000,$FBD958,$FCEBF5,None,None,None,None,10,20,$2,$4,$0,$1,$1,$9,$1,None,aTilesetAnimation848831
+Chapter1ChapterData,ptiles,ptileset,ppalette,aedcutscene,$FCEBF5,None,None,None,None,10,20,$2,$4,$0,$1,$6A,$9,$1,None,aTilesetAnimation8487CE
 Chapter2ChapterData,$F6A500,$FAD82F,$F68100,$FBDC6F,$FCEC1B,eventChapter2Data._StartingPositions,None,None,None,10,20,$2,$4,$0,$1,$1,$9,$1,None,aTilesetAnimation848831
 Chapter2xChapterData,$F6E885,$FAEB21,$F68200,$FBE0DC,None,eventChapter2xData._StartingPositions,None,3,None,10,20,$2,$4,$0,$5,$7,$D,$7,$FAA256,aTilesetAnimation8487CE
 Chapter3ChapterData,$F7AC25,$FB8059,$F68300,$FBE590,$FCEC64,eventChapter3Data._StartingPositions,None,None,None,10,20,$2,$4,$0,$3,$1,$9,$1,None,None
