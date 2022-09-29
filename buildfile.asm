@@ -35,6 +35,8 @@ DSizeEnds		:= []
 
 .include "asm/QoL/_QOLInstaller.asm"
 
+.include "custom/_CustomInstaller.asm"
+
 
 ; End of hacky hex edits
 
