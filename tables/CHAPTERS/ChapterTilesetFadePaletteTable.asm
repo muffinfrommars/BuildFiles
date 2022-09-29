@@ -1,6 +1,6 @@
 
 aChapterTilesetFadePaletteTable ; 8C/C9F9
-	.long $EFF388
+	.long ppalettedark
 	.long $EFF42A
 	.long $EFF4C2
 	.long $EFF559

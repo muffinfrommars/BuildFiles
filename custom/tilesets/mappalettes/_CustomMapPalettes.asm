@@ -1,13 +1,5 @@
 ;palettes
 
-* = $EEB20 ; overrides a vanilla palette
-.logical lorom($EEB20, 1)
-
-cpalette
-.binary "castlepalette.bin"
-
-.here
-
 * = $3B0F00 ;Ch12 / "Night time" palette fix 
 .logical lorom($3B0F00, 1)
 
@@ -32,7 +24,7 @@ ppalette
 
 .here
 
-* = $3E7959 ;plains fade palette - 3E79F2
+* = $3E7959 ;plains fade palette - 3E79F3
 .logical lorom($3E7959, 1)
 
 ppalettedark
@@ -40,15 +32,21 @@ ppalettedark
 
 .here
 
-* = $3E79F3 ; - 3E7AF2
-.logical lorom($3E79F3, 1)
+* = $3E79F4 ; - 3E7AF3
+.logical lorom($3E79F4, 1)
 
 sppalette
 .binary "snowplainspalette.bin"
 
 .here
 
-;Room for one more custom map palette @ 3E7AF3
+* = $3E7AF4 ; last palette to fit in a small section of free space, move to a different address chunk from now on
+.logical lorom($3E7AF4, 1)
+
+cpalette
+.binary "castlepalette.bin"
+
+.here
 
 
 
