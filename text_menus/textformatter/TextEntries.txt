@@ -99,6 +99,7 @@ Ol]wen
 Perne
 Trude
 Tina
+Ethlyn
 Glade
 Dean
 Eda
@@ -119,10 +120,13 @@ Diar[muid
 Saias
 Ced
 Galzus
+Blume
+Ranz
 
 )Weis[mann
 Bucks
-Lobos
+Dryas
+Carl
 Bandole
 Tol[man
 Eisenhau
@@ -160,6 +164,8 @@ Alphan
 Farden
 Coulter
 Altena
+Hilda
+Blume
 Raydrik
 Porcus
 Bovis
@@ -173,7 +179,8 @@ Ro[meo
 Luccia
 Jubel
 Cairpre
-E[mily
+Tailtiu
+Alfiona
 Bella
 Cliff
 (Murphy
@@ -232,11 +239,14 @@ Thracia
 //-Thief
 
 Arion
-Gunter
 Ishtar
-Jabal
+Arden
+Quan
+Lachesis
 Julius
-Kant
+Eldigan
+Sigurd
+Beowolf
 (Manfroy
 //(Mannheim
   (Mannhei

@@ -28,7 +28,7 @@
         _BAShield_DracoknightF          .structBattleAnimationShieldDefinitionEntry DracoknightF,  			-1
         _BAShield_Ballistician          .structBattleAnimationShieldDefinitionEntry Ballistician,			-1
         _BAShield_IronBallistician      .structBattleAnimationShieldDefinitionEntry IronBallistician,		-1
-        _BAShield_KillerBallistician    .structBattleAnimationShieldDefinitionEntry KillerBallistician,		-1
+        _BAShield_TrueArcher    .structBattleAnimationShieldDefinitionEntry TrueArcher,		-1
         _BAShield_VeninBallistician	  .structBattleAnimationShieldDefinitionEntry VeninBallistician,		-1
 		
         .sint -1

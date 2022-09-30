@@ -95,56 +95,6 @@ eventChapter4xEvents ; FD/85C5
 
 	_rlNPCCheck ; FD/87B4
 
-		.al
-		.xl
-		.autsiz
-		.databank ?
-
-		lda #Emily
-		sta wEventEngineCharacterTarget,b
-		jsl rlASMCCountAllUnitUncapturedAlive
-		lda wEventEngineParameter1,b
-		bne _False
-
-		lda #Murphy
-		sta wEventEngineCharacterTarget,b
-		jsl rlASMCCountAllUnitUncapturedAlive
-		lda wEventEngineParameter1,b
-		bne _False
-
-		lda #Bella
-		sta wEventEngineCharacterTarget,b
-		jsl rlASMCCountAllUnitUncapturedAlive
-		lda wEventEngineParameter1,b
-		bne _False
-
-		lda #Cliff
-		sta wEventEngineCharacterTarget,b
-		jsl rlASMCCountAllUnitUncapturedAlive
-		lda wEventEngineParameter1,b
-		bne _False
-
-		lda #Bowie
-		sta wEventEngineCharacterTarget,b
-		jsl rlASMCCountAllUnitUncapturedAlive
-		lda wEventEngineParameter1,b
-		bne _False
-
-		lda #Leena
-		sta wEventEngineCharacterTarget,b
-		jsl rlASMCCountAllUnitUncapturedAlive
-		lda wEventEngineParameter1,b
-		bne _False
-
-		sec
-		bra _End
-
-		_False
-		clc
-
-		_End
-		rtl
-
 	_SoldierLeftReinforcements ; FD/8813
 		LOAD2 eventChapter4xData._SoldierLeftGroup
 		WAIT_MOVE
@@ -436,7 +386,6 @@ eventChapter4xEvents ; FD/85C5
 		YIELD
 
 		PLAY_SOUND_WORD $00F7
-		SCROLL_CAMERA_CHAR Bella
 		SET_CAMERA_SPEED $04
 		YIELD
 
@@ -487,23 +436,6 @@ eventChapter4xEvents ; FD/85C5
 	END1
 
 	_RetreatingChildTable ; FD/8F82
-		.word Emily
-		.byte FlagEmilySaved
-
-		.word Murphy
-		.byte FlagMurphySaved
-
-		.word Bella
-		.byte FlagBellaSaved
-
-		.word Cliff
-		.byte FlagCliffSaved
-
-		.word Bowie
-		.byte FlagBowieSaved
-
-		.word Leena
-		.byte FlagLeenaSaved
 
 	.word $0000
 	.word $0000

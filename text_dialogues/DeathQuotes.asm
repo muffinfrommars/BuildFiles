@@ -95,11 +95,18 @@ leifdeath
 .byte EndText
 
 finndeath
-.text "Lord Leif..."
+.text "To have fallen so easily..."
 .byte NewLine
-.text "Y-You must...fulfill"
+.text "Can I...achieve no more?"
+.byte WaitForA
+.byte EndText
+
+gladedeath
+.text "D-Damn...! That one hurt."
 .byte NewLine
-.text "your lord father's dying wish..."
+.text "Sorry Finn... I need to... sit one this out."
+.byte NewLine
+.text "I'll see you... up ahead."
 .byte WaitForA
 .byte EndText
 
@@ -413,13 +420,6 @@ tinadeath
 .text "Why...me...?"
 .byte NewLine
 .text "I can't...believe..."
-.byte WaitForA
-.byte EndText
-
-gladedeath
-.text "Even without me..."
-.byte NewLine
-.text "Leonster...shall...rise again..."
 .byte WaitForA
 .byte EndText
 
@@ -743,7 +743,7 @@ velddeath
 
 ; Unused
 
-gunterdeath
+ethlyndeath
 .text "Oof..."
 .byte NewLine
 .text "I suppose I've lived long enough..."

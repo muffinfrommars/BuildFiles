@@ -20,7 +20,7 @@ aBattleAnimationsOnMusicTable .block	; 96/846C
 .word	Xavier
 .word	Weissmann
 .word	Bucks
-.word	Lobos
+.word	Blume
 .word	Rumaigh	;used to be Ishtar
 .word	Eisenhau
 .word	Gomez
@@ -40,7 +40,7 @@ aBattleAnimationsOnMusicTable .block	; 96/846C
 .word	Muller
 .word	Reinkoch
 .word	Palman
-.word	Kant
+.word	Eldigan
 .word	Gustav
 .word	Mannheim
 .word	Fraus

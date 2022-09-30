@@ -39,6 +39,7 @@
 	.include "Chapter24Data.event"
 	.include "Chapter24xData.event"
 	.include "ChapterFinalData.event"
+	.include "debug.event"
 .here
 	
 * = $0D6134
@@ -91,6 +92,7 @@
 * = $18FB37
 .logical $B1FB37
 	.include "Chapter1Data.event"
+	.include "debugData.event"
 .here
 	
 * = $1CB000

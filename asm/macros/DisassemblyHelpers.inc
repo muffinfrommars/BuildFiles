@@ -72,3 +72,8 @@ pack .function Iterable, Width=2
     Iterable ..= [0]
   .endif
 .endf (Iterable[0::2] | (Iterable[1::2] << (4 * Width)))
+
+crossbank .segment Filename
+        - := $10000 - (* & $FFFF)
+        .binary \Filename, 0, -
+      .endsegment

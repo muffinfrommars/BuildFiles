@@ -69,7 +69,7 @@ class_name_pointers		.block
 .word	<>class_names._Civilian_data
 .word	<>class_names._Ballistician_data
 .word	<>class_names._IronBallistician_data
-.word	<>class_names._KillerBallistician_data
+.word	<>class_names._TrueArcherDismounted_data ; Formerly KillerBallistician
 .word	<>class_names._DarkPrince_data
 .word	<>class_names._Fighter_data
 .word	<>class_names._CavalierDismounted_data
@@ -113,7 +113,7 @@ class_name_pointers		.block
 .word	<>class_names._Priestess_data
 .word	<>class_names._HighPriestess_data
 .word	<>class_names._MyrmidonF_data
-.word	<>class_names._HeroFE4F_data
+.word	<>class_names._TrueArcher_data ; formerly HeroFE4F
 .word	<>class_names._SwordmasterF_data
 .word	<>class_names._ArcherF_data
 .word	<>class_names._SniperF_data
@@ -277,7 +277,6 @@ _SniperF_data
 _Hero_data
 _HeroF_data
 _HeroFE4_data				; Unused
-_HeroFE4F_data				; Unused
 	.text "Hero"
 	.word $0000
 
@@ -408,8 +407,9 @@ _Civilian_data
 
 _Ballistician_data
 _IronBallistician_data
-_KillerBallistician_data	; Unused
+_TrueArcherDismounted_data
 _VeninBallistician_data
+_TrueArcher_data	
 	.text "Ballistician"
 	.word $0000
 	

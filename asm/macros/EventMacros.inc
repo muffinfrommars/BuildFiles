@@ -204,6 +204,12 @@ macroDialogueWithBackground .macro DialoguePointer, BackgroundID
 		YIELD_UNK
 	.endm
 
+macroASMCLoadUnitGroup .segment UnitGroupPointer
+      STORE_LONG lEventEngineUnitGroupPointer, \UnitGroupPointer
+      CALL_ASM_LOOP rlASMCLoadUnitGroup
+      YIELD_UNK
+    .endsegment
+
 macroEventConditionCheckCoords .macro Coords
 		CMP_BYTE wCursorXCoord, \Coords[0]
 		CMP_BYTE wCursorYCoord, \Coords[1]

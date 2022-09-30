@@ -128,7 +128,7 @@ BAprop7D,Thief,BA_WeaponSword,BAprop_DancerThieves
 BAprop7E,Rogue,BA_WeaponSword,BAprop_DancerThieves
 BAprop7F,Ballistician,BA_WeaponBow,BAprop_Ballisticians
 BAprop80,IronBallistician,BA_WeaponBow,BAprop_Ballisticians
-BAprop81,KillerBallistician,BA_WeaponBow,BAprop_Ballisticians
+BAprop81,TrueArcherDismounted,BA_WeaponBow,BAprop_InfantryBow
 BAprop82,VeninBallistician,BA_WeaponBow,BAprop_Ballisticians
 BAprop83,DarkPrince,BA_WeaponMagic,BAprop_DarkPrince
 BAprop84,Fighter,BA_WeaponAxe,BAprop_MyrmidonFighterHero
@@ -194,7 +194,7 @@ BApropBF,Priestess,BA_WeaponStaff,BAprop_InfantryStaff
 BApropC0,HighPriestess,BA_WeaponMagic,BAprop_InfantryMagic
 BApropC1,HighPriestess,BA_WeaponStaff,BAprop_InfantryStaff
 BApropC2,MyrmidonF,BA_WeaponSword,BAprop_MyrmidonFighterHero
-BApropC3,HeroFE4F,BA_WeaponSword,BAprop_SwordmasterHeroFE4
+BApropC3,TrueArcher,BA_WeaponBow,BAprop_Ballisticians
 BApropC4,SwordmasterF,BA_WeaponSword,BAprop_SwordmasterHeroFE4
 BApropC5,Archer,BA_WeaponBow,BAprop_InfantryBow
 BApropC6,ArcherF,BA_WeaponBow,BAprop_InfantryBow
@@ -223,5 +223,5 @@ BApropDC,MasterKnightF,BA_WeaponMagic,BAprop_CavMagic
 BApropDD,LoptrianMageF,BA_WeaponStaff,BAprop_InfantryStaff
 BApropDE,HeroFe4,BA_WeaponAxe,BAprop_MyrmidonFighterHero
 BApropDF,HeroFe4,BA_WeaponThrownAxe,BAprop_InfantryThrownAxe
-BApropE0,HeroFE4F,BA_WeaponAxe,BAprop_MyrmidonFighterHero
-BApropE1,HeroFE4F,BA_WeaponThrownAxe,BAprop_InfantryThrownAxe
+BApropE0,TrueArcherDismounted,BA_WeaponBow,BAprop_Ballisticians
+BApropE1,HeroFE4,BA_WeaponThrownAxe,BAprop_InfantryThrownAxe ;formerly fe4f

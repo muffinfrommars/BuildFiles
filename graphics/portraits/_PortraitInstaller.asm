@@ -11,12 +11,12 @@
 	aPortraitPalette05 .binary "sprites/PortraitPalette05.bin"
 	aPortraitPalette06 .binary "sprites/PortraitPalette06.bin"
 	aPortraitPalette07 .binary "sprites/PortraitPalette07.bin"
-	aPortraitPalette08 .binary "sprites/PortraitPalette08.bin"
+	aPortraitPalette08 .binary "sprites/PortraitPalette08.bin" ; previously Cairpre's Palette
 	aPortraitPalette09 .binary "sprites/PortraitPalette09.bin"
 	aPortraitPalette0A .binary "sprites/PortraitPalette0A.bin"
 	aPortraitPalette0B .binary "sprites/PortraitPalette0B.bin"
-	aPortraitPalette0C .binary "sprites/PortraitPalette0C.bin"
-	aPortraitPalette0D .binary "sprites/PortraitPalette0D.bin"
+	aPortraitPalette0C .binary "../../custom/graphics/portraits/PortraitLachesis.pal"
+	aPortraitPalette0D .binary "../../custom/graphics/portraits/PortraitEldigan.pal"
 	aPortraitPalette0E .binary "sprites/PortraitPalette0E.bin"
 	aPortraitPalette0F .binary "sprites/PortraitPalette0F.bin"
 	aPortraitPalette10 .binary "sprites/PortraitPalette10.bin"
@@ -38,7 +38,7 @@
 	aPortraitPalette20 .binary "sprites/PortraitPalette20.bin"
 	aPortraitPalette21 .binary "sprites/PortraitPalette21.bin"
 	aPortraitPalette22 .binary "sprites/PortraitPalette22.bin"
-	aPortraitPalette23 .binary "sprites/PortraitPalette23.bin"
+	aPortraitPalette23 .binary "../../custom/graphics/portraits/PortraitYLewyn.pal" ;Seemingly Unused Before
 	aPortraitPalette24 .binary "sprites/PortraitPalette24.bin"
 	aPortraitPalette25 .binary "sprites/PortraitPalette25.bin"
 	aPortraitPalette26 .binary "sprites/PortraitPalette26.bin"
@@ -67,22 +67,22 @@
 	aPortraitPalette3D .binary "sprites/PortraitPalette3D.bin"
 	aPortraitPalette3E .binary "sprites/PortraitPalette3E.bin"
 	aPortraitPalette3F .binary "sprites/PortraitPalette3F.bin"
-	aPortraitPalette40 .binary "sprites/PortraitPalette40.bin"
-	aPortraitPalette41 .binary "sprites/PortraitPalette41.bin"
+	aPortraitPalette40 .binary "../../custom/graphics/portraits/PortraitQuan.pal"
+	aPortraitPalette41 .binary "../../custom/graphics/portraits/PortraitEthlyn.pal"
 	aPortraitPalette42 .binary "sprites/PortraitPalette42.bin"
 	aPortraitPalette43 .binary "sprites/PortraitPalette43.bin"
 	aPortraitPalette44 .binary "sprites/PortraitPalette44.bin"
-	aPortraitPalette45 .binary "sprites/PortraitPalette45.bin"
-	aPortraitPalette46 .binary "sprites/PortraitPalette46.bin"
-	aPortraitPalette47 .binary "sprites/PortraitPalette47.bin"
-	aPortraitPalette48 .binary "sprites/PortraitPalette48.bin"
-	aPortraitPalette49 .binary "sprites/PortraitPalette49.bin"
-	aPortraitPalette4A .binary "sprites/PortraitPalette4A.bin"
-	aPortraitPalette4B .binary "sprites/PortraitPalette4B.bin"
-	aPortraitPalette4C .binary "sprites/PortraitPalette4C.bin"
-	aPortraitPalette4D .binary "sprites/PortraitPalette4D.bin"
-	aPortraitPalette4E .binary "sprites/PortraitPalette4E.bin"
-	aPortraitPalette4F .binary "sprites/PortraitPalette4F.bin"
+	aPortraitPalette45 .binary "../../custom/graphics/portraits/PortraitBrigid.pal" ;Seemingly Unused Before
+	aPortraitPalette46 .binary "../../custom/graphics/portraits/PortraitEdain.pal" ;Seemingly Unused Before
+	aPortraitPalette47 .binary "../../custom/graphics/portraits/PortraitDew.pal" ;Seemingly Unused Before
+	aPortraitPalette48 .binary "../../custom/graphics/portraits/PortraitAlec.pal" ;Seemingly Unused Before
+	aPortraitPalette49 .binary "../../custom/graphics/portraits/PortraitNaoise.pal" ;Seemingly Unused Before
+	aPortraitPalette4A .binary "../../custom/graphics/portraits/PortraitAyra.pal" ;Seemingly Unused Before
+	aPortraitPalette4B .binary "sprites/PortraitPalette4B.bin" ;Seemingly Unused Before
+	aPortraitPalette4C .binary "sprites/PortraitPalette4C.bin" ;Seemingly Unused Before
+	aPortraitPalette4D .binary "sprites/PortraitPalette4D.bin" ;Seemingly Unused Before
+	aPortraitPalette4E .binary "../../custom/graphics/portraits/PortraitYFinn.pal" ;Seemingly Unused Before
+	aPortraitPalette4F .binary "../../custom/graphics/portraits/PortraitBeowolf.pal" ;Seemingly Unused Before
 	aPortraitPalette50 .binary "sprites/PortraitPalette50.bin"
 	aPortraitPalette51 .binary "sprites/PortraitPalette51.bin"
 	aPortraitPalette52 .binary "sprites/PortraitPalette52.bin"
@@ -95,11 +95,11 @@
 	aPortraitPalette59 .binary "sprites/PortraitPalette59.bin"
 	aPortraitPalette5A .binary "sprites/PortraitPalette5A.bin"
 	aPortraitPalette5B .binary "sprites/PortraitPalette5B.bin"
-	aPortraitPalette5C .binary "sprites/PortraitPalette5C.bin"
+	aPortraitPalette5C .binary "../../custom/graphics/portraits/PortraitSigurd.pal"
 	aPortraitPalette5D .binary "sprites/PortraitPalette5D.bin"
 	aPortraitPalette5E .binary "sprites/PortraitPalette5E.bin"
 	aPortraitPalette5F .binary "sprites/PortraitPalette5F.bin"
-	aPortraitPalette60 .binary "sprites/PortraitPalette60.bin"
+	aPortraitPalette60 .binary "../../custom/graphics/portraits/PortraitArden.pal"
 	aPortraitPalette61 .binary "sprites/PortraitPalette61.bin"
 	aPortraitPalette62 .binary "sprites/PortraitPalette62.bin"
 	aPortraitPalette63 .binary "sprites/PortraitPalette63.bin"
@@ -113,8 +113,8 @@
 	aPortraitPalette6B .binary "sprites/PortraitPalette6B.bin"
 	aPortraitPalette6C .binary "sprites/PortraitPalette6C.bin"
 	aPortraitPalette6D .binary "sprites/PortraitPalette6D.bin"
-	aPortraitPalette6E .binary "sprites/PortraitPalette6E.bin"
-	aPortraitPalette6F .binary "sprites/PortraitPalette6F.bin"
+	aPortraitPalette6E .binary "sprites/PortraitPalette6E.bin" ;Seemingly Unused Before
+	aPortraitPalette6F .binary "sprites/PortraitPalette6F.bin" ;Seemingly Unused Before
 	aPortraitPalette70 .binary "sprites/PortraitPalette70.bin"
 	aPortraitPalette71 .binary "sprites/PortraitPalette71.bin"
 	aPortraitPalette72 .binary "sprites/PortraitPalette72.bin"
@@ -134,19 +134,19 @@
 	aPortraitPalette80 .binary "sprites/PortraitPalette80.bin"
 	aPortraitPalette81 .binary "sprites/PortraitPalette81.bin"
 	aPortraitPalette82 .binary "sprites/PortraitPalette82.bin"
-	aPortraitPalette83 .binary "sprites/PortraitPalette83.bin"
-	aPortraitPalette84 .binary "sprites/PortraitPalette84.bin"
-	aPortraitPalette85 .binary "sprites/PortraitPalette85.bin"
-	aPortraitPalette86 .binary "sprites/PortraitPalette86.bin"
-	aPortraitPalette87 .binary "sprites/PortraitPalette87.bin"
-	aPortraitPalette88 .binary "sprites/PortraitPalette88.bin"
-	aPortraitPalette89 .binary "sprites/PortraitPalette89.bin"
-	aPortraitPalette8A .binary "sprites/PortraitPalette8A.bin"
-	aPortraitPalette8B .binary "sprites/PortraitPalette8B.bin"
-	aPortraitPalette8C .binary "sprites/PortraitPalette8C.bin"
-	aPortraitPalette8D .binary "sprites/PortraitPalette8D.bin"
-	aPortraitPalette8E .binary "sprites/PortraitPalette8E.bin"
-	aPortraitPalette8F .binary "sprites/PortraitPalette8F.bin"
+	aPortraitPalette83 .binary "sprites/PortraitPalette83.bin" ;Seemingly Unused Before
+	aPortraitPalette84 .binary "sprites/PortraitPalette84.bin" ;Seemingly Unused Before
+	aPortraitPalette85 .binary "sprites/PortraitPalette85.bin" ;Seemingly Unused Before
+	aPortraitPalette86 .binary "sprites/PortraitPalette86.bin" ;Seemingly Unused Before
+	aPortraitPalette87 .binary "sprites/PortraitPalette87.bin" ;Seemingly Unused Before
+	aPortraitPalette88 .binary "sprites/PortraitPalette88.bin" ;Seemingly Unused Before
+	aPortraitPalette89 .binary "sprites/PortraitPalette89.bin" ;Seemingly Unused Before
+	aPortraitPalette8A .binary "sprites/PortraitPalette8A.bin" ;Seemingly Unused Before
+	aPortraitPalette8B .binary "sprites/PortraitPalette8B.bin" ;Seemingly Unused Before
+	aPortraitPalette8C .binary "sprites/PortraitPalette8C.bin" ;Seemingly Unused Before
+	aPortraitPalette8D .binary "sprites/PortraitPalette8D.bin" ;Seemingly Unused Before
+	aPortraitPalette8E .binary "sprites/PortraitPalette8E.bin" ;Seemingly Unused Before
+	aPortraitPalette8F .binary "sprites/PortraitPalette8F.bin" ;Seemingly Unused Before
 	aPortraitPalette90 .binary "sprites/PortraitPalette90.bin"
 	aPortraitPalette91 .binary "sprites/PortraitPalette91.bin"
 	aPortraitPalette92 .binary "sprites/PortraitPalette92.bin"
@@ -167,10 +167,10 @@
 	aPortraitPaletteA1 .binary "sprites/PortraitPaletteA1.bin"
 	aPortraitPaletteA2 .binary "sprites/PortraitPaletteA2.bin"
 	aPortraitPaletteA3 .binary "sprites/PortraitPaletteA3.bin"
-	aPortraitPaletteA4 .binary "sprites/PortraitPaletteA4.bin"
+	aPortraitPaletteA4 .binary "sprites/PortraitPaletteA4.bin" ;Seemingly Unused Before
 	aPortraitPaletteA5 .binary "sprites/PortraitPaletteA5.bin"
 	aPortraitPaletteA6 .binary "sprites/PortraitPaletteA6.bin"
-	aPortraitPaletteA7 .binary "sprites/PortraitPaletteA7.bin"
+	aPortraitPaletteA7 .binary "../../custom/graphics/portraits/PortraitTailtiu.pal" ;Seemingly Unused Before
 	aPortraitPaletteA8 .binary "sprites/PortraitPaletteA8.bin"
 	aPortraitPaletteA9 .binary "sprites/PortraitPaletteA9.bin"
 	aPortraitPaletteAA .binary "sprites/PortraitPaletteAA.bin"
@@ -178,15 +178,15 @@
 	aPortraitPaletteAC .binary "sprites/PortraitPaletteAC.bin"
 	aPortraitPaletteAD .binary "sprites/PortraitPaletteAD.bin"
 	aPortraitPaletteAE .binary "sprites/PortraitPaletteAE.bin"
-	aPortraitPaletteAF .binary "sprites/PortraitPaletteAF.bin"
+	aPortraitPaletteAF .binary "sprites/PortraitPaletteAF.bin" ;Seemingly Unused Before, but glitchy when used
 	aPortraitPaletteB0 .binary "sprites/PortraitPaletteB0.bin"
 	aPortraitPaletteB1 .binary "sprites/PortraitPaletteB1.bin"
 	aPortraitPaletteB2 .binary "sprites/PortraitPaletteB2.bin"
 	aPortraitPaletteB3 .binary "sprites/PortraitPaletteB3.bin"
 	aPortraitPaletteB4 .binary "sprites/PortraitPaletteB4.bin"
-	aPortraitPaletteB5 .binary "sprites/PortraitPaletteB5.bin"
+	aPortraitPaletteB5 .binary "sprites/PortraitPaletteB5.bin" ;Seemingly Unused Before, but glitchy when replaced
 	aPortraitPaletteB6 .binary "sprites/PortraitPaletteB6.bin"
-	aPortraitPaletteB7 .binary "sprites/PortraitPaletteB7.bin"
+	aPortraitPaletteB7 .binary "../../custom/graphics/portraits/PortraitKalf.pal"
 	aPortraitPaletteB8 .binary "sprites/PortraitPaletteB8.bin"
 	aPortraitPaletteB9 .binary "sprites/PortraitPaletteB9.bin"
 	aPortraitPaletteBA .binary "sprites/PortraitPaletteBA.bin"
@@ -222,24 +222,24 @@
 	aPortraitPaletteD8 .binary "sprites/PortraitPaletteD8.bin"
 	aPortraitPaletteD9 .binary "sprites/PortraitPaletteD9.bin"
 	aPortraitPaletteDA .binary "sprites/PortraitPaletteDA.bin"
-	aPortraitPaletteDB .binary "sprites/PortraitPaletteDB.bin"
-	aPortraitPaletteDC .binary "sprites/PortraitPaletteDC.bin"
-	aPortraitPaletteDD .binary "sprites/PortraitPaletteDD.bin"
-	aPortraitPaletteDE .binary "sprites/PortraitPaletteDE.bin"
-	aPortraitPaletteDF .binary "sprites/PortraitPaletteDF.bin"
-	aPortraitPaletteE0 .binary "sprites/PortraitPaletteE0.bin"
-	aPortraitPaletteE1 .binary "sprites/PortraitPaletteE1.bin"
-	aPortraitPaletteE2 .binary "sprites/PortraitPaletteE2.bin"
-	aPortraitPaletteE3 .binary "sprites/PortraitPaletteE3.bin"
-	aPortraitPaletteE4 .binary "sprites/PortraitPaletteE4.bin"
+	aPortraitPaletteDB .binary "sprites/PortraitPaletteDB.bin" ;Seemingly Unused Before
+	aPortraitPaletteDC .binary "sprites/PortraitPaletteDC.bin" ;Seemingly Unused Before
+	aPortraitPaletteDD .binary "sprites/PortraitPaletteDD.bin" ;Seemingly Unused Before
+	aPortraitPaletteDE .binary "sprites/PortraitPaletteDE.bin" ;Seemingly Unused Before
+	aPortraitPaletteDF .binary "sprites/PortraitPaletteDF.bin" ;Seemingly Unused Before one of these palettes is used for dialogue, dunno which exactly
+	aPortraitPaletteE0 .binary "sprites/PortraitPaletteE0.bin" ;Seemingly Unused Before
+	aPortraitPaletteE1 .binary "sprites/PortraitPaletteE1.bin" ;Seemingly Unused Before
+	aPortraitPaletteE2 .binary "sprites/PortraitPaletteE2.bin" ;Seemingly Unused Before
+	aPortraitPaletteE3 .binary "sprites/PortraitPaletteE3.bin" ;Seemingly Unused Before
+	aPortraitPaletteE4 .binary "../../custom/graphics/portraits/PortraitYTravant.pal" ;Seemingly Unused Before
 	aPortraitPaletteE5 .binary "sprites/PortraitPaletteE5.bin"
 	aPortraitPaletteE6 .binary "sprites/PortraitPaletteE6.bin"
 	aPortraitPaletteE7 .binary "sprites/PortraitPaletteE7.bin"
 	aPortraitPaletteE8 .binary "sprites/PortraitPaletteE8.bin"
-	aPortraitPaletteE9 .binary "sprites/PortraitPaletteE9.bin"
-	aPortraitPaletteEA .binary "sprites/PortraitPaletteEA.bin"
-	aPortraitPaletteEB .binary "sprites/PortraitPaletteEB.bin"
-	aPortraitPaletteEC .binary "sprites/PortraitPaletteEC.bin"
+	aPortraitPaletteE9 .binary "../../custom/graphics/portraits/PortraitOOifey.pal" ;Seemingly Unused Before
+	aPortraitPaletteEA .binary "../../custom/graphics/portraits/PortraitYOifey.pal" ;Seemingly Unused Before
+	aPortraitPaletteEB .binary "../../custom/graphics/portraits/PortraitHilda.pal" ;Seemingly Unused Before
+	aPortraitPaletteEC .binary "../../custom/graphics/portraits/PortraitArvis.pal" ;Seemingly Unused Before
 	aPortraitPaletteED .binary "sprites/PortraitPaletteED.bin"
 	aPortraitPaletteEE .binary "sprites/PortraitPaletteEE.bin"
 	aPortraitPaletteEF .binary "sprites/PortraitPaletteEF.bin"
@@ -265,13 +265,13 @@
 
 	segmentStart
 
-	g4bppcPortraitEB8318 .binary "sprites/PortraitEB8318.4bpp.comp"
-	g4bppcPortraitEB8851 .binary "sprites/PortraitEB8851.4bpp.comp"
+	g4bppcPortraitEB8318 .binary "sprites/PortraitEB8318.4bpp.comp" ;old travant
+	g4bppcPortraitTailtiu .binary "../../custom/graphics/portraits/PortraitTailtiu.4bpp.fe4" ;formerly EB8851 Cairpre
 	g4bppcPortraitEB8C84 .binary "sprites/PortraitEB8C84.4bpp.comp"
 	g4bppcPortraitEB91DE .binary "sprites/PortraitEB91DE.4bpp.comp"
 	g4bppcPortraitEB9717 .binary "sprites/PortraitEB9717.4bpp.comp"
-	g4bppcPortraitEB9BD9 .binary "sprites/PortraitEB9BD9.4bpp.comp"
-	g4bppcPortraitEBA119 .binary "sprites/PortraitEBA119.4bpp.comp"
+	g4bppcPortraitLachesis .binary "../../custom/graphics/portraits/PortraitLachesis.4bpp.fe4" ; formerly g4bppcEB9BD9 - Daisy
+	g4bppcPortraitEldigan .binary "../../custom/graphics/portraits/PortraitEldigan.4bpp.fe4" ; formerly g4bppcEBA119 - Asaello
 	g4bppcPortraitEBA613 .binary "sprites/PortraitEBA613.4bpp.comp"
 	g4bppcPortraitEBAB36 .binary "sprites/PortraitEBAB36.4bpp.comp"
 	g4bppcPortraitEBB048 .binary "sprites/PortraitEBB048.4bpp.comp"
@@ -303,7 +303,7 @@
 	g4bppcPortraitEC8209 .binary "sprites/PortraitEC8209.4bpp.comp"
 	g4bppcPortraitEC8729 .binary "sprites/PortraitEC8729.4bpp.comp"
 	g4bppcPortraitEC8C0D .binary "sprites/PortraitEC8C0D.4bpp.comp"
-	g4bppcPortraitEC9117 .binary "sprites/PortraitEC9117.4bpp.comp"
+	g4bppcPortraitBeowolf .binary "../../custom/graphics/portraits/PortraitBeowolf.4bpp.fe4" ; formerly g4bppcEC9117 - Hermina
 	g4bppcPortraitEC95D7 .binary "sprites/PortraitEC95D7.4bpp.comp"
 	g4bppcPortraitEC9AB8 .binary "sprites/PortraitEC9AB8.4bpp.comp"
 	g4bppcPortraitEC9F78 .binary "sprites/PortraitEC9F78.4bpp.comp"
@@ -342,8 +342,8 @@
 	g4bppcPortraitED930E .binary "sprites/PortraitED930E.4bpp.comp"
 	g4bppcPortraitED9854 .binary "sprites/PortraitED9854.4bpp.comp"
 	g4bppcPortraitED9D9B .binary "sprites/PortraitED9D9B.4bpp.comp"
-	g4bppcPortraitEDA2CB .binary "sprites/PortraitEDA2CB.4bpp.comp"
-	g4bppcPortraitEDA84E .binary "sprites/PortraitEDA84E.4bpp.comp"
+	g4bppcPortraitQuan .binary "../../custom/graphics/portraits/PortraitQuan.4bpp.fe4" ; formerly g4bppcPortraitEDA2CB - Arthur
+	g4bppcPortraitEthlyn .binary "../../custom/graphics/portraits/PortraitEthlyn.4bpp.fe4" ; formerly g4bppcPortraitEDA84E - Jeanne
 	g4bppcPortraitEDAD56 .binary "sprites/PortraitEDAD56.4bpp.comp"
 	g4bppcPortraitEDB266 .binary "sprites/PortraitEDB266.4bpp.comp"
 	g4bppcPortraitEDB735 .binary "sprites/PortraitEDB735.4bpp.comp"
@@ -359,7 +359,7 @@
 	g4bppcPortraitEDE4DA .binary "sprites/PortraitEDE4DA.4bpp.comp"
 	g4bppcPortraitEDE988 .binary "sprites/PortraitEDE988.4bpp.comp"
 	g4bppcPortraitEDED87 .binary "sprites/PortraitEDED87.4bpp.comp"
-	g4bppcPortraitEDF246 .binary "sprites/PortraitEDF246.4bpp.comp"
+	g4bppcPortraitSigurd .binary "../../custom/graphics/portraits/PortraitSigurd.4bpp.fe4" ; formerly g4bppcEDF246 - Oltoph, Kant, Boss4Unknown
 	g4bppcPortraitEDF6BA .binary "sprites/PortraitEDF6BA.4bpp.comp"
 	g4bppcPortraitEDFBE9 .binary "sprites/PortraitEDFBE9.4bpp.comp"
 
@@ -373,7 +373,7 @@
 	segmentStart
 
 	g4bppcPortraitEE8071 .binary "sprites/PortraitEE8071.4bpp.comp"
-	g4bppcPortraitEE84E4 .binary "sprites/PortraitEE84E4.4bpp.comp"
+	g4bppcPortraitArden .binary "../../custom/graphics/portraits/PortraitArden.4bpp.fe4" ; formerly g4bppcPortraitEE84E4 - Jabal
 	g4bppcPortraitEE89F5 .binary "sprites/PortraitEE89F5.4bpp.comp"
 	g4bppcPortraitEE8ED4 .binary "sprites/PortraitEE8ED4.4bpp.comp"
 	g4bppcPortraitEE9378 .binary "sprites/PortraitEE9378.4bpp.comp"
@@ -432,12 +432,44 @@
 	g4bppcPortraitEFD3A1 .binary "sprites/PortraitEFD3A1.4bpp.comp"
 	g4bppcPortraitEFD772 .binary "sprites/PortraitEFD772.4bpp.comp"
 	g4bppcPortraitEFDC2E .binary "sprites/PortraitEFDC2E.4bpp.comp"
-	g4bppcPortraitEFE053 .binary "sprites/PortraitEFE053.4bpp.comp"
+	g4bppcPortraitYTravant .binary "../../custom/graphics/portraits/PortraitYTravant.4bpp.fe4"
 	g4bppcPortraitEFE47D .binary "sprites/PortraitEFE47D.4bpp.comp"
 	g4bppcPortraitEFE801 .binary "sprites/PortraitEFE801.4bpp.comp"
-	g4bppcPortraitEFEBDE .binary "sprites/PortraitEFEBDE.4bpp.comp"
+	g4bppcPortraitKalf .binary "../../custom/graphics/portraits/PortraitKalf.4bpp.fe4" ; formerly g4bppcEFEBDE - Unused HighPriest from FE4
 	g4bppcPortraitEFEF61 .binary "sprites/PortraitEFEF61.4bpp.comp"
 
 	segmentEnd
 
+.here
+
+;Additional Space for custom shit, still unsure what to replace from Vanilla now that all the unused stuff is replaced. Will Optimize Later
+
+* = $4A6920
+.logical $14E920
+
+	g4bppcPortraitYFinn .binary "../../custom/graphics/portraits/PortraitYFinn.4bpp.fe4"
+	g4bppcPortraitArvis .binary "../../custom/graphics/portraits/PortraitArvis.4bpp.fe4"
+	g4bppcPortraitHilda .binary "../../custom/graphics/portraits/PortraitHilda.4bpp.fe4"
+	g4bppcPortraitAyra .binary "../../custom/graphics/portraits/PortraitAyra.4bpp.fe4"
+	g4bppcPortraitYLewyn .crossbank "../../custom/graphics/portraits/PortraitYLewyn.4bpp.fe4"
+
+.here
+
+* = $4A8000
+.logical $158000
+
+	.binary "../../custom/graphics/portraits/PortraitYLewyn.4bpp.fe4", -
+	g4bppcPortraitAzelle .binary "../../custom/graphics/portraits/PortraitAzelle.4bpp.fe4"
+	g4bppcPortraitBrigid .binary "../../custom/graphics/portraits/PortraitBrigid.4bpp.fe4"
+	g4bppcPortraitEdain .binary "../../custom/graphics/portraits/PortraitEdain.4bpp.fe4"
+	g4bppcPortraitDew .binary "../../custom/graphics/portraits/PortraitDew.4bpp.fe4"
+	g4bppcPortraitNaoise .binary "../../custom/graphics/portraits/PortraitNaoise.4bpp.fe4"
+	g4bppcPortraitAlec .binary "../../custom/graphics/portraits/PortraitAlec.4bpp.fe4"
+	g4bppcPortraitDeirdre .binary "../../custom/graphics/portraits/PortraitDeirdre.4bpp.fe4"
+	g4bppcPortraitMidir .binary "../../custom/graphics/portraits/PortraitMidir.4bpp.fe4"
+	g4bppcPortraitYShannan .binary "../../custom/graphics/portraits/PortraitYShannan.4bpp.fe4"
+	g4bppcPortraitOShannan .binary "../../custom/graphics/portraits/PortraitOShannan.4bpp.fe4"
+	g4bppcPortraitYOifey .binary "../../custom/graphics/portraits/PortraitYOifey.4bpp.fe4"
+	g4bppcPortraitOOifey .binary "../../custom/graphics/portraits/PortraitOOifey.4bpp.fe4"
+	g4bppcPortraitLachesis2 .binary "../../custom/graphics/portraits/PortraitLachesis2.4bpp.fe4"
 .here

@@ -127,8 +127,8 @@ aActiveSpeakerAssociationTable ; 8C/C842
 	.word TinaPortrait
 	.word Tina
 
-	.word GunterPortrait		;<<
-	.word GunterDialogue		;<<
+	.word EthlynPortrait		;<<
+	.word Ethlyn				;<<
 
 	.word AmaldaPortrait
 	.word Amalda
@@ -169,14 +169,14 @@ aActiveSpeakerAssociationTable ; 8C/C842
 	.word ReinhardtPortrait
 	.word ReinhardtDialogue
 
-	.word CairprePortrait
-	.word Cairpre
+	.word TailtiuPortrait
+	.word Tailtiu
 
 	.word RaydrikPortrait
 	.word Raydrik
 
-	.word SaiasPortrait			;<<
-	.word JuliusSaiasPortrait
+	.word QuanPortrait			;<< Previously JuliusSaiasPortrait w/ SaiasPortrait
+	.word Quan
 
 	.word VeldPortrait
 	.word Veld
@@ -187,11 +187,11 @@ aActiveSpeakerAssociationTable ; 8C/C842
 	.word BucksPortrait
 	.word Bucks
 
-	.word JabalPortrait
-	.word Jabal
+	.word ArdenPortrait ;Previously Jabal
+	.word Arden
 
-	.word LobosPortrait
-	.word Lobos
+	.word BlumePortrait ;Previously Blume
+	.word Blume
 
 	.word ShivaPortrait
 	.word Shiva
@@ -214,7 +214,7 @@ aActiveSpeakerAssociationTable ; 8C/C842
 	.word KempfPortrait
 	.word Kempf
 
-	.word OltophPortrait
+	.word KempfPortrait ; Portrait replaced by Sigurd
 	.word Oltoph
 
 	.word ColhoPortrait
@@ -238,8 +238,8 @@ aActiveSpeakerAssociationTable ; 8C/C842
 	.word SeilPortrait
 	.word Seil
 
-	.word SchuperMarlonPortrait		;<<
-	.word Schuper
+	.word EldiganPortrait		;<< formerly SchuperMarlon / Schuper
+	.word Eldigan
 
 	.word BrookPortrait
 	.word Brook
@@ -259,8 +259,8 @@ aActiveSpeakerAssociationTable ; 8C/C842
 	.word PalmanPortrait
 	.word Palman
 
-	.word KantPortrait			;<<
-	.word Kant
+	.word BeowolfPortrait			;<<
+	.word Beowolf
 
 	.word GustavPortrait
 	.word Gustav
@@ -283,8 +283,8 @@ aActiveSpeakerAssociationTable ; 8C/C842
 	.word AlphandPortrait
 	.word Alphand
 
-	.word ColhoPortrait
-	.word Orvis
+	.word SigurdPortrait
+	.word Sigurd
 
 	.word FadenPortrait
 	.word Faden

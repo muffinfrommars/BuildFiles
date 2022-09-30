@@ -2,7 +2,7 @@ ch11xoltophflees
 
 .byte Right_slot
 .word LoadPortrait
-.word oltoph_portrait
+.word kempf_portrait ; otolph portrait replaced
 .text "Hmph! Orders be damned, I'll not just sit here"
 .byte NewLine
 .text "and wait to die!"
@@ -314,7 +314,7 @@ ch11xopening1
 
 .byte Right_slot
 .word LoadPortrait
-.word oltoph_portrait
+.word kempf_portrait ; otolph portrait replaced
 
 .byte Left_slot
 .word LoadPortrait

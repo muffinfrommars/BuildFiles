@@ -1,37 +1,37 @@
 ch1titlename
-.text "Chapter 1: The Warrior of Fiana"
+.text "Chapter One"
 .byte $01
 
 ch2titlename
-.text "Chapter 2: The Coastal Village"
+.text "Chapter Two"
 .byte $01
 
 ch2xtitlename
-.text "Chapter 2x: The Corsair Isles"
+.text "Chapter Three"
 .byte $01
 
 ch3titlename
-.text "Chapter 3: Kerberos' Gate"
+.text "Chapter Four"
 .byte $01
 
 ch4titlename
-.text "Chapter 4: Imprisoned"
+.text "Chapter Five"
 .byte $01
 
 ch4xtitlename
-.text "Chapter 4x: Hero on the Wind"
+.text "Chapter Six"
 .byte $01
 
 ch5titlename
-.text "Chapter 5: Mother and Daughter"
+.text "Chapter Seven"
 .byte $01
 
 ch6titlename
-.text "Chapter 6: The Escape"
+.text "Chapter Eight"
 .byte $01
 
 ch7titlename
-.text "Chapter 7: The Shield of Thracia"
+.text "Chapter Nine"
 .byte $01
 
 ch8titlename

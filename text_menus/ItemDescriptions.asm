@@ -750,7 +750,7 @@ _HelDesc
 ; Prf weapons
 
 _LightBrandDesc
-.text "{Lock}Leif, Casts light "
+.text "{Lock}Ethlyn, Leif, Uses"
 .word $0000
 .text "[magic at range "
 .word $0000
@@ -761,7 +761,7 @@ _LightBrandDesc
 .word $0000
 
 _EarthSwordDesc
-.text "{Lock}+Nanna"
+.text "{Lock}Lachesis, +Nanna"
 .word $0000
 .text "Casts potent light"
 .word $0000

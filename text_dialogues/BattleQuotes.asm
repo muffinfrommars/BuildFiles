@@ -461,7 +461,7 @@ ishtarboss
 .byte WaitForA
 .byte EndText
 
-mannheimboss
-.text "No! We can't get stranded here!"
+sigurdboss
+.text "One strike will decide it all!"
 .byte WaitForA
 .byte EndText

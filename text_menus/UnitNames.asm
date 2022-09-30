@@ -49,7 +49,7 @@ char_name_pointers		.block
 	.word	<>char_names._SchroffName
 	.word	<>char_names._MareetaName
 	.word	<>char_names._TinaName
-	.word	<>char_names._GunterName	; Unused
+	.word	<>char_names._EthlynName	; Previously Gunter
 	.word	<>char_names._AmaldaName
 	.word	<>char_names._ConomorName
 	.word	<>char_names._HomerName
@@ -57,39 +57,39 @@ char_name_pointers		.block
 	.word	<>char_names._SaraName
 	.word	<>char_names._SaiasName
 	.word	<>char_names._RaydrikName
-	.word	<>char_names._JuliusName	; Unused
+	.word	<>char_names._QuanName	; Previously Julius, Unused
 	.word	<>char_names._VeldName
 	.word	<>char_names._WeissmannName
 	.word	<>char_names._MunsterName
 	.word	<>char_names._BucksName
-	.word	<>char_names._JabalName		; Unused
+	.word	<>char_names._ArdenName		; Previously Jabal
 
 	.word	<>char_names._LifisCrewName
 	.word	<>char_names._LifisCrewName
 	.word	<>char_names._LifisCrewName
 
-	.word	<>char_names._LobosName
+	.word	<>char_names._CarlName ;formerly Lobos
 
 	.word	<>char_names._MunsterName
 	.word	<>char_names._MunsterName
 	.word	<>char_names._MunsterName
 
-	.word	<>char_names._RomeoName
-	.word	<>char_names._LucciaName
-	.word	<>char_names._JubelName
-	.word	<>char_names._CairpreName
+	.word	<>char_names._BlumeName ;formerly Romeo
+	.word	<>char_names._HildaName ;formerly Luccia
+	.word	<>char_names._ArvisName ;formerly Jubel
+	.word	<>char_names._TailtiuName ;formerly Cairpre
 	.word	<>char_names._CedName
 	.word	<>char_names._IshtarName	; Dialogue-only
 	.word	<>char_names._ReinhardtName	; Unused
 
-	.word	<>char_names._LifisCrewName
+	.word	<>char_names._KalfName ;formerly LifisCrewName - new name entry
 
-	.word	<>char_names._EmilyName
-	.word	<>char_names._MurphyName
-	.word	<>char_names._BellaName
-	.word	<>char_names._CliffName
-	.word	<>char_names._BowieName
-	.word	<>char_names._LeenaName
+	.word	<>char_names._AlfionaName ;formelry Emily
+	.word	<>char_names._RanzName ;formerly Murphy
+	.word	<>char_names._LurvinName ;formerly Bella
+	.word	<>char_names._DryasName ;formerly Cliff
+	.word	<>char_names._LanceName ;formerly Bowie
+	.word	<>char_names._AlfaceName ;formerly Leena
 	.word	<>char_names._HiredSwordName
 	.word	<>char_names._GalzusName
 
@@ -155,7 +155,7 @@ char_name_pointers		.block
 	.word	<>char_names._HiredSwordName
 
 	.word	<>char_names._Frieges21stName
-	.word	<>char_names._SchuperName	; Unused
+	.word	<>char_names._EldiganName	; formerly Schuper
 	.word	<>char_names._BrookName
 	.word	<>char_names._SilesseName
 	.word	<>char_names._NicolovName
@@ -163,7 +163,7 @@ char_name_pointers		.block
 	.word	<>char_names._MullerName
 	.word	<>char_names._ReinkochName
 	.word	<>char_names._PalmanName
-	.word	<>char_names._KantName		; Unused
+	.word	<>char_names._BeowolfName		; formerly Kant
 	.word	<>char_names._GustavName
 	.word	<>char_names._DancerName
 	.word	<>char_names._ClericName	; Unused
@@ -173,14 +173,14 @@ char_name_pointers		.block
 	.word	<>char_names._ZaunName
 	.word	<>char_names._CohenName
 	.word	<>char_names._AlphandName
-	.word	<>char_names._OrvisName		; Unused
+	.word	<>char_names._SigurdName		; formerly Orvis
 	.word	<>char_names._FadenName
 
 	.word	<>char_names._CoulterName
 
 	.word	<>char_names._ReinhardtName
 
-	.word	<>char_names._NancyName		; Unused
+	.word	<>char_names._LachesisName		; formerly Nancy
 
 	.word	<>char_names._TahraName
 	.word	<>char_names._TahraName
@@ -214,7 +214,7 @@ char_name_pointers		.block
 	.word	<>char_names._MunsterName
 	.word	<>char_names._MunsterName
 
-	.word	<>char_names._JuliusName
+	.word	<>char_names._ManfroyName ; Previously Julius, Unused
 	.word	<>char_names._ManfroyName
 
 	.word	<>char_names._MunsterName
@@ -644,8 +644,8 @@ _TinaName
 	.text "Tina"
 	.word $0000
 
-_GunterName
-	.text "Gunter"
+_EthlynName
+	.text "Ethlyn"
 	.word $0000
 
 _AmaldaName
@@ -676,8 +676,8 @@ _RaydrikName
 	.text "Raydrik "
 	.word $0000
 
-_JuliusName
-	.text "Julius"
+_QuanName
+	.text "Quan"
 	.word $0000
 
 _VeldName
@@ -696,32 +696,32 @@ _BucksName
 	.text "Bucks "
 	.word $0000
 
-_JabalName
-	.text "Jabal "
+_ArdenName
+	.text "Arden "
 	.word $0000
 
 _LifisCrewName
 	.text "Lifis Pirates "
 	.word $0000
 
-_LobosName
-	.text "Lobos "
+_CarlName
+	.text "Carl"
 	.word $0000
 
-_RomeoName
-	.text "Ro[meo"
+_BlumeName
+	.text "Blume "
 	.word $0000
 
-_LucciaName
-	.text "Luccia"
+_HildaName
+	.text "Hilda "
 	.word $0000
 
-_JubelName
-	.text "Jubel "
+_ArvisName
+	.text "Arvis "
 	.word $0000
 
-_CairpreName
-	.text "Cairpre "
+_TailtiuName
+	.text "Tailtiu "
 	.word $0000
 
 _IshtarName
@@ -732,28 +732,32 @@ _ReinhardtName
 	.text "Reinhardt "
 	.word $0000
 
-_EmilyName
-	.text "E[mily"
+_KalfName
+	.text "Kalf"
 	.word $0000
 
-_MurphyName
-	.text "(Murphy "
+_AlfionaName
+	.text "Alfiona "
 	.word $0000
 
-_BellaName
-	.text "Bella "
+_RanzName
+	.text "Ranz"
 	.word $0000
 
-_CliffName
-	.text "Cliff "
+_LurvinName
+	.text "Lurvin"
 	.word $0000
 
-_BowieName
-	.text "Bo]wie"
+_DryasName
+	.text "Dryas "
 	.word $0000
 
-_LeenaName
-	.text "Leena "
+_LanceName
+	.text "Lance "
+	.word $0000
+
+_AlfaceName
+	.text "Alface"
 	.word $0000
 
 _HiredSwordName
@@ -946,8 +950,8 @@ _Frieges21stName
 	.text "Friege"
 	.word $0000
 
-_SchuperName
-	.text "Schuper "
+_EldiganName
+	.text "Eldigan "
 	.word $0000
 
 _BrookName
@@ -978,8 +982,8 @@ _PalmanName
 	.text "Pal[man "
 	.word $0000
 
-_KantName
-	.text "Kant"
+_BeowolfName
+	.text "Beo]wolf"
 	.word $0000
 
 _GustavName
@@ -1018,16 +1022,16 @@ _AlphandName
 	.text "Alphand "
 	.word $0000
 
-_OrvisName
-	.text "Orvis "
+_SigurdName
+	.text "Sigurd"
 	.word $0000
 
 _FadenName
 	.text "Faden "
 	.word $0000
 
-_NancyName
-	.text "+Nancy"
+_LachesisName
+	.text "Lachesis"
 	.word $0000
 
 _TahraName

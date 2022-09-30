@@ -20,7 +20,7 @@ aMountedClassTable .block ; 88/8000
 	.byte MageKnightF
 	.byte GreatKnight
 	.byte PegasusKnight
-	.byte FalconKnight
+	.byte TrueArcher ; FalconKnight
 	.byte Dracorider
 	.byte DracoriderF
 	.byte Dracoknight
@@ -51,7 +51,7 @@ aDismountedClassTable .block ; 88/801C
 	.byte MageKnightFDismounted
 	.byte GreatKnightDismounted
 	.byte PegasusKnightDismounted
-	.byte FalconKnightDismounted
+	.byte TrueArcherDismounted ; FalconKnightDismounted
 	.byte DracoriderDismounted
 	.byte DracoriderFDismounted
 	.byte DracoknightDismounted

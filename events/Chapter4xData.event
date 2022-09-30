@@ -4,13 +4,7 @@ eventChapter4xData ; B1/EB48
 	_UnusedCoordinates1 ; B1/EB48
 		.byte 8, 7
 
-	_ChildGroup ; B1/EB4A
-		UNIT Emily, NPC, [12, 11], [12, 11], Ishtar, [], 1, False, [$02, $0B, $00, $00]
-		UNIT Cliff, NPC, [13, 12], [13, 12], Ishtar, [], 1, False, [$02, $0B, $00, $00]
-		UNIT Bella, NPC, [12, 12], [12, 12], Ishtar, [], 1, False, [$02, $0B, $00, $00]
-		UNIT Murphy, NPC, [12, 20], [12, 20], Ishtar, [], 1, False, [$02, $0B, $00, $00]
-		UNIT Leena, NPC, [13, 19], [13, 19], Ishtar, [], 1, False, [$02, $0B, $00, $00]
-		UNIT Bowie, NPC, [12, 19], [12, 19], Ishtar, [], 1, False, [$02, $0B, $00, $00]
+	_ChildGroup ; B1/
 	UNIT
 
 	_Opening1CameraCoordinates ; B1/EBC4

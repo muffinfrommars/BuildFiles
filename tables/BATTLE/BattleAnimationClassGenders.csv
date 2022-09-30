@@ -62,7 +62,7 @@ RogueGender,GenderMale
 CivilianGender,GenderMale
 BallisticianGender,GenderMale
 IronBallisticianGender,GenderMale
-KillerBallisticianGender,GenderMale
+TrueArcherDismountedGender,GenderMale
 DarkPrinceGender,GenderMale
 FighterGender,GenderMale
 CavalierDismountedGender,GenderMale
@@ -106,7 +106,7 @@ SageFGender,GenderFemale
 PriestessGender,GenderFemale
 HighPriestessGender,GenderFemale
 MyrmidonFGender,GenderFemale
-HeroFE4FGender,GenderFemale
+TrueArcherGender,GenderMale
 SwordmasterFGender,GenderFemale
 ArcherFGender,GenderFemale
 SniperFGender,GenderFemale

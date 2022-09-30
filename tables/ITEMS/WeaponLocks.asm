@@ -5,6 +5,7 @@ aUnknown1WeaponLock ; B0/99D6
 
 aEarthSwordWeaponLock ; B0/99DA
 	.word Nanna
+	.word Lachesis
 	.word 0
 
 aGrafcaliburWeaponLock ; B0/99DE
@@ -35,9 +36,12 @@ aBragisBladeWeaponLock ; B0/99FA
 	.word Nanna
 	.word Diarmuid
 	.word Fergus
+	.word Lachesis
+	.word Quan
 
 aLightBrandWeaponLock ; B0/9A00
 	.word Leif
+	.word Ethlyn
 	.word 0
 
 aVougeWeaponLock ; B0/9A04
@@ -50,6 +54,7 @@ aMjolnirWeaponLock ; B0/9A0A
 	.word 0
 
 aBallistaWeaponLock ; B0/9A0E
+	.word Ronan
 	.word MunsterBallista
 	.word FriegeBallista1
 	.word FriegeBallista2
@@ -58,14 +63,17 @@ aBallistaWeaponLock ; B0/9A0E
 	.word 0
 
 aKillerBallistaWeaponLock ; B0/9A1A
+	.word Ronan
 	.word 0
 
 aVeninBallistaWeaponLock ; B0/9A1C
+	.word Ronan
 	.word FriegeVeninBallista
 	.word MunsterVeninBallista
 	.word 0
 
 aIronBallistaWeaponLock ; B0/9A22
+	.word Ronan
 	.word BallistaEnemy
 	.word FriegeBallista5
 	.word 0
@@ -86,6 +94,7 @@ aHammerneWeaponLock ; B0/9A36
 	.word 0
 
 aBeoBladeWeaponLock ; B0/9A3A
+	.word Beowolf
 	.word Fergus
 	.word Diarmuid
 	.word 0

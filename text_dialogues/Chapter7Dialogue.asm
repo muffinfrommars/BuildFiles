@@ -462,7 +462,7 @@ ch7ending8cairpre
 
 .byte Right_slot
 .word LoadPortrait
-.word cairpre_portrait
+.word TailtiuPortrait
 .text "Good day, sir!"
 .byte WaitForA
 

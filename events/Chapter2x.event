@@ -12,44 +12,13 @@ eventChapter2xEvents ; 97/805A
 			CHECK_DEAD Lifis
 			CMP_WORD wCurrentPhase, Enemy
 		END_DEFINITION
-		EVENT FlagAlwaysZero, _ShivaAIChange
-			CMP_WORD wCurrentTurn, 25
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT FlagAlliedDeath, eventMapDeathQuoteDummyEvent
-			CMP_WORD wCurrentTurn, 22
-			CHECK_NUM_UNITS_GTE Shiva, 1
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT FlagAlwaysZero, _MyrmidonWarriorReinforcements
-			CMP_WORD wCurrentTurn, 2
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT FlagAlwaysZero, _TopIslandReinforcements
-			CMP_WORD_RANGE wCurrentTurn, 5, 9
-			CMP_WORD wCurrentPhase, Enemy
-			ROLL_RNG 30
-			TEST_FLAG_UNSET FlagBossDeath
-		END_DEFINITION
-		EVENT FlagAlwaysZero, _LowerRightIslandReinforcements
-			CMP_WORD_RANGE wCurrentTurn, 10, 14
-			ROLL_RNG 80
-			CMP_WORD wCurrentPhase, Enemy
-			TEST_FLAG_UNSET FlagBossDeath
-		END_DEFINITION
-		EVENT FlagAlwaysZero, _LowerLeftIslandReinforcements
-			CMP_WORD_RANGE wCurrentTurn, 15, 20
-			ROLL_RNG 20
-			CMP_WORD wCurrentPhase, Enemy
-			TEST_FLAG_UNSET FlagBossDeath
-		END_DEFINITION
 	END_DEFINITION_ARRAY
 
 	_LocationEventDefinitions ; 97/80F3
 		EVENT FlagAlwaysZero, _EndingEvent
-			macroEventConditionCheckCoords [23, 2]
+			macroEventConditionCheckCoords [14, 1]
 			CMP_WORD wCurrentPhase, Player
-			CMP_WORD aSelectedCharacterBuffer.Character, Leif
+			CMP_WORD aSelectedCharacterBuffer.Character, Finn
 		END_DEFINITION
 	END_DEFINITION_ARRAY
 
@@ -63,56 +32,33 @@ eventChapter2xEvents ; 97/805A
 	END_DEFINITION_ARRAY
 
 	_AfterActionEventDefinitions ; 97/811E
-		EVENT $07, _TorchPickup
-			macroEventConditionCheckCoords [5, 25]
+		EVENT $10, _DrawBridge
+			TEST_FLAG_UNSET $07
+			macroEventConditionCheckCoords [13, 10]
+		END_DEFINITION
+		EVENT $00, _EndingEvent
+			macroEventConditionCheckCoords [14, 2]
 			CMP_WORD wCurrentPhase, Player
 		END_DEFINITION
-		EVENT $08, _TorchPickup
-			macroEventConditionCheckCoords [12, 19]
+		EVENT $00, _EndingEvent
+			macroEventConditionCheckCoords [3, 1]
 			CMP_WORD wCurrentPhase, Player
 		END_DEFINITION
 	END_DEFINITION_ARRAY
 
 	_BattleEventDefinitions ; 97/814A
-		macroBossQuoteDefinition $06, Lifis
-		macroBossQuoteDefinition $05, Shiva
 	END_DEFINITION_ARRAY
 
 	_ShopEventDefinitions ; 97/815C
 	END_DEFINITION_ARRAY
 
 	_LeifEyvelTalk ; 97/815E
-		macroDialogueHouse ch2xeyvelLeif
 	END2
 
 	_MyrmidonWarriorReinforcements ; 98/8167
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $3A
-		YIELD
-
-		SCROLL_CAMERA_SPEED [25, 4], 3
-		YIELD
-
-		macroDialogueWithBackground ch2xturn2, 1
-
-		CALL_ASM_LOOP rlASMCDialogueWithBGEnd, $0000
-		YIELD
-
-		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, INIDISP_Setting(False, 15)
-
-		LOAD1 eventChapter2xData._EnemyGroup2
-		WAIT_MOVE
-		YIELD
 	END2
 
 	_ShivaAIChange ; 97/81A5
-		macroSetCharacterByte Shiva, structCharacterDataRAM.AI1, $00
-		macroSetCharacterByte Shiva, structCharacterDataRAM.AI4, $00
-		macroSetCharacterByte Shiva, structCharacterDataRAM.AI2, $00
-		macroSetCharacterByte Shiva, structCharacterDataRAM.Unknown3E, $00
 	END2
 
 	_PrepGroups ; 97/8206
@@ -125,7 +71,7 @@ eventChapter2xEvents ; 97/805A
 		PAUSE_SKIPPABLE 32
 		YIELD
 
-		SET_MUSIC $3A
+		SET_MUSIC $08
 		YIELD
 
 		macroChapterTitlePopup ch2xtitlename
@@ -148,27 +94,15 @@ eventChapter2xEvents ; 97/805A
 
 		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, INIDISP_Setting(False, 15)
 
-		LOAD1 eventChapter2xData._LifisShivaGroup
+		LOAD1 eventChapter2xData._PreGate
 		WAIT_MOVE
 		YIELD
 
-		STORE_LONG lEventEngineUnitGroupPointer, eventChapter2xData._EnemyGroup1
-		CALL_ASM_LOOP rlASMCLoadUnitGroup, $0000
-		YIELD_UNK
+		LOAD1 eventChapter2xData._TactitianGroup
+		WAIT_MOVE
+		YIELD
 
 		STORE_LONG lEventEngineUnitGroupPointer, eventChapter2xData._EnemyGroup3
-		CALL_ASM_LOOP rlASMCLoadUnitGroup, $0000
-		YIELD_UNK
-
-		STORE_LONG lEventEngineUnitGroupPointer, eventChapter2xData._EnemyGroup4
-		CALL_ASM_LOOP rlASMCLoadUnitGroup, $0000
-		YIELD_UNK
-
-		STORE_LONG lEventEngineUnitGroupPointer, eventChapter2xData._EnemyGroup5
-		CALL_ASM_LOOP rlASMCLoadUnitGroup, $0000
-		YIELD_UNK
-
-		STORE_LONG lEventEngineUnitGroupPointer, eventChapter2xData._EnemyGroup6
 		CALL_ASM_LOOP rlASMCLoadUnitGroup, $0000
 		YIELD_UNK
 
@@ -182,92 +116,52 @@ eventChapter2xEvents ; 97/805A
 	END2
 
 	_TopIslandReinforcements ; 97/82F6
-		LOAD2 eventChapter2xData._TopIslandReinforcementsGroup1
-		WAIT_MOVE
-		YIELD
-
-		LOAD2 eventChapter2xData._TopIslandReinforcementsGroup2
-		WAIT_MOVE
-		YIELD
-
-		LOAD2 eventChapter2xData._TopIslandReinforcementsGroup3
-		WAIT_MOVE
-		YIELD
 	END2
 
 	_UnusedReinforcements1 ; 97/8309
-		LOAD2 eventChapter2xData._TopIslandReinforcementsGroup2
-		WAIT_MOVE
-		YIELD
 	END2
 
 	_UnusedReinforcements2 ; 97/8310
-		LOAD2 eventChapter2xData._TopIslandReinforcementsGroup3
-		WAIT_MOVE
-		YIELD
 	END2
 
 	_LowerRightIslandReinforcements ; 97/8317
-		LOAD2 eventChapter2xData._LowerRightIslandReinforcementsGroup1
-		WAIT_MOVE
-		YIELD
-
-		LOAD2 eventChapter2xData._LowerRightIslandReinforcementsGroup2
-		WAIT_MOVE
-		YIELD
-
-		LOAD2 eventChapter2xData._LowerRightIslandReinforcementsGroup3
-		WAIT_MOVE
-		YIELD
-
-		LOAD2 eventChapter2xData._LowerRightIslandReinforcementsGroup4
-		WAIT_MOVE
-		YIELD
 	END2
 
 	_UnusedReinforcements3 ; 97/8330
-		LOAD2 eventChapter2xData._LowerRightIslandReinforcementsGroup2
-		WAIT_MOVE
-		YIELD
 	END2
 
 	_UnusedReinforcements4 ; 97/8337
-		LOAD2 eventChapter2xData._LowerRightIslandReinforcementsGroup3
-		WAIT_MOVE
-		YIELD
 	END2
 
 	_UnusedReinforcements5 ; 97/833E
-		LOAD2 eventChapter2xData._LowerRightIslandReinforcementsGroup4
-		WAIT_MOVE
-		YIELD
 	END2
 
 	_LowerLeftIslandReinforcements ; 97/8345
-		LOAD2 eventChapter2xData._LowerLeftIslandReinforcementsGroup1
-		WAIT_MOVE
-		YIELD
-
-		LOAD2 eventChapter2xData._LowerLeftIslandReinforcementsGroup2
-		WAIT_MOVE
-		YIELD
 	END2
 
-	_UnusedReinforcements6 ; 97/8352
-		LOAD2 eventChapter2xData._LowerLeftIslandReinforcementsGroup2
-		WAIT_MOVE
-		YIELD
-	END2
-
-	_TorchPickup ; 97/8359
+	_DrawBridge ; 97/8352
 		STORE_WORD wEventEngineParameter1, TurnStatusDead
 		CALL_ASM_LOOP rlASMCActiveUnitTestTurnStatus, $0000
 		JUMP_TRUE +
 
-		macroGiveItemToActiveUnit Torch
+		PAUSE_SKIPPABLE 64
+		YIELD
+
+		PLAY_SOUND_BYTE $45
+		macroSingleTileChangeByCoordinates [11, 5], $027F
+
+		DIALOGUE ch2xGate
+		YIELD
+
 		CALL_ASM_LOOP rlASMCSaveActiveUnitData, $0000
 
+		SET_FLAG $07
+		YIELD
+
 		+
+	END2
+
+	_TorchPickup ; 97/8359
 	END2
 
 	_EndingEvent ; 97/8398

@@ -1,0 +1,69 @@
+
+eventdebugData ; B1/8425
+
+	_PrepGroup ; B1/8425
+		.byte 24, 23
+	UNIT
+
+	_ReinforcementsCameraCoordinates ; B1/8799
+		.byte 23, 19
+
+	_ReinforcementsGroup ; B1/879B
+	UNIT Arden, Enemy, [7, 12], [7, 12], Leif, [MasterSword], 1, True, [$01, $03, $00, $80]
+	UNIT Marty, NPC, [9, 12], [9, 12], Leif, [IronAxe], 1, True, [$01, $03, $00, $80]
+	UNIT
+
+	_debugGroup ; B1/87EF
+	UNIT Finn, Player, [2, 4], [2, 4], Leif, [IronLance,MasterSeal], 1, True, [$00, $00, $00, $00]
+	UNIT Leif, Player, [3, 4], [3, 4], Leif, [DoorKey,MasterSeal,Torch,Vulnerary], 1, True, [$00, $00, $00, $00]
+	UNIT Lachesis, Player, [4, 4], [4, 4], Leif, [EarthSword,Recover,Physic,Heal], 1, True, [$00, $00, $00, $00]
+	UNIT Ethlyn, Player, [5, 4], [5, 4], Leif, [LightBrand, Physic], 1, True, [$00, $00, $00, $00]
+	UNIT Quan, Player, [6, 4], [6, 4], Leif, [GaeBolg, ShortSword], 1, True, [$00, $00, $00, $00]
+	UNIT Eldigan, Player, [7, 4], [7, 4], Leif, [IronSword], 1, True, [$00, $00, $00, $00]
+	UNIT Sigurd, Player, [8, 4], [8, 4], Leif, [SilverSword], 1, True, [$00, $00, $00, $00]
+	UNIT Beowolf, Player, [9, 4], [9, 4], Leif, [BeoBlade], 1, True, [$00, $00, $00, $00]
+	UNIT Travant, Player, [10, 4], [10, 4], Leif, [Gungnir], 1, True, [$00, $00, $00, $00]
+	UNIT Kalf, Player, [11, 4], [11, 4], Leif, [KingMaker], 1, True, [$00, $00, $00, $00]
+	UNIT Alfiona, Player, [12, 4], [12, 4], Leif, [Fortify,Physic], 1, True, [$00, $00, $00, $00]
+	UNIT Arden, Player, [2, 5], [2, 5], Leif, [MasterSword], 1, True, [$00, $00, $00, $00]
+	UNIT Ranz, Player, [3, 5], [3, 5], Leif, [IronLance], 1, True, [$00, $00, $00, $00]
+	UNIT Lurvin, Player, [4, 5], [4, 5], Leif, [Javelin], 1, True, [$00, $00, $00, $00]
+	UNIT Dryas, Player, [5, 5], [5, 5], Leif, [MasterLance], 1, True, [$00, $00, $00, $00]
+	UNIT Selphina, Player, [6, 5], [6, 5], Leif, [IronBow], 1, True, [$00, $00, $00, $00]
+	UNIT Glade, Player, [7, 5], [7, 5], Leif, [SlimLance], 1, True, [$00, $00, $00, $00]
+	UNIT Saias, Player, [8, 5], [8, 5], Leif, [Vulnerary], 1, True, [$00, $00, $00, $00]
+	UNIT Blume, Player, [9, 5], [9, 5], Leif, [Mjolnir], 1, True, [$00, $00, $00, $00]
+	UNIT Hilda, Player, [10, 5], [10, 5], Leif, [Bolganone], 1, True, [$00, $00, $00, $00]
+	UNIT Tailtiu, Player, [11, 5], [11, 5], Leif, [Thunder], 1, True, [$00, $00, $00, $00]
+	UNIT Ronan, Player, [12, 5], [12, 5], Leif, [KillerBallista, IronBallista, Ballista, VeninBallista, IronBow], 1, True, [$00, $00, $00, $00]
+	UNIT Lance, Player, [2, 6], [2, 6], Leif, [IronAxe], 1, True, [$00, $00, $00, $00]
+	UNIT Alface, Player, [3, 6], [3, 6], Leif, [Greatlance], 1, True, [$00, $00, $00, $00]
+	UNIT Arvis, Player, [4, 6], [4, 6], Leif, [Valflame], 1, True, [$00, $00, $00, $00]
+	UNIT Nanna, Player, [5, 6], [5, 6], Leif, [], 1, True, [$00, $00, $00, $00]
+	UNIT Carl, Player, [6, 6], [6, 6], Leif, [KillingEdge], 1, True, [$00, $00, $00, $00]
+	UNIT
+
+	_StartingPositions ; B1/881D
+		.byte 2, 3
+		.byte 3, 3
+		.byte 4, 3
+		.byte 5, 3
+		.byte 6, 3
+		.byte 7, 3
+		.byte 8, 3
+		.byte 9, 3
+		.byte 10, 3
+		.byte 11, 3
+		.byte 12, 3
+		.byte 13, 3
+		.byte 2, 4
+		.byte 3, 4
+		.byte 4, 4
+		.byte 5, 4
+	.byte $FF
+
+	_Armory ; B1/883E
+		SHOP [5, 1], [KillingEdge, KillerLance, KillerAxe, KillerBow]
+
+	_Vendor ; B1/8850
+		SHOP [3, 1], [Mend, Elfire, Light, DoorKey, MasterSeal]

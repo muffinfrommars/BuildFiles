@@ -245,7 +245,7 @@ ch2xturn2
 	
 	.byte EndText
 	
-ch2xeyvelLeif
+ch2xGate
 	.byte Left_slot
 	.word LoadPortrait
 	.word leif_portrait

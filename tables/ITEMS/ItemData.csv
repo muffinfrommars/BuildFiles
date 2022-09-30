@@ -45,8 +45,8 @@ Javelin,TypeLance,None,6,50,12,20,0,1,2,RankD,ItemEffectivenesses.aNoEffectivene
 MasterLance,TypeLance,None,14,55,16,20,0,1,2,RankA,ItemEffectivenesses.aNoEffectiveness,aNoItemBonuses,3400,<>item_descs._MasterLanceDesc,None,None,None,Skill3Brave,TraitWeapon,$2A
 Ridersbane,TypeLance,None,14,60,13,20,0,1,1,RankB,ItemEffectivenesses.aCavalryEffectiveness,aNoItemBonuses,3000,<>item_descs._RidersbaneDesc,None,None,None,None,TraitWeapon,$2B
 KillerLance,TypeLance,None,12,80,10,20,30,1,1,RankB,ItemEffectivenesses.aNoEffectiveness,aNoItemBonuses,3000,<>item_descs._KillerLanceDesc,None,None,None,None,TraitWeapon,$2C
-GaeBolg,TypeLance,None,20,100,2,90,50,1,2,RankB,ItemEffectivenesses.aNoEffectiveness,aGaeBolgItemBonuses,0,<>item_descs._GaeBolgDesc,None,None,Skill2Charm | Skill2Vantage | Skill2Nihil,Skill3Wrath | Skill3Brave,TraitWeapon,$2D
-Gungnir,TypeLance,None,20,100,1,90,70,1,1,RankB,ItemEffectivenesses.aNoEffectiveness,aGungnirItemBonuses,0,<>item_descs._GungnirDesc,None,None,Skill2Vantage | Skill2Nihil,Skill3Wrath | Skill3Paragon | Skill3Brave,TraitWeapon,$2E
+GaeBolg,TypeLance,None,20,100,2,90,50,1,2,RankE,ItemEffectivenesses.aNoEffectiveness,aGaeBolgItemBonuses,0,<>item_descs._GaeBolgDesc,None,None,Skill2Charm | Skill2Vantage | Skill2Nihil,Skill3Wrath | Skill3Brave,TraitWeapon,$2D
+Gungnir,TypeLance,None,20,100,1,90,70,1,1,RankE,ItemEffectivenesses.aNoEffectiveness,aGungnirItemBonuses,0,<>item_descs._GungnirDesc,None,None,Skill2Vantage | Skill2Nihil,Skill3Wrath | Skill3Paragon | Skill3Brave,TraitWeapon,$2E
 BrokenLance,TypeLance,None,0,0,15,-1,0,1,1,RankE,ItemEffectivenesses.aNoEffectiveness,aNoItemBonuses,400,<>item_descs._BrokenLanceDesc,None,None,None,None,TraitWeapon | TraitUnbreakable | TraitBroken,$2F
 IronAxe,TypeAxe,None,9,65,10,30,0,1,1,RankE,ItemEffectivenesses.aNoEffectiveness,aNoItemBonuses,1100,<>item_descs._IronAxeDesc,None,None,None,None,TraitWeapon,$30
 VeninAxe,TypeAxe,None,6,65,10,30,0,1,1,RankE,ItemEffectivenesses.aNoEffectiveness,aNoItemBonuses,0,<>item_descs._VeninAxeDesc,None,PoisonEffect,None,None,TraitWeapon,$31

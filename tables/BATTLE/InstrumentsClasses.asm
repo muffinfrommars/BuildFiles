@@ -78,7 +78,7 @@ InstrumentsBrigands				= $79
 .byte InstrumentsDefault      ; Civilian
 .byte InstrumentsDefault      ; Ballistician
 .byte InstrumentsDefault      ; IronBallistician
-.byte InstrumentsDefault      ; KillerBallistician
+.byte InstrumentsDefault      ; KillerBallistician -> TrueArcherDismounted
 .byte InstrumentsDefault      ; DarkPrince
 .byte InstrumentsDefault      ; Fighter
 .byte InstrumentsDefault      ; CavalierDismounted
@@ -123,7 +123,7 @@ InstrumentsBrigands				= $79
 .byte InstrumentsDefault      ; Priestess
 .byte InstrumentsDefault      ; HighPriestess
 .byte InstrumentsDefault      ; MyrmidonF
-.byte InstrumentsDefault      ; HeroFE4F
+.byte InstrumentsDefault      ; HeroFE4F -> TrueArcher
 .byte InstrumentsDefault      ; SwordmasterF
 .byte InstrumentsDefault      ; ArcherF
 .byte InstrumentsDefault      ; SniperF

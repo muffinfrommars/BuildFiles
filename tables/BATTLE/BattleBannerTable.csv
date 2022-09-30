@@ -5,7 +5,7 @@ GladeBattleBanner,Glade,$00
 RaydrikBattleBanner,Raydrik,$08
 RumaighBattleBanner,Rumaigh,$08
 DeanBattleBanner,Dean,$08
-LobosBattleBanner,Lobos,$03
+LobosBattleBanner,Blume,$03
 EisenhauBattleBanner,Eisenhau,$03
 BandoleBattleBanner,Bandole,$03
 TolmanBattleBanner,Tolman,$03
@@ -48,12 +48,12 @@ AlphandBattleBanner,Alphand,$08
 LoptrianDarkBishopBattleBanner,LoptrianDarkBishop,$08
 LifisBattleBanner,Lifis,$08
 BucksBattleBanner,Bucks,$08
-JabalBattleBanner,Jabal,$08
+JabalBattleBanner,Arden,$08 ; Jabal Replaced with Arden
 CedChp23BattleBanner,CedChp23,$08
 CedChp4xBattleBanner,CedChp4x,$08
 GomezBattleBanner,Gomez,$08
 SeilBattleBanner,Seil,$08
-EmilyBattleBanner,Emily,$08
+QuanBattleBanner,Quan,$00
 MishaBattleBanner,Misha,$08
 ColhoBattleBanner,Colho,$08
 PerneBattleBanner,Perne,$08
