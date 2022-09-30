@@ -1,14 +1,14 @@
 
-eventdebugData ; B1/8425
+eventdebugData
 
-	_PrepGroup ; B1/8425
+	_PrepGroup
 		.byte 24, 23
 	UNIT
 
-	_ReinforcementsCameraCoordinates ; B1/8799
+	_ReinforcementsCameraCoordinates
 		.byte 23, 19
 
-	_ReinforcementsGroup ; B1/879B
+	_ReinforcementsGroup
 	UNIT Arden, Enemy, [7, 12], [7, 12], Leif, [MasterSword], 1, True, [$01, $03, $00, $80]
 	UNIT Marty, NPC, [9, 12], [9, 12], Leif, [IronAxe], 1, True, [$01, $03, $00, $80]
 	UNIT
@@ -62,8 +62,8 @@ eventdebugData ; B1/8425
 		.byte 5, 4
 	.byte $FF
 
-	_Armory ; B1/883E
-		SHOP [5, 1], [KillingEdge, KillerLance, KillerAxe, KillerBow]
+	_Armory
+		SHOP [5, 1], [SilverSword, SilverLance]
 
-	_Vendor ; B1/8850
-		SHOP [3, 1], [Mend, Elfire, Light, DoorKey, MasterSeal]
+	_Vendor
+		SHOP [3, 1], [DoorKey, BridgeKey, Torch]

@@ -83,7 +83,15 @@ eventChapter1Events ; FD/8000
 		
 		CALL_ASM_SKIPPABLE rlEventEngineCancelFading, $0000
 
-		PLAY_SOUND_BYTE $80
+		macroSetAllCharacterByte structCharacterDataRAM.Fatigue, 0
+
+		CALL_ASM_LOOP $83ACEA, $0000
+
+		macroSetAllCharacterTurnStatus (TurnStatusUnknown1 | TurnStatusHidden)
+
+		macroUnsetAllCharacterTurnStatus (TurnStatusGrayed | TurnStatusMovementStar | TurnStatusMoved)
+
+		PLAY_SOUND_BYTE $4A
 
 		STORE_LONG lEventEngineUnitGroupPointer, eventChapter1Data._AedCutscene
 		CALL_ASM_LOOP rlASMCLoadUnitGroup, $0000
@@ -102,6 +110,8 @@ eventChapter1Events ; FD/8000
 		YIELD
 
 		FADE_IN $02
+
+		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, INIDISP_Setting(False, 15)
 
 		DIALOGUE aedethlyn1
 		YIELD
@@ -211,6 +221,8 @@ eventChapter1Events ; FD/8000
 		macroRemoveUnit ThraciaDracoknight1
 		macroRemoveUnit ThraciaDracoknight1
 		macroRemoveUnit ThraciaDracoknight1
+
+		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, INIDISP_Setting(False, 15)
 
 		CALL_ASM_SKIPPABLE rlUnknown8C9E22, $0000
 		CALL_ASM_SKIPPABLE $83FBDC, $0000

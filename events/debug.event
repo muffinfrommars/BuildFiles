@@ -230,19 +230,43 @@ eventdebugEvents ; 8C/F611
 	.word $0000
 
 	_OpeningEvent ; 8C/FE55
+		CALL_ASM_SKIPPABLE rlEventEngineCancelFading, $0000
+
+		STORE_LONG lEventEngineUnitGroupPointer, eventdebugData._debugGroup
+		CALL_ASM_LOOP rlASMCLoadUnitGroup, $0000
+		YIELD_UNK
+		YIELD
+
+		CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog, $0000
+
+		PAUSE_SKIPPABLE 5
+		YIELD
+
+		FADE_IN $02
 
 		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, $0F
-
-		LOAD1 eventdebugData._debugGroup
-		WAIT_MOVE
-		YIELD
 
 	END2
 
 	_EndingEvent ; 8C/FF31
 
-		ADD_WORD wCurrentChapter, Chapter24x
-		YIELD_UNK
+		CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd, $0000
+
+		CALL_ASM_SKIPPABLE rlUnknown8C9E22, $0000
+		CALL_ASM_SKIPPABLE $83FBDC, $0000
+		CALL_ASM_SKIPPABLE $9A9D79, $0000
+
+		STORE_WORD wCurrentChapter, Chapter24x
+
+		CALL_ASM_SKIPPABLE $849485, $0000
+		CALL_ASM_SKIPPABLE $9A98CF, $0000
+
+		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, $01
+
+		STORE_WORD bBuf_INIDISP, $0000
+		STORE_WORD INIDISP, $0000
+
+		CALL_ASM_SKIPPABLE rlEventEngineCancelFading, $0000
 
 		CALL_ASM_LOOP rlASMCChapterEnd, $0000
 	END1

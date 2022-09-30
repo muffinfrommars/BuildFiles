@@ -145,7 +145,7 @@ ID	Title
 8B	Valkyrie Staff (No Loop)
 8C	Level Up!
 8D	Unit Change
-8E	~~Arena (Entrance)~~ Missing / Treat as Null
+8E	
 8F	Arena (Match)
 90	Verdane Castle Town
 91	Grannvale Castle Town

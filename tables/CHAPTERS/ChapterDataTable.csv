@@ -34,5 +34,5 @@ Chapter23ChapterData,$F6E885,$FAEB21,$F69F00,$FCD685,$FCF54B,eventChapter23Data.
 Chapter24ChapterData,$F8A3D6,$FB9ABD,$F6A000,$FCDC2D,$FCF570,eventChapter24Data._StartingPositions,None,None,$2,10,18,$2,$4,$4,$3,$3,$B,$3,None,None
 Chapter24xChapterData,$F9AE74,$FBBDDF,$F6A100,$FCDF8D,$FCF66E,eventChapter24xData._StartingPositions,$978055,3,$2,8,16,$2,$4,$4,$3,$3,$C,$3,None,aTilesetAnimation8488C7
 ChapterFinalChapterData,$F9AE74,$FBBDDF,$F6A200,$FCE2C2,$FCF6B0,eventChapterFinalData._StartingPositions,None,None,$2,6,18,$2,$4,$0,$1,$8,$E,$8,None,aTilesetAnimation8488C7
-ChapterUnknownChapterData,ptiles,ptileset,ppalette,debug,$FCF724,None,None,None,None,8,16,$2,$4,$0,$1,$6E,$E,$7,None,aTilesetAnimation8487CE
+ChapterUnknownChapterData,ctiles,ctileset,cpalette,debug,$FCF724,None,None,None,None,8,16,$2,$4,$0,$1,$6E,$E,$7,None,aTilesetAnimation8487CE
 WorldMapChapterData,$F9E117,$FBCA18,$F6A400,$FCE828,None,None,None,None,$2,10,20,$2,$4,$0,$1,$1,$9,$1,None,None
