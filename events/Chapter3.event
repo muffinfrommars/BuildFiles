@@ -107,7 +107,7 @@ eventChapter3Events ; 8C/E435
 
 	_CairpreHouseDestroy ; 8C/EA35
 	END1
-
+	
 	_LucciaHouseDestroy ; 8C/EA64
 	END1
 

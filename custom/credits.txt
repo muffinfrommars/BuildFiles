@@ -16,10 +16,14 @@ Based off of events from Fire Emblem: Genealogy of the Holy War and Fire Emblem:
 
 FE4 Mitsuki Oosawa Manga - Additional events based off of plotlines from this story https://fireemblem.fandom.com/wiki/Fire_Emblem:_Genealogy_of_the_Holy_War_(Mitsuki_Oosawa_manga)
 
+Additional lore established by Kaga in an interview https://garmtranslations.wordpress.com/2019/02/13/fire-emblem-genealogy-of-the-holy-war-fan-special-roundtable-discussion/
+
 Fire Emblem Heroes - help in developing character personalities, various other ideas
 
 Various tools used in process of developing this hack, such as bsnes debugging, YY-Char, SnesGFX, 64tass, Lunar Expand, Lunar Address, FE5 Map Editor, FE5 Tileset Editor, FE45_Compress
 
 Tiled ver 1.8.4 - Used in the process of creating Maps and Tilesets
+
+*Need to identify the creator(s) of the updated FE4 char portraits
 
 Muffin from Mars - Me :) Director, developer, writer of this project
