@@ -5,7 +5,6 @@ eventChapter2Data ; B1/F91C
 	UNIT
 
 	_GladeArrive ; B1/F960
-		UNIT Glade, Player, [14, 4], [14, 4], Leif, [Javelin, SlimLance, Vulnerary], 1, False, [$00, $00, $00, $00]
 	UNIT
 
 	_EnemyGroup1 ; B1/F962
