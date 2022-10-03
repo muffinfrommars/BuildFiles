@@ -96,15 +96,9 @@ eventChapter2Events ; 99/81B4
 		WAIT_MOVE
 		YIELD
 
-		MOVE_UNIT Glade, [14, 4], [13, 2], 1, None
+		MOVE_UNIT Glade, [14, 4], [14, 4], 1, None
 		YIELD_UNK
 		PAUSE_SKIPPABLE $60
-
-
-		MOVE_UNIT Glade, [13, 2], [8, 2], 1, None
-		YIELD_UNK
-		WAIT_MOVE
-		YIELD
 
 	END2
 

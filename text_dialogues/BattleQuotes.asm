@@ -408,13 +408,6 @@ cohenboss
 .byte WaitForA
 .byte EndText
 
-reinhardtboss
-.text "This must be fate..."
-.byte NewLine
-.text "Forgive me..."
-.byte WaitForA
-.byte EndText
-
 coulterboss
 .text "Heh, heh, heh..."
 .byte NewLine
@@ -424,40 +417,30 @@ coulterboss
 .byte WaitForA
 .byte EndText
 
-alphandboss
-.text "You!"
+dryasboss
+.text "Now then..."
 .byte NewLine
-.text "How did you make it this far?!"
+.text "Show me what you've got!"
 .byte WaitForA
 .byte EndText
 
-fadenboss
-.text "Witness the fury"
-.byte NewLine
-.text "of the Knights of Munster,"
-.byte NewLine
-.text "you damned rebels!"
+beowolfboss
+.text "Let's get to work."
 .byte WaitForA
 .byte EndText
 
-veldboss
-.text "Heh, heh, heh..."
-.byte NewLine
-.text "You dare to cross me?"
-.byte NewLine
-.text "Don't you know the power I wield?"
-.byte WaitForA
-.byte ScrollText
-.text "Let me show you just what"
-.byte NewLine
-.text "a grave mistake you've made!"
+ardenboss
+.text "I'm strong, I'm tough... but I ain't slow!"
 .byte WaitForA
 .byte EndText
 
-; Unused
+eldiganboss
+.text "No mercy!"
+.byte WaitForA
+.byte EndText
 
-ishtarboss
-.text "Behold the power of House Friege!"
+quanboss
+.text "I will not lose!"
 .byte WaitForA
 .byte EndText
 

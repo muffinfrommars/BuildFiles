@@ -83,15 +83,11 @@ eventChapter1Events ; FD/8000
 		
 		CALL_ASM_SKIPPABLE rlEventEngineCancelFading, $0000
 
-		macroSetAllCharacterByte structCharacterDataRAM.Fatigue, 0
-
 		CALL_ASM_LOOP $83ACEA, $0000
 
 		macroSetAllCharacterTurnStatus (TurnStatusUnknown1 | TurnStatusHidden)
 
 		macroUnsetAllCharacterTurnStatus (TurnStatusGrayed | TurnStatusMovementStar | TurnStatusMoved)
-
-		PLAY_SOUND_BYTE $4A
 
 		STORE_LONG lEventEngineUnitGroupPointer, eventChapter1Data._AedCutscene
 		CALL_ASM_LOOP rlASMCLoadUnitGroup, $0000
@@ -112,6 +108,8 @@ eventChapter1Events ; FD/8000
 		FADE_IN $02
 
 		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, INIDISP_Setting(False, 15)
+
+		PLAY_SOUND_BYTE $4A
 
 		DIALOGUE aedethlyn1
 		YIELD
@@ -199,7 +197,6 @@ eventChapter1Events ; FD/8000
 		FADE_OUT $02
 		YIELD
 
-
 		macroRemoveUnit Quan
 		macroRemoveUnit Travant
 		macroRemoveUnit ThraciaDracorider
@@ -222,7 +219,14 @@ eventChapter1Events ; FD/8000
 		macroRemoveUnit ThraciaDracoknight1
 		macroRemoveUnit ThraciaDracoknight1
 
-		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, INIDISP_Setting(False, 15)
+		PLAY_SOUND_WORD $00E0
+		PAUSE_SKIPPABLE 32
+		YIELD
+
+		HALT_UNTIL_WORD_SKIPPABLE aUnknown0004BA, $0000
+
+		YIELD
+
 
 		CALL_ASM_SKIPPABLE rlUnknown8C9E22, $0000
 		CALL_ASM_SKIPPABLE $83FBDC, $0000
@@ -232,7 +236,7 @@ eventChapter1Events ; FD/8000
 
 		CALL_ASM_SKIPPABLE $849485, $0000
 		CALL_ASM_SKIPPABLE $9A98CF, $0000
-
+	
 		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, $01
 
 		STORE_WORD bBuf_INIDISP, $0000
@@ -240,20 +244,24 @@ eventChapter1Events ; FD/8000
 
 		CALL_ASM_SKIPPABLE rlEventEngineCancelFading, $0000
 
-
-		SET_CAMERA [1, 1]
-
 		STORE_LONG lEventEngineUnitGroupPointer, eventChapter1Data._FinnandGlade
 		CALL_ASM_LOOP rlASMCLoadUnitGroup, $0000
 		YIELD_UNK
 		YIELD
 
+		SCROLL_CAMERA_SPEED [1, 1], 4
+		YIELD
+		
 		CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog, $0000
 
-		PAUSE_SKIPPABLE 5
+		FADE_IN $02
+
+		STORE_BYTE bBuf_INIDISP, $00
+
+		PAUSE_SKIPPABLE 60
 		YIELD
 
-		FADE_IN $04
+		STORE_BYTE bBuf_INIDISP, $80
 
 		macroChapterTitlePopup ch2titlename 
 
@@ -265,19 +273,9 @@ eventChapter1Events ; FD/8000
 		WAIT_MOVE
 		YIELD
 
-		LOAD1 eventChapter2Data._PrisonerGuardsGroup
-		WAIT_MOVE
-		YIELD
+		macroSetAllCharacterByte structCharacterDataRAM.Fatigue, 0
 
-		LOAD1 eventChapter2Data._EnemyGroup1
-		WAIT_MOVE
-
-		LOAD1 eventChapter2Data._EnemyGroup2
-		WAIT_MOVE
-		YIELD
-
-		CALL_ASM_LOOP $83ACEA, $0000
-	END3
+		END3
 
 	_EthlynDeathMovestring ; FD/832D
 		MS_DEATH_EFFECT

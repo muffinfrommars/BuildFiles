@@ -43,3 +43,24 @@ canimated   .binary "castleanimations.bin"
 
 ;temple tileset related info
 
+
+* = $4B1BA2 
+.logical lorom($4B1BA2, 1)
+
+ttiles   .binary "templeTiles.dat.fe4"
+
+.here
+
+* = $4B63BB
+.logical lorom($4B63BB, 1)
+
+ttileset   .binary "templeTileset.dat.fe4"
+
+.here
+
+* = $3A8000
+.logical lorom($3A8000, 1)
+
+tanimated   .binary "templeanimations"
+
+.here

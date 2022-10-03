@@ -46,7 +46,6 @@ ReinkochBattleQuote,Reinkoch,AnyChapter,None,reinkochboss
 ShannamBattleQuote,Shannam,AnyChapter,None,shannamboss
 PalmanBattleQuote,Palman,AnyChapter,None,palmanboss
 AmaldaBattleQuote,Amalda,AnyChapter,None,amaldaboss
-IshtarBattleQuote,Ishtar,AnyChapter,None,ishtarboss
 BharatBattleQuote,Bharat,AnyChapter,None,bharatboss
 ConomorBattleQuote,Conomor,AnyChapter,None,conomorboss
 MannheimBattleQuote,Mannheim,AnyChapter,None,gustavboss
@@ -57,9 +56,11 @@ SeimetzBattleQuote,Seimetz,AnyChapter,None,seimetzboss
 ZaunBattleQuote,Zaun,AnyChapter,None,zaunboss
 CohenBattleQuote,Cohen,AnyChapter,None,cohenboss
 SaiasBattleQuote2,Saias,AnyChapter,None,saiasboss
-ReinhardtBattleQuote,Reinhardt,AnyChapter,None,reinhardtboss
 CoulterBattleQuote,Coulter,AnyChapter,None,coulterboss
-AlphandBattleQuote,Alphand,AnyChapter,None,alphandboss
-FadenBattleQuote,Faden,AnyChapter,None,fadenboss
 RaydrikChp24BattleQuote,RaydrikChp24,AnyChapter,None,raydrikboss
-VeldBattleQuote,Veld,AnyChapter,None,veldboss
+DryasBattleQuote,Dryas,AnyChapter,None,dryasboss
+BeowolfBattleQuote,Beowolf,AnyChapter,None,beowolfboss
+ArdenBattleQuote,Arden,AnyChapter,None,ardenboss
+QuanBattleQuote,Quan,AnyChapter,None,quanboss
+EldiganBattleQuote,Eldigan,AnyChapter,None,eldiganboss
+SigurdBattleQuote,Sigurd,AnyChapter,None,sigurdboss

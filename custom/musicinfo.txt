@@ -190,7 +190,7 @@ B7	Julia's Theme
 B8	Seliph's Theme	
 B9	Time of Sadness 1
 BA	Time of Sadness 2 (GAME OVER...)
-BB	~~Gold Axe, Silver Axe ♪♪~~ Missing / Treat as Null 
+BB	
 BC	Embracing Destiny
 BD	Augustira Palace
 BE	Royal Palace of Silesse 
