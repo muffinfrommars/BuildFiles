@@ -56,3 +56,6 @@ tools/YY-CHR/*.exe
 tools/YY-CHR/*.fra
 tools/YY-CHR/*.ini
 tools/YY-CHR/*.pal
+
+custom/story/*.txt
+custom/musicpatch/

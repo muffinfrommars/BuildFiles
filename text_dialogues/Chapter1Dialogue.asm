@@ -212,72 +212,27 @@ ch1ending
 	
 	.byte EndText
 	
-ch1endingnoeyvel
+battleFinn
 
-	.byte Right_Slot
-    .word LoadPortrait
-    .word leif_portrait2
-	.byte $09 ; font 9(always use font 9)	
-	.text "Nanna! Mareeta! Where are you?!"
+	.word $1400
+	.byte $00
+	.text "...Hyah!"
+	.word PauseDialogue
+	.byte $5A
+
+	.byte EndText
+
+
+battleGlade
+
+	.text "...ugh!"
 	.byte NewLine
-	.text "Please, answer me!"
-	.byte WaitForA
-		
-	.byte Left_slot
-    .word LoadPortrait
-    .word youngman_portrait
-	.text "L-Lord Leif!"
+	.text "...Oohhh..."
 	.byte NewLine
-	.text "Gods' breath, are you a sight fer sore eyes!"
-	.byte NewLine
-	.text "I...wish I had better news fer you."
-	.byte WaitForA
-	.byte ScrollText
-	.text "They came fer Lady Nanna, they did,"
-	.byte NewLine
-	.text "and we couldn't do nuthin' to stop 'em!"
-	.byte WaitForA
-	
-	.byte Right_slot
-	.byte ScrollText
-	.text "Nanna? What happened to Nanna?"
-	.byte WaitForA
-	
-	.byte Left_slot
-	.byte ScrollText
-	.text "The Empire took 'er, sure as you're standin'"
-	.byte NewLine
-	.text "here. Mareeta tried to break her loose,"
-	.byte NewLine
-	.text "but only got captured 'erself."
-	.byte WaitForA
-	.byte ScrollText
-	.text "They both wore chains, last I saw."
-	.byte WaitForA
-	
-	.byte Right_slot
-	.byte ScrollText
-	.text "Where were they taken?"
-	.byte WaitForA
-	
-	.byte Left_slot
-	.byte ScrollText
-	.text "Don't rightfully know, Lord Leif. One of them"
-	.byte NewLine
-	.text "soldiers said somethin' about headin' back"
-	.byte NewLine
-	.text "to Munster, but nuthin' more specific'n that."
-	.byte WaitForA
-	
-	.byte Right_slot
-	.byte ScrollText
-	.text "Munster... Then that's where I'm headed, too."
-	.byte NewLine
-	.text "I'll bring everyone home: Nanna, Mareeta,"
-	.byte NewLine
-	.text "and the Commander!"
-	.byte WaitForA
-	
+	.text "Stop, stop!"
+	.word PauseDialogue
+	.byte $5A
+
 	.byte EndText
 	
 ch1wm1
