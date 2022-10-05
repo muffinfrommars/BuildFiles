@@ -68,10 +68,7 @@ eventChapter1Events ; FD/8000
 
 		macroUnsetAllCharacterTurnStatus (TurnStatusGrayed | TurnStatusMovementStar | TurnStatusMoved)
 
-		STORE_LONG lEventEngineUnitGroupPointer, eventChapter1Data._AedCutscene
-		CALL_ASM_LOOP rlASMCLoadUnitGroup, $0000
-		YIELD_UNK
-		YIELD
+		macroASMCLoadUnitGroup eventChapter1Data._AedCutscene
 
 		SCROLL_CAMERA_CHAR Ethlyn
 		SET_CAMERA_SPEED 5
@@ -91,10 +88,7 @@ eventChapter1Events ; FD/8000
 		DIALOGUE aedethlyn1
 		YIELD
 
-		STORE_LONG lEventEngineUnitGroupPointer, eventChapter1Data._AedCutscene2
-		CALL_ASM_LOOP rlASMCLoadUnitGroup, $0000
-		YIELD_UNK
-		YIELD
+		macroASMCLoadUnitGroup eventChapter1Data._AedCutscene2
 
 		CALL_ASM_SKIPPABLE rlClearHDMAArray, $0000
 
@@ -196,24 +190,15 @@ eventChapter1Events ; FD/8000
 		macroRemoveUnit ThraciaDracoknight1
 		macroRemoveUnit ThraciaDracoknight1
 
-		CALL_ASM_SKIPPABLE rlUnknown8C9E22, $0000
-		CALL_ASM_SKIPPABLE $83FBDC, $0000
-		;CALL_ASM_SKIPPABLE $9A9D79, $0000
-
-		STORE_WORD wCurrentChapter, Chapter2
-
-		CALL_ASM_LOOP $849485, $0000
-		CALL_ASM_LOOP $9A98CF, $0000
-
-		STORE_WORD bBuf_INIDISP, $0000
-		STORE_WORD INIDISP, $0000
+		cmacroChangeMap Chapter2
 
 		CALL_ASM_SKIPPABLE rlEventEngineCancelFading, $0000
 
-		STORE_LONG lEventEngineUnitGroupPointer, eventChapter1Data._FinnandGlade
-		CALL_ASM_LOOP rlASMCLoadUnitGroup, $0000
-		YIELD_UNK
-		YIELD
+		macroASMCLoadUnitGroup eventChapter1Data._FinnandGlade
+		
+		macroASMCLoadUnitGroup eventChapter2Data._PracticeFortBoss
+
+		macroSetAllCharacterByte structCharacterDataRAM.Fatigue, 0
 
 		SET_CAMERA [7, 9]
 		
@@ -225,9 +210,6 @@ eventChapter1Events ; FD/8000
 
 		PLAY_SOUND_WORD $00E0
 		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $11
 		YIELD
 
 		STORE_WORD_FROM wEventEngineParameter1, wCurrentChapter
@@ -246,12 +228,6 @@ eventChapter1Events ; FD/8000
 		YIELD
 
 		FADE_IN $04
-
-		LOAD1 eventChapter2Data._PracticeFortBoss
-		WAIT_MOVE
-		YIELD
-
-		macroSetAllCharacterByte structCharacterDataRAM.Fatigue, 0
 
 		END3
 

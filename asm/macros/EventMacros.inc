@@ -206,7 +206,7 @@ macroDialogueWithBackground .macro DialoguePointer, BackgroundID
 
 macroASMCLoadUnitGroup .segment UnitGroupPointer
       STORE_LONG lEventEngineUnitGroupPointer, \UnitGroupPointer
-      CALL_ASM_LOOP rlASMCLoadUnitGroup
+      CALL_ASM_LOOP rlASMCLoadUnitGroup, $0000
       YIELD_UNK
     .endsegment
 

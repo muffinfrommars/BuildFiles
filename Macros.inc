@@ -33,3 +33,5 @@
 .include "asm/macros/Terrain.inc"
 .include "asm/macros/TilesetAnimations.inc"
 .include "asm/macros/Turncount.inc"
+
+.include "custom/asm/CustomEventMacros.inc"

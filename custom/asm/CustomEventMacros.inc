@@ -1,0 +1,12 @@
+cmacroChangeMap .macro Chapter
+		CALL_ASM_SKIPPABLE rlUnknown8C9E22, $0000
+		CALL_ASM_SKIPPABLE $83FBDC, $0000
+
+		STORE_WORD wCurrentChapter, \Chapter
+
+		CALL_ASM_LOOP $849485, $0000
+		CALL_ASM_LOOP $9A98CF, $0000
+
+		STORE_WORD bBuf_INIDISP, $0000
+		STORE_WORD INIDISP, $0000
+	.endm
