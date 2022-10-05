@@ -219,24 +219,33 @@ eventChapter1Events ; FD/8000
 		
 		CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog, $0000
 
-		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, INIDISP_Setting(False, 15)
-
-		STORE_WORD wEventEngineParameter2, $0000
-		CALL_ASM_SKIPPABLE $9AE80A, $0000
-
-		HALT_UNTIL_WORD_SKIPPABLE $7FAA14, $0000
-		YIELD
-
-		STORE_BYTE bBuf_INIDISP, $00
-
-		FADE_IN $04
-
-
-		macroChapterTitlePopup ch2titlename 
+		STORE_WORD wEventEngineCharacterTarget, Finn
+		STORE_WORD wEventEngineParameter1, TurnStatusGrayed
+		CALL_ASM_LOOP rlASMCUnsetUnitTurnStatus, $0000
 
 		PLAY_SOUND_WORD $00E0
 		PAUSE_SKIPPABLE 32
 		YIELD
+
+		SET_MUSIC $11
+		YIELD
+
+		STORE_WORD_FROM wEventEngineParameter1, wCurrentChapter
+		STORE_WORD wEventEngineParameter2, 4
+		CALL_ASM_SKIPPABLE $9A98E6, $0000
+
+		STORE_BYTE $7E41AC, $00
+		HALT_UNTIL_WORD_SKIPPABLE $7FAA14, $0000
+
+		STORE_WORD_FROM wCurrentChapter, wEventEngineParameter1
+
+		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, $0F
+
+		PLAY_SOUND_WORD $00E0
+		PAUSE_SKIPPABLE 32
+		YIELD
+
+		FADE_IN $04
 
 		LOAD1 eventChapter2Data._PracticeFortBoss
 		WAIT_MOVE

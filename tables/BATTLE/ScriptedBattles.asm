@@ -71,7 +71,7 @@ CedAlphandScriptedBattle .dstruct structScriptedBattleSetup, $17, [CedChp23, Pla
 	.byte $80, $01, $00, $38	;First80+Right0;Crit1;0;
 .word $FFFF, $FFFF
 
-FinnGladeScriptedBattle .dstruct structScriptedBattleSetup, $00, [Finn, Player, Fighter, SlimLance, TerrainVillage, [22, 22], 1, 81, 13, 2, 0], [Glade, Enemy, Fighter, SlimLance, TerrainVillage, [24, 24], 1, 89, 15, 3, 0], $09, Finn, cinorsin, Glade, cinhalvan, Chapter2, None
+FinnGladeScriptedBattle .dstruct structScriptedBattleSetup, $00, [Finn, Player, Fighter, SlimLance, TerrainVillage, [22, 22], 1, 81, 13, 2, 0], [Glade, Enemy, Fighter, SlimLance, TerrainVillage, [24, 24], 1, 89, 15, 3, 0], $09, Finn, cinorsin, Glade, cinhalvan, $FFFF, None
 
 	; Rounds
 					   ; Dmg

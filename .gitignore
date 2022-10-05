@@ -58,4 +58,5 @@ tools/YY-CHR/*.ini
 tools/YY-CHR/*.pal
 
 custom/story/*.txt
+custom/story/intro*.txt
 custom/musicpatch/
