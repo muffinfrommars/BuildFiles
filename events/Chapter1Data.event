@@ -41,7 +41,7 @@ eventChapter1Data ; B1/FB37
 
 	_FinnandGlade ; B1/FC0D
 		UNIT Finn, Player, [6, 9], [6, 9], Xavier, [IronLance, Vulnerary], 1, False, [$00, $00, $00, $00]
-		UNIT Glade, Player, [8, 9], [8, 9], Xavier, [Javelin, SlimLance, Vulnerary], 1, False, [$00, $00, $00, $00]
+		UNIT Glade, Player, [7, 9], [7, 9], Xavier, [Javelin, SlimLance, Vulnerary], 1, False, [$00, $00, $00, $00]
 	UNIT
 
 	_ducttape ; B1/FC2
