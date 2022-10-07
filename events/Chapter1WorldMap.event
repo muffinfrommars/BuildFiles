@@ -33,14 +33,14 @@ eventChapter1WorldMapEvents ; E7/E010
 	STORE_WORD $7EA93F, $0001
 	CALL_ASM_SKIPPABLE $91CA46, $0000
 
-	STORE_LONG lEventEngineLongParameter, ch1wm1
+	STORE_LONG lEventEngineLongParameter, ch1wm6
 	CALL_ASM_SKIPPABLE rlASMCWorldMapDialogue, $0000
 
 	HALT_UNTIL_WORD_SKIPPABLE wUnknown0017E9, $0000
 
 	PAUSE_SKIPPABLE 32
 
-	STORE_LONG lEventEngineLongParameter, ch1wm2
+	STORE_LONG lEventEngineLongParameter, ch1wm6
 	CALL_ASM_SKIPPABLE rlASMCWorldMapDialogue, $0000
 
 	HALT_UNTIL_WORD_SKIPPABLE wUnknown0017E9, $0000
@@ -71,7 +71,7 @@ eventChapter1WorldMapEvents ; E7/E010
 	STORE_WORD $7EA93F, $0001
 	CALL_ASM_SKIPPABLE $91CA46, $0000
 
-	STORE_LONG lEventEngineLongParameter, ch1wm3
+	STORE_LONG lEventEngineLongParameter, ch1wm6
 	CALL_ASM_SKIPPABLE rlASMCWorldMapDialogue, $0000
 
 	HALT_UNTIL_WORD_SKIPPABLE wUnknown0017E9, $0000
@@ -109,7 +109,7 @@ eventChapter1WorldMapEvents ; E7/E010
 	STORE_WORD $7EA93F, $0001
 	CALL_ASM_SKIPPABLE $91CA46, $0000
 
-	STORE_LONG lEventEngineLongParameter, ch1wm4
+	STORE_LONG lEventEngineLongParameter, ch1wm6
 	CALL_ASM_SKIPPABLE rlASMCWorldMapDialogue, $0000
 
 	HALT_UNTIL_WORD_SKIPPABLE wUnknown0017E9, $0000
@@ -143,7 +143,7 @@ eventChapter1WorldMapEvents ; E7/E010
 	STORE_WORD $7EA93F, $0001
 	CALL_ASM_SKIPPABLE $91CA46, $0000
 
-	STORE_LONG lEventEngineLongParameter, ch1wm5
+	STORE_LONG lEventEngineLongParameter, ch1wm6
 	CALL_ASM_SKIPPABLE rlASMCWorldMapDialogue, $0000
 
 	HALT_UNTIL_WORD_SKIPPABLE wUnknown0017E9, $0000

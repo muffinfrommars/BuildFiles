@@ -135,233 +135,269 @@ ch1northerncave
 	
 ch1ending
 
-	.byte Right_slot
-    .word LoadPortrait
-    .word leif_portrait2
-	.byte $09 ; font 9(always use font 9)
-	.text "Nanna! Mareeta! Where are you?!"
-	.byte NewLine
-	.text "Please, answer me!"
-	.byte WaitForA
 	
-	.byte Left_slot
-    .word LoadPortrait
-    .word eyvel_portrait
-	.text "Little Nan, Mareeta..."
-	.byte NewLine
-	.text "Raydrik must've taken 'em."
-	.byte WaitForA
-	
-	.byte Right_Slot
-	.byte ScrollText
-	.text "What?! That means...they were taken"
-	.byte NewLine
-	.text "to Munster, right?"
-	.byte WaitForA
-	
-	.byte Left_slot
-	.byte ScrollText
-	.text "Yeah—as bargaining chips, in case Weismann"
-	.byte NewLine
-	.text "couldn't finish the job. It's the sort of thing"
-	.byte NewLine
-	.text "Raydrik would pull, all right."
-	.byte WaitForA
-	
-	.byte Right_Slot
-	.byte ScrollText
-	.text "Gods' breath..."
-	.byte NewLine
-	.text "Commander, we have to give chase!"
-	.byte NewLine
-	.text "The two of them are counting on us!"
-	.byte WaitForA
-	
-	.byte Left_slot
-	.byte ScrollText
-	.text "Now look here, Little Leif—" ;interrupt
-	.byte WaitForA
-	
-	.byte Right_Slot
-	.byte ScrollText
-	.text "Commander, you yourself said"
-	.byte NewLine
-	.text "I'm not a child anymore."
-	.byte WaitForA
-	.byte ScrollText
-	.text "Nanna and Mareeta were taken captive"
-	.byte NewLine
-	.text "because of me—and I refuse to let anyone"
-	.byte NewLine
-	.text "suffer in my place."
-	.byte WaitForA
-	.byte ScrollText
-	.text "I will never again let someone sacrifice"
-	.byte NewLine
-	.text "their life in exchange for mine."
-	.byte WaitForA
-	
-	.byte Left_slot
-	.byte ScrollText
-	.text "...I understand. We leave at dawn, then."
-	.byte NewLine
-	.text "I won't lie, Little Lord: this is gonna get rough."
-	.byte NewLine
-	.text "Get some rest while you can."
-	.byte WaitForA
 	
 	.byte EndText
 	
-battleFinn
+battleGlade1
 
-	.word $1400
-	.byte $00
 	.text "...Hyah!"
-	.word PauseDialogue
-	.byte $5A
+	.byte WaitForA
 
 	.byte EndText
 
 
-battleGlade
+battleGlade2
 
 	.text "...ugh!"
-	.byte NewLine
+	.byte WaitForA
+	.byte ScrollText
 	.text "...Oohhh..."
 	.byte NewLine
 	.text "Stop, stop!"
-	.word PauseDialogue
-	.byte $5A
+	.byte WaitForA
 
 	.byte EndText
 	
-ch1wm1
+introFinnGlade1
 
-	.text "Barely escaping the burning of Castle Leonster"
+	.byte Right_slot
+    .word LoadPortrait
+    .word FinnPortrait
+	.byte $09 ; font 9(always use font 9)
+	.text "Glade!"
 	.byte NewLine
-	.text "with his life, "
+	.text "Are you alright?!"
 	.byte WaitForA
-	
-	.word LoadPortraitalt_1
-	.long LoadPortraitalt_2
-	.word $0001 ;leify-right
-	.word $0406 ;y then x
-	.text "the young Prince Leif was looked"
+
+	.byte Left_slot
+    .word LoadPortrait
+    .word GladePortrait
+	.text "...Gotcha!"
+
+	.byte Right_slot
+	.byte ScrollText
+	.text "Huh?"
+	.byte WaitForA
+
+	.word PlayMusic
+	.byte $4C
+
+	.byte Left_slot
+	.byte ScrollText
+	.text "The lack of faith hurts!"
 	.byte NewLine
-	.text "after by Finn, his knight and retainer."
-	.word LoadPortraitalt_1
-	.long LoadPortraitalt_2
-	.word $0102 ;finn
-	.word $0C10 ;y then x
+	.text "Did you really think I'd go down"
+	.byte NewLine
+	.text "so easily? "
+	.byte WaitForA
+
+	.byte Right_slot
+	.byte ScrollText
+	.text "Glade, please..."
+	.byte NewLine
+	.text "There isn't much daylight left. I'd rather not"
+	.byte NewLine
+	.text "waste what remaining time we have left fooling a-"
+
+	.byte Left_slot
+	.byte ScrollText
+	.text "Oh gods, can you relax already? You've"
+	.byte NewLine
+	.text "been at this for weeks. Unless you feel"
+	.byte NewLine
+	.text "like burning out, I'd say a break is in order."
+	.byte WaitForA
+
+	.byte Right_slot
+	.byte ScrollText
+
+	.byte Left_slot
+	.byte ScrollText
+	.text "At any rate, I think you'll be fine."
+	.byte NewLine
+	.text "I haven't seen any of those pampered pretty boys"
+	.byte NewLine
+	.text "training half as hard as you."
+	.byte WaitForA
+
+	.byte Right_slot
+	.text "I suppose you're right..."
+	.byte NewLine
+	.text "But, what about you? Are you sure you're ready?"
 	.byte WaitForA
 	.byte ScrollText
+	.text "I know a lot of the generals have their eyes on "
+	.byte NewLine
+	.text "you, anticipating your performance. You've got"
+	.byte NewLine
+	.text "quite the pair of shoes to fill in."
+	.byte WaitForA
+
+	.byte Left_slot
+	.byte ScrollText
+	.text "*scoff* Finn, I come and hang out with you to"
+	.byte NewLine
+	.text "have a good time. If I wanted a lecture, I'd be"
+	.byte NewLine
+	.text "with my father right now."
+	.byte ScrollText
+	.text "You're sounding more like him every day."
+	.byte WaitForA
+
+	.byte Right_slot
+	.byte ScrollText
+	.text "Sorry... I just... This is important to me."
+	.byte NewLine
+	.text "And, of course, I'd also like to see you do well."
+	.byte WaitForA
+	.byte ScrollText
+
+	.word PlayMusic
+	.byte $4B
+
+	.byte Left_slot
+	.byte ScrollText
+	.text "Hey..."
+	.byte NewLine
+	.text "I know the odds are stacked against you, but"
+	.byte NewLine
+	.text "you're a natural born survivor."
+	.byte ScrollText
+	.text "I'd wager you could survive a week or more in"
+	.byte NewLine
+	.text "those damned Thracian mountains with nothing but"
+	.byte NewLine
+	.text "the clothes on your back."
+	.byte WaitForA
+
+	.byte ScrollText
+	.text "With the higher-ups oogling at recruits born from"
+	.byte NewLine
+	.text "noble houses, they'll be that much more shocked"
+	.byte NewLine
+	.text "when they see you rise to the occasion."
+	.byte WaitForA
+	.byte ScrollText
+
+	.byte Right_slot
+	.text "You think so?"
+	.byte NewLine
+	.text "That really means a lot, coming from you."
+	.byte WaitForA
+
+	.byte EndText
+	
+introFinnGlade2
+
+	.byte Right_slot
+    .word LoadPortrait
+    .word FinnPortrait
+	.text "Ah, I should pack my things..."
+	.byte NewLine
+	.text "I have kitchen duty this week, the children"
+	.byte NewLine
+	.text "will fall behind if I'm not supervising them."
+	.byte WaitForA
+
+	.byte Left_slot
+    .word LoadPortrait
+    .word GladePortrait
+	.text "Seriously?"
+	.byte NewLine
+	.text "Couldn't they have given you this week"
+	.byte NewLine
+	.text "off, given everything?"
+	.byte WaitForA
+
+	.byte Right_Slot
+	.byte ScrollText
+	.text "They did, actually."
+	.byte NewLine
+	.text "But, I turned down the offer."
+	.byte WaitForA
+
+	.byte Left_Slot
+	.byte ScrollText
+	.text "...You turned down a break?"
+	.byte WaitForA
+	.byte ScrollText
+	.text "Alright, I'm getting out of here before"
+	.byte NewLine
+	.text "any more of your craziness rubs off on me."
+	.byte NewLine
+	.text "Until tomorrow!"
+	.byte WaitForA
+	
 	
 	.byte EndText
 	
-ch1wm2
+introFinnGlade3
 
-	.text "Together with Nanna, "
-	.word LoadPortraitalt_1
-	.long LoadPortraitalt_2
-	.word $0213 ;nanna
-	.word $0C03 ;y then x
-	.byte WaitForA
-	.text "a young noblewoman"
+	.byte Right_slot
+    .word LoadPortrait
+    .word FinnPortrait
+	.text "See you tomorrow."
 	.byte NewLine
-	.text "under Finn's care, the trio fled pursuers"
-	.byte WaitForA
-	
-	.byte NewLine
-	.text "sent by the conquerors of North Thracia:"
-	.byte NewLine
-	.text "the Grannvale Empire, which lay to the west."
-	.byte WaitForA
-	
-	.word ClearPortraitalt
-	.long $82937A
-	.word $0000
+	.text "Make sure to wake up on time!"
+
+	.byte Left_Slot
+	.word LoadPortrait
+    .word GladePortrait
 	.byte ScrollText
-	.word ClearPortraitalt
-	.long $82937A
-	.word $0001
-	.byte ScrollText
-	.word ClearPortraitalt
-	.long $82937A
-	.word $0002
-	
-	.text "Yet Finn proved stronger than those who hunted"
-	.byte NewLine
-	.text "them, and the three made their way to the cities"
+	.text "Yeah, Yeah!"
 	.byte WaitForA
-	.byte ScrollText
-	
+
 	.byte EndText
 	
-ch1wm3
+introDryas1
 
-	.text "of Ulster"
+	.byte Right_slot
+    .word LoadPortrait
+    .word FinnPortrait
+	.text "..."
 	.byte WaitForA
-	.byte ScrollText
-	
-	.byte EndText
-	
-ch1wm4
 
-	.text "and Tahra, posing as common vagrants."
+	.byte Left_Slot
+	.word LoadPortrait
+    .word GladePortrait
+	.text "Hmph."
+	.byte NewLine
+	.text "Not often does a recruit arrive on scene"
+	.byte NewLine
+	.byte "earlier than myself."
 	.byte WaitForA
+	.byte ClearPortrait
+
+	.byte Right_slot
+	.byte ClearPortrait
+
+	.byte Left_Slot
+	.byte LoadPortrait
+	.byte FinnPortrait
 	.byte ScrollText
+	.text "Ah!"
+	.byte WaitForA
+
+	.word PlayMusic
+	.byte $32
+
+	.byte Right_slot
+	.word LoadPortrait
+	.word DryasPortrait
+	.text "You ARE here for the trials, yes?"
+	.byte WaitForA
+
+	.byte Left_Slot
+	.byte ScrollText
+	.text ""
+
 	
 	.byte EndText
 	
 ch1wm5
 
-	.text "Eventually, they drifted into Fiana,"
-	.byte NewLine
-	.text "a small village on Thracia's eastern coast."
-	.byte WaitForA
-	.byte ScrollText
 	
-	.text "Fiana was an independent community"
-	.byte NewLine
-	.text "with its own militia, "
-	.byte WaitForA
-	.text "the Fiana Freeblades,"
-	.byte NewLine
-	.text "led by the swordswoman Eyvel."
-	.word LoadPortraitalt_1
-	.long LoadPortraitalt_2
-	.word $0005 ;eyvel
-	.word $080B ;y then x
-	.byte WaitForA
-	.byte ScrollText
-	
-	.text "Eyvel welcomed Leif's group"
-	.byte NewLine
-	.word LoadPortraitalt_1
-	.long LoadPortraitalt_2
-	.word $0101 ;leify-left
-	.word $0817 ;y then x
-	.text "as if they were her own kin."
-	.byte WaitForA
-	.byte ScrollText
-	
-	.text "Under her watchful eye, the deposed prince"
-	.byte NewLine
-	.text "spent his childhood in Fiana, "
-	.byte WaitForA
-	.text "growing into"
-	.byte NewLine
-	.text "maturity alongside youths of common birth."
-	.byte WaitForA
-	
-	.word ClearPortraitalt
-	.long $82937A
-	.word $0000
-	.byte ScrollText
-	.word ClearPortraitalt
-	.long $82937A
-	.word $0001
-	.byte ScrollText
 	
 	.byte EndText
 	

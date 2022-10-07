@@ -3,14 +3,9 @@
 * = $546950
 .logical lorom($546950, 1)
 
-aedcutscene    .binary "aedcutscene.bin.fe4"
-
-.here
-
-* = $546C77
-.logical lorom($546C77, 1)
-
-village    .binary "village.bin.fe4"
+    aedcutscene    .binary "aedcutscene.bin.fe4"
+    village        .binary "village.bin.fe4"
+    overworld      .binary "overworld.bin.fe4"
 
 .here
 

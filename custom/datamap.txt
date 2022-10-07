@@ -1,3 +1,4 @@
+0D7E28  -  0D7FFF originally freespace, scripted battles will go here. ~8 More battles can fit atm
 3E7758 - 3E7C10 - originally freespace, custom map palettes inserted here
 476743 - 480B12 - originally freespace, tileset data here
 4ABF36 - 4FFFFF - originally freespace, more tileset data here

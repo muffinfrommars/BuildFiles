@@ -4,7 +4,7 @@ aScriptedBattleTable ; 9A/E802
 	.addr MareetaShannamScriptedBattle
 	.addr NannaLoptrianScriptedBattle
 	.addr CedAlphandScriptedBattle
-	.addr FinnGladeScriptedBattle 
+	.addr FinnGladeScriptedBattle
 	.addr OsianHalvanScriptedBattle
 	.addr OsianHalvanScriptedBattle
 	.addr OsianHalvanScriptedBattle
@@ -64,17 +64,23 @@ NannaLoptrianScriptedBattle .dstruct structScriptedBattleSetup, $00, [Nanna, Pla
 	.byte $00, $01, $00, $20	;Right0;Crit1;0;
 .word $FFFF, $FFFF
 
-CedAlphandScriptedBattle .dstruct structScriptedBattleSetup, $17, [CedChp23, Player, Sage, Forseti, TerrainCastle, [$FF, 32], 17, 99, 37, 17, 8], [Alphand, Enemy, DarkBishop, $FFFF, TerrainCastle, [56, 56], 13, 67, 31, 12, 8], $09, Halvan, None, Halvan, None, $FFFF, $9A9B45
+CedAlphandScriptedBattle .dstruct structScriptedBattleSetup, $17, [CedChp23, Player, Sage, Forseti, TerrainCastle, [$FF, 32], 17, 99, 37, 17, 8], [Alphand, Enemy, DarkBishop, $FFFF, TerrainCastle, [56, 56], 13, 67, 31, 12, 8], $09, Halvan, None, Halvan, None, $FFFF, None
 
 	; Rounds
 					   ; Dmg
 	.byte $80, $01, $00, $38	;First80+Right0;Crit1;0;
 .word $FFFF, $FFFF
 
-FinnGladeScriptedBattle .dstruct structScriptedBattleSetup, $00, [Finn, Player, Soldier, $FFFF, TerrainVillage, [22, 22], 1, 81, 13, 2, 0], [Glade, Enemy, Soldier, $FFFF, TerrainVillage, [24, 24], 1, 89, 15, 3, 0], $09, Finn, battleFinn, Glade, battleGlade, $FFFF, None
+
+* = $9AFE28
+.logical lorom($D7E28, 1)
+
+FinnGladeScriptedBattle .dstruct structScriptedBattleSetup, $00, [Glade, Enemy, Soldier, Javelin, TerrainVillage, [22, 22], 1, 81, 13, 2, 0], [Finn, Player, Soldier, Javelin, TerrainVillage, [24, 24], 1, 89, 15, 3, 0], $0A, Glade, battleGlade1, Glade, battleGlade2, $FFFF, None
 
 	; Rounds
 					   ; Dmg
-	.byte $80, $02, $00, $0C	;First80+Right0;Miss2;0;
-	.byte $00, $01, $00, $20	;Right0;Crit1;0;
+	.byte $80, $02, $00, $0C	;Right start, miss
+	.byte $02, $11, $00, $38	;crit + astra + hit
 .word $FFFF, $FFFF
+
+.here
