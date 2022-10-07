@@ -190,23 +190,23 @@ eventChapter1Events ; FD/8000
 		macroRemoveUnit ThraciaDracoknight1
 		macroRemoveUnit ThraciaDracoknight1
 
-		cmacroChangeMap Chapter2
+		cmacroChangeMapSkippable Chapter2
 
 		CALL_ASM_SKIPPABLE rlEventEngineCancelFading, $0000
 
-		macroASMCLoadUnitGroup eventChapter1Data._FinnandGlade
+		macroASMCLoadUnitGroup eventChapter1Data._FinnGlade1
 		
-		macroASMCLoadUnitGroup eventChapter2Data._PracticeFortBoss
-
 		macroSetAllCharacterByte structCharacterDataRAM.Fatigue, 0
 
-		SET_CAMERA [7, 9]
+		SET_CAMERA [7, 10]
+
+		PAUSE_SKIPPABLE 10
+		YIELD
 		
 		CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog, $0000
+		YIELD
 
-		STORE_WORD wEventEngineCharacterTarget, Finn
-		STORE_WORD wEventEngineParameter1, TurnStatusGrayed
-		CALL_ASM_LOOP rlASMCUnsetUnitTurnStatus, $0000
+		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, $0F
 
 		PLAY_SOUND_WORD $00E0
 		PAUSE_SKIPPABLE 32
@@ -223,11 +223,71 @@ eventChapter1Events ; FD/8000
 
 		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, $0F
 
+		SET_CAMERA [7, 10]
+
+		MOVE_UNIT None, [9, 9], [6, 9], 1, None
+		YIELD_UNK
+
+		DIALOGUE introFinnGlade1
+		YIELD
+
+		DIALOGUE introFinnGlade2
+		YIELD
+
+		MOVE_UNIT None, [5, 9], [7, 4], 1, None
+		YIELD_UNK
+
+		PAUSE_SKIPPABLE 15
+		YIELD
+
+		DIALOGUE introFinnGlade3
+		YIELD
+
+		MOVE_UNIT None, [7, 4], [8, 1], 1, None
+		YIELD_UNK
+
+		macroRemoveUnit Glade
+		YIELD_UNK
+
+		WAIT_MOVE
+		YIELD
+
+		MOVE_UNIT None, [6, 9], [8, 18], 1, None
+
+		PAUSE_SKIPPABLE 25
+		YIELD
+
 		PLAY_SOUND_WORD $00E0
 		PAUSE_SKIPPABLE 32
 		YIELD
 
-		FADE_IN $04
+		FADE_OUT $02
+		YIELD
+
+		macroRemoveUnit Finn
+
+		cmacroChangeMap Chapter24x
+
+		CALL_ASM_SKIPPABLE rlEventEngineCancelFading, $0000
+
+		macroASMCLoadUnitGroup eventChapter1Data._Finn1
+		
+		macroSetAllCharacterByte structCharacterDataRAM.Fatigue, 0
+
+		SET_CAMERA [14, 12]
+
+		PAUSE_SKIPPABLE 60
+		YIELD
+		
+		CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog, $0000
+		YIELD
+
+		MOVE_UNIT None, [18, 14], [14, 12], 1, None
+
+		macroDialogueWithBackground introDryas1, 2
+
+		CALL_ASM_LOOP rlASMCDialogueWithBGEnd, $0000
+		YIELD
 
 		END3
 
