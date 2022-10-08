@@ -360,44 +360,95 @@ introDryas1
 
 	.byte Left_Slot
 	.word LoadPortrait
-    .word GladePortrait
-	.text "Hmph."
+    .word XavierPortrait
+	.text "Hah."
 	.byte NewLine
 	.text "Not often does a recruit arrive on scene"
 	.byte NewLine
-	.byte "earlier than myself."
+	.text "earlier than myself."
 	.byte WaitForA
-	.byte ClearPortrait
+	.word ClearPortrait
 
 	.byte Right_slot
-	.byte ClearPortrait
+	.word ClearPortrait
 
 	.byte Left_Slot
-	.byte LoadPortrait
-	.byte FinnPortrait
+	.word LoadPortrait
+	.word FinnPortrait
 	.byte ScrollText
 	.text "Ah!"
-	.byte WaitForA
 
 	.word PlayMusic
-	.byte $32
+	.byte $29
 
 	.byte Right_slot
 	.word LoadPortrait
-	.word DryasPortrait
+	.word XavierPortrait
 	.text "You ARE here for the trials, yes?"
 	.byte WaitForA
 
 	.byte Left_Slot
 	.byte ScrollText
-	.text ""
+	.text "Y-yes, Sir. Pardon me, Sir. I was... just taking"
+	.byte NewLine
+	.text "in a bit of the scenery."
 
-	
+	.byte right_slot
+	.byte ScrollText
+	.text "Aye. It is rather peaceful up here."
+	.byte NewLine
+	.text "Relish it. Moments such as these are scarcely"
+	.byte NewLine
+	.text "available should an individual pass today's tests."
+	.byte ScrollText
+	.text "What's your name, lad?"
+	.byte WaitForA
+	.byte ScrollText
+
+	.byte Left_Slot
+	.byte ScrollText
+	.text "My name is Finn, Sir. Just... Finn."
+	.byte WaitForA
+	.byte ScrollText
+
+	.byte right_slot
+	.text "You're an orphan boy, yes?"
+	.byte NewLine
+	.text "You've got the height of a soldier."
+	.byte NewLine
+	.text "I've seen you around there, hard to miss."
+	.byte WaitForA
+
+	.byte ScrollText
+	.text "As for muscle..."
+	.byte NewLine
+	.text "Ah, no matter. Let's see how today goes."
+	.byte WaitForA
+
 	.byte EndText
 	
-ch1wm5
+introDryas2
 
 	
+	.byte right_slot
+	.word LoadPortrait
+	.word XavierPortrait
+	.text "Good."
+	.byte NewLine
+	.text "It looks like the others have arrived."
+	.byte WaitForA
+	.byte ScrollText
+	.text "I expect good things today from you, Finn."
+	.byte WaitForA
+	.word ClearPortrait
+	.word RetractBox
+
+	.byte Left_Slot
+	.word LoadPortrait
+	.word FinnPortrait
+	.text "..."
+	.byte NewLine
+	.byte WaitForA
 	
 	.byte EndText
 	
