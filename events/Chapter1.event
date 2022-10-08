@@ -271,6 +271,8 @@ eventChapter1Events ; FD/8000
 		CALL_ASM_SKIPPABLE rlEventEngineCancelFading, $0000
 
 		macroASMCLoadUnitGroup eventChapter1Data._Finn1
+
+		macroASMCLoadUnitGroup eventChapter1Data._NPCGroup
 	
 		SET_CAMERA [10, 12]
 		
@@ -282,7 +284,7 @@ eventChapter1Events ; FD/8000
 		FADE_IN $02
 		YIELD
 
-		MOVE_UNIT None, [18, 14], [14, 12], 1, None
+		MOVE_UNIT None, [19, 14], [14, 12], 1, None
 		YIELD_UNK
 
 		WAIT_MOVE
@@ -317,24 +319,10 @@ eventChapter1Events ; FD/8000
 		MOVE_UNIT Dryas, [32, 26], [18, 12], 1, None
 		YIELD_UNK
 
-		SCROLL_CAMERA_SPEED [20, 20], 2
-		YIELD
+		MOVE_UNIT LeonsterLanceKnight, [21, 22], [20, 12], 1, None
+		YIELD_UNK
 
 		SCROLL_CAMERA_SPEED [16, 13], 1
-		YIELD
-
-		macroASMCLoadUnitGroup eventChapter1Data._NPCGroup
-
-		WAIT_MOVE
-		YIELD
-
-		WAIT_MOVE
-		YIELD
-
-		WAIT_MOVE
-		YIELD
-
-		WAIT_MOVE
 		YIELD
 
 		WAIT_MOVE
@@ -346,11 +334,11 @@ eventChapter1Events ; FD/8000
 		DIALOGUE introDryas2
 		YIELD
 
-		MOVE_UNIT LeonsterLanceKnight, [21, 22], [20, 12], 1, None
-		YIELD_UNK
-
 		MOVE_UNIT None, [21, 21], [16, 15], 1, None
 		YIELD_UNK
+
+		PAUSE_SKIPPABLE 20
+		YIELD
 
 		MOVE_UNIT None, [22, 21], [17, 15], 1, None
 		YIELD_UNK
@@ -359,9 +347,6 @@ eventChapter1Events ; FD/8000
 		YIELD_UNK
 
 		MOVE_UNIT None, [21, 20], [18, 15], 1, None
-		YIELD_UNK
-
-		MOVE_UNIT None, [20, 20], [20, 15], 1, None
 		YIELD_UNK
 
 		WAIT_MOVE
@@ -378,6 +363,12 @@ eventChapter1Events ; FD/8000
 
 		WAIT_MOVE
 		YIELD
+
+		PAUSE_SKIPPABLE 60
+		YIELD
+
+		MOVE_UNIT None, [20, 20], [20, 15], 4, None
+		YIELD_UNK
 
 		END3
 
