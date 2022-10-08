@@ -195,8 +195,6 @@ eventChapter1Events ; FD/8000
 		CALL_ASM_SKIPPABLE rlEventEngineCancelFading, $0000
 
 		macroASMCLoadUnitGroup eventChapter1Data._FinnGlade1
-		
-		macroSetAllCharacterByte structCharacterDataRAM.Fatigue, 0
 
 		SET_CAMERA [7, 10]
 
@@ -249,6 +247,9 @@ eventChapter1Events ; FD/8000
 		macroRemoveUnit Glade
 		YIELD_UNK
 
+		SET_MUSIC $0F
+		YIELD
+
 		WAIT_MOVE
 		YIELD
 
@@ -266,20 +267,32 @@ eventChapter1Events ; FD/8000
 
 		macroRemoveUnit Finn
 
-		cmacroChangeMap Chapter24x
+		cmacroChangeMapSkippable Chapter24x
 
 		CALL_ASM_SKIPPABLE rlEventEngineCancelFading, $0000
 
 		macroASMCLoadUnitGroup eventChapter1Data._Finn1
 
 		macroASMCLoadUnitGroup eventChapter1Data._NPCGroup
+
+		macroSingleTileChangeByCoordinates [19, 17], $0041
+		macroSingleTileChangeByCoordinates [20, 17], $0041
+		macroSingleTileChangeByCoordinates [19, 18], $0041
+		macroSingleTileChangeByCoordinates [20, 18], $0041
 	
-		SET_CAMERA [10, 12]
+		SET_CAMERA [1, 1]
+
 		
 		CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog, $0000
 		YIELD
 
 		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, $0F
+
+		SCROLL_CAMERA_SPEED [12, 13], 1
+		YIELD
+
+		WAIT_MOVE
+		YIELD
 
 		FADE_IN $02
 		YIELD
@@ -293,24 +306,22 @@ eventChapter1Events ; FD/8000
 		PAUSE_SKIPPABLE 20
 		YIELD
 
-		macroSingleTileChangeByCoordinates [19, 17], $0041
-		macroSingleTileChangeByCoordinates [20, 17], $0041
-		macroSingleTileChangeByCoordinates [19, 18], $0041
-		macroSingleTileChangeByCoordinates [20, 18], $0041
-
 		macroDialogueWithBackground introDryas1, 3
 
 		CALL_ASM_LOOP rlASMCDialogueWithBGEnd, $0000
 		YIELD
 
-		SET_CAMERA [10, 12]
+		SET_CAMERA [12, 13]
 
 		macroASMCLoadUnitGroup eventChapter1Data._XavierGroup
+
+		SET_MUSIC $0F
+		YIELD
 
 		CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog, $0000
 		YIELD
 
-		FADE_IN $04
+		FADE_IN $02
 		YIELD
 
 		PAUSE_SKIPPABLE 40
@@ -319,10 +330,10 @@ eventChapter1Events ; FD/8000
 		MOVE_UNIT Dryas, [32, 26], [18, 12], 1, None
 		YIELD_UNK
 
-		MOVE_UNIT LeonsterLanceKnight, [21, 22], [20, 12], 1, None
+		MOVE_UNIT Ranz, [21, 22], [20, 12], 1, None
 		YIELD_UNK
 
-		SCROLL_CAMERA_SPEED [17, 14], 1
+		SCROLL_CAMERA_SPEED [17, 14], 2
 		YIELD
 
 		WAIT_MOVE
@@ -343,10 +354,10 @@ eventChapter1Events ; FD/8000
 		MOVE_UNIT None, [22, 21], [17, 15], 1, None
 		YIELD_UNK
 
-		MOVE_UNIT None, [22, 20], [15, 15], 1, None
+		MOVE_UNIT None, [22, 23], [15, 15], 1, None
 		YIELD_UNK
 
-		MOVE_UNIT None, [21, 20], [18, 15], 1, None
+		MOVE_UNIT None, [21, 23], [18, 15], 1, None
 		YIELD_UNK
 
 		WAIT_MOVE
@@ -367,8 +378,47 @@ eventChapter1Events ; FD/8000
 		PAUSE_SKIPPABLE 60
 		YIELD
 
-		MOVE_UNIT None, [20, 20], [20, 15], 3, None
+		MOVE_UNIT None, [23, 22], [20, 15], 3, None
 		YIELD_UNK
+
+		PAUSE_SKIPPABLE 60
+		YIELD
+
+		FADE_OUT $02
+		YIELD
+
+		PAUSE_SKIPPABLE 60
+		YIELD
+
+		WARP_UNIT Finn, [19, 15], [11, 8]
+		WARP_UNIT Dryas, [18, 12], [3, 6]
+		WARP_UNIT LeonsterSoldier, [0, 0], [7, 7]
+		WARP_UNIT Xavier, [16, 12], [10, 12]
+
+		PAUSE_SKIPPABLE 60
+		YIELD
+
+		cmacroChangeMap Chapter2x
+
+		CALL_ASM_SKIPPABLE rlEventEngineCancelFading, $0000
+
+		macroSetAllCharacterByte structCharacterDataRAM.Fatigue, 0
+
+		SET_CAMERA [1, 1]
+
+		SET_MUSIC $0F
+		YIELD
+
+		PAUSE_SKIPPABLE 10
+		YIELD
+		
+		CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog, $0000
+		YIELD
+
+		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, $0F
+
+		FADE_IN $02
+		YIELD
 
 		END3
 

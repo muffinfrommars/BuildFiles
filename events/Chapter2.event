@@ -37,7 +37,7 @@ eventChapter2Events ; 99/81B4
 			CMP_WORD wCurrentPhase, Player
 		END_DEFINITION
 		EVENT $02, eventMapDeathQuoteDummyEvent
-			CHECK_DEAD Weissmann
+			CHECK_DEAD Dryas
 			CMP_WORD wCurrentPhase, Enemy
 		END_DEFINITION
 		EVENT $00, _EndingEvent

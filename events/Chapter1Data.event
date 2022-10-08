@@ -29,12 +29,12 @@ eventChapter1Data ; B1/FB37
 		
 
 	_NPCGroup ; B1/FBA1
-		UNIT LeonsterLanceKnight, NPC, [21, 22], [21, 22], Xavier, [IronLance], 2, False, [$01, $03, $00, $80]
+		UNIT Ranz, NPC, [21, 22], [21, 22], Xavier, [IronLance], 2, False, [$01, $03, $00, $80]
 		UNIT LeonsterSoldier, NPC, [22, 21], [22, 21], Xavier, [IronLance], 2, False, [$01, $03, $00, $80]
 		UNIT LeonsterSoldier, NPC, [21, 21], [21, 21], Xavier, [IronLance], 2, False, [$01, $03, $00, $80]
-		UNIT LeonsterSoldier, NPC, [22, 20], [22, 20], Xavier, [IronLance], 2, False, [$01, $03, $00, $80]
-		UNIT LeonsterSoldier, NPC, [21, 20], [21, 20], Xavier, [IronLance], 2, False, [$01, $03, $00, $80]
-		UNIT LeonsterSoldier, NPC, [20, 20], [20, 20], Xavier, [IronLance], 2, False, [$01, $03, $00, $80]
+		UNIT LeonsterSoldier, NPC, [22, 23], [22, 23], Xavier, [IronLance], 2, False, [$01, $03, $00, $80]
+		UNIT LeonsterSoldier, NPC, [21, 23], [21, 23], Xavier, [IronLance], 2, False, [$01, $03, $00, $80]
+		UNIT LeonsterSoldier, NPC, [23, 22], [23, 22], Xavier, [IronLance], 2, False, [$01, $03, $00, $80]
 	UNIT
 
 	_Opening1CameraCoordinates ; B1/FBDF

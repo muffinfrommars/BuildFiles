@@ -8,10 +8,6 @@ eventChapter2xEvents ; 97/805A
 	END_DEFINITION_ARRAY
 
 	_TurnEventDefinitions ; 97/8067
-		EVENT FlagBossDeath, eventMapDeathQuoteDummyEvent
-			CHECK_DEAD Lifis
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
 	END_DEFINITION_ARRAY
 
 	_LocationEventDefinitions ; 97/80F3
@@ -23,26 +19,25 @@ eventChapter2xEvents ; 97/805A
 	END_DEFINITION_ARRAY
 
 	_TalkEventDefinitions ; 97/8110
-		EVENT $09, _LeifEyvelTalk
-			CHECK_CHARS2 Leif, Eyvel
-		END_DEFINITION
 	END_DEFINITION_ARRAY
 
 	_BeforeActionEventDefinitions ; 97/811C
 	END_DEFINITION_ARRAY
 
 	_AfterActionEventDefinitions ; 97/811E
-		EVENT $10, _DrawBridge
-			TEST_FLAG_UNSET $07
-			macroEventConditionCheckCoords [13, 10]
+		EVENT $02, eventMapDeathQuoteDummyEvent
+			CHECK_DEAD Dryas
+			CMP_WORD wCurrentPhase, NPC
 		END_DEFINITION
 		EVENT $00, _EndingEvent
-			macroEventConditionCheckCoords [14, 2]
-			CMP_WORD wCurrentPhase, Player
+			TEST_FLAG_UNSET $06
+			TEST_FLAG_SET $02
+			CMP_WORD_RANGE wCurrentTurn, 1, $FFFF
 		END_DEFINITION
 		EVENT $00, _EndingEvent
-			macroEventConditionCheckCoords [3, 1]
 			CMP_WORD wCurrentPhase, Player
+			TEST_FLAG_SET $02
+			CMP_WORD wCurrentTurn, 1
 		END_DEFINITION
 	END_DEFINITION_ARRAY
 
