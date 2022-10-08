@@ -322,7 +322,7 @@ eventChapter1Events ; FD/8000
 		MOVE_UNIT LeonsterLanceKnight, [21, 22], [20, 12], 1, None
 		YIELD_UNK
 
-		SCROLL_CAMERA_SPEED [16, 13], 1
+		SCROLL_CAMERA_SPEED [17, 14], 1
 		YIELD
 
 		WAIT_MOVE
@@ -367,7 +367,7 @@ eventChapter1Events ; FD/8000
 		PAUSE_SKIPPABLE 60
 		YIELD
 
-		MOVE_UNIT None, [20, 20], [20, 15], 4, None
+		MOVE_UNIT None, [20, 20], [20, 15], 3, None
 		YIELD_UNK
 
 		END3
