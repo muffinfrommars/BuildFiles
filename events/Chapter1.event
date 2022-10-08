@@ -325,28 +325,43 @@ eventChapter1Events ; FD/8000
 
 		macroASMCLoadUnitGroup eventChapter1Data._NPCGroup
 
+		WAIT_MOVE
+		YIELD
+
+		WAIT_MOVE
+		YIELD
+
+		WAIT_MOVE
+		YIELD
+
+		WAIT_MOVE
+		YIELD
+
+		WAIT_MOVE
+		YIELD
+
 		PAUSE_SKIPPABLE 40
 		YIELD
 
 		DIALOGUE introDryas2
 		YIELD
 
-		MOVE_UNIT LeonsterLanceKnight, [21, 23], [20, 12], 1, None
+		MOVE_UNIT LeonsterLanceKnight, [21, 22], [20, 12], 1, None
 		YIELD_UNK
 
-		MOVE_UNIT LeonsterSoldier, [21, 22], [16, 15], 1, None
+		MOVE_UNIT None, [21, 21], [16, 15], 1, None
 		YIELD_UNK
 
-		MOVE_UNIT LeonsterSoldier, [23, 22], [17, 15], 1, None
+		MOVE_UNIT None, [22, 21], [17, 15], 1, None
 		YIELD_UNK
 
-		MOVE_UNIT LeonsterSoldier, [22, 23], [15, 15], 1, None
+		MOVE_UNIT None, [22, 20], [15, 15], 1, None
 		YIELD_UNK
 
-		MOVE_UNIT LeonsterSoldier, [23, 23], [18, 15], 1, None
+		MOVE_UNIT None, [21, 20], [18, 15], 1, None
 		YIELD_UNK
 
-		MOVE_UNIT LeonsterSoldier, [24, 23], [20, 15], 1, None
+		MOVE_UNIT None, [20, 20], [20, 15], 1, None
 		YIELD_UNK
 
 		WAIT_MOVE
