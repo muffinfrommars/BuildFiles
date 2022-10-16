@@ -57,7 +57,7 @@ rlDemoRain ; 9A/E53D
 
 	.dstruct structDMAToVRAM, aBG1TilemapBuffer, $0800, VMAIN_Setting(True), $E000
 
-	lda #(`$9FBA75)<<8
+	lda #(`$9FBA75)<<8 ; spawns both rain and lightning
 	sta lR18+1
 	lda #<>$9FBA75
 	sta lR18
@@ -70,7 +70,7 @@ rlDemoRain ; 9A/E53D
 
 	.dstruct structDMAToVRAM, aBG3TilemapBuffer, $0800, VMAIN_Setting(True), $A000
 
-	lda #(`DemoRainPalette)<<8
+	lda #(`DemoRainPalette)<<8 ; makes rain move diagonally
 	sta lR18+1
 	lda #<>DemoRainPalette
 	sta lR18
@@ -93,7 +93,7 @@ rlDemoRain ; 9A/E53D
 	sta lR43
 	jsl rlProcEngineCreateProc
 
-	lda #(`procDemoRain)<<8
+	lda #(`procDemoRain)<<8 ; makes rain move diagonally 
 	sta lR43+1
 	lda #<>procDemoRain
 	sta lR43

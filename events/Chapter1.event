@@ -20,6 +20,20 @@ eventChapter1Events ; FD/8000
 	END_DEFINITION_ARRAY
 
 	_AfterActionEventDefinitions ; FD/80E7
+		EVENT $02, eventMapDeathQuoteDummyEvent
+			CHECK_DEAD Dryas
+			CMP_WORD wCurrentPhase, NPC
+		END_DEFINITION
+		EVENT $00, _EndingEvent
+			TEST_FLAG_UNSET $06
+			TEST_FLAG_SET $02
+			CMP_WORD_RANGE wCurrentTurn, 1, $FFFF
+		END_DEFINITION
+		EVENT $00, _EndingEvent
+			CMP_WORD wCurrentPhase, Player
+			TEST_FLAG_SET $02
+			CMP_WORD wCurrentTurn, 1
+		END_DEFINITION
 	END_DEFINITION_ARRAY
 
 	_BattleEventDefinitions ; FD/80E9
@@ -247,8 +261,7 @@ eventChapter1Events ; FD/8000
 		macroRemoveUnit Glade
 		YIELD_UNK
 
-		SET_MUSIC $0F
-		YIELD
+		PLAY_SOUND_WORD $00E0
 
 		WAIT_MOVE
 		YIELD
@@ -271,17 +284,16 @@ eventChapter1Events ; FD/8000
 
 		CALL_ASM_SKIPPABLE rlEventEngineCancelFading, $0000
 
+		SET_CAMERA [1, 1]
+
 		macroASMCLoadUnitGroup eventChapter1Data._Finn1
 
-		macroASMCLoadUnitGroup eventChapter1Data._NPCGroup
+		macroASMCLoadUnitGroup eventChapter1Data._RanzGroup
 
 		macroSingleTileChangeByCoordinates [19, 17], $0041
 		macroSingleTileChangeByCoordinates [20, 17], $0041
 		macroSingleTileChangeByCoordinates [19, 18], $0041
 		macroSingleTileChangeByCoordinates [20, 18], $0041
-	
-		SET_CAMERA [1, 1]
-
 		
 		CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog, $0000
 		YIELD
@@ -315,9 +327,6 @@ eventChapter1Events ; FD/8000
 
 		macroASMCLoadUnitGroup eventChapter1Data._XavierGroup
 
-		SET_MUSIC $0F
-		YIELD
-
 		CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog, $0000
 		YIELD
 
@@ -343,12 +352,27 @@ eventChapter1Events ; FD/8000
 		YIELD
 
 		DIALOGUE introDryas2
-		YIELD
+		YIELD		
+
+		MOVE_UNIT Xavier, [13, 13], [19, 13], 1, None
+		YIELD_UNK
+
+		DIALOGUE introDryas3
+		YIELD	
 
 		MOVE_UNIT None, [21, 21], [16, 15], 1, None
 		YIELD_UNK
 
 		PAUSE_SKIPPABLE 20
+		YIELD
+
+		WAIT_MOVE
+		YIELD
+
+		MOVE_UNIT Xavier, [19, 13], [16, 12], 1, None
+		YIELD_UNK
+
+		PAUSE_SKIPPABLE 40
 		YIELD
 
 		MOVE_UNIT None, [22, 21], [17, 15], 1, None
@@ -357,19 +381,10 @@ eventChapter1Events ; FD/8000
 		MOVE_UNIT None, [22, 23], [15, 15], 1, None
 		YIELD_UNK
 
-		MOVE_UNIT None, [21, 23], [18, 15], 1, None
-		YIELD_UNK
-
-		WAIT_MOVE
-		YIELD
-
-		PAUSE_SKIPPABLE 40
-		YIELD
-
 		MOVE_UNIT Finn, [14, 12], [19, 15], 1, None
 		YIELD_UNK
 
-		MOVE_UNIT Xavier, [13, 13], [16, 12], 1, None
+		MOVE_UNIT None, [21, 23], [18, 15], 1, None
 		YIELD_UNK
 
 		WAIT_MOVE
@@ -381,7 +396,72 @@ eventChapter1Events ; FD/8000
 		MOVE_UNIT None, [23, 22], [20, 15], 3, None
 		YIELD_UNK
 
-		PAUSE_SKIPPABLE 60
+		PAUSE_SKIPPABLE 120
+		YIELD
+
+		PLAY_SOUND_WORD $00E0
+
+		DIALOGUE introDryas4
+		YIELD
+
+		SCROLL_CAMERA_CHAR Finn
+		SET_CAMERA_SPEED 3
+		YIELD
+
+		DIALOGUE introDryas5
+		YIELD
+
+		SCROLL_CAMERA_CHAR Dryas
+		SET_CAMERA_SPEED 2
+		YIELD
+
+		DIALOGUE introDryas6
+		YIELD
+
+		SCROLL_CAMERA_CHAR Finn
+		SET_CAMERA_SPEED 2
+		YIELD
+
+		DIALOGUE introDryas7
+		YIELD
+		
+		PAUSE_SKIPPABLE 30
+		YIELD
+
+		SCROLL_CAMERA_SPEED [17, 14], 2
+		YIELD
+
+		MOVE_UNIT Dryas, [18, 12], [13, 13], 3, None
+		YIELD_UNK
+
+		MOVE_UNIT Finn, [19, 15], [21, 15], 1, None
+		YIELD_UNK
+
+		MOVE_UNIT Xavier, [16, 12], [20, 19], 1, None
+		YIELD_UNK
+
+		MOVE_UNIT None, [16, 15], [17, 14], 1, None
+		YIELD_UNK
+
+		WAIT_MOVE
+		YIELD
+
+		MOVE_UNIT Ranz, [20, 12], [18, 25], 1, None
+		YIELD_UNK
+
+		MOVE_UNIT None, [17, 15], [19, 25], 1, None
+		YIELD_UNK
+
+		MOVE_UNIT None, [15, 15], [20, 25], 1, None
+		YIELD_UNK
+
+		MOVE_UNIT None, [18, 15], [20, 24], 1, None
+		YIELD_UNK
+
+		WAIT_MOVE
+		YIELD
+
+		PAUSE_SKIPPABLE 90
 		YIELD
 
 		FADE_OUT $02
@@ -391,8 +471,8 @@ eventChapter1Events ; FD/8000
 		YIELD
 
 		WARP_UNIT Finn, [19, 15], [11, 8]
-		WARP_UNIT Dryas, [18, 12], [3, 6]
-		WARP_UNIT LeonsterSoldier, [0, 0], [7, 7]
+		WARP_UNIT Dryas, [13, 13], [3, 6]
+		WARP_UNIT LeonsterSoldier, [17, 14], [7, 7]
 		WARP_UNIT Xavier, [16, 12], [10, 12]
 
 		PAUSE_SKIPPABLE 60

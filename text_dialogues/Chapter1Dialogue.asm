@@ -428,7 +428,6 @@ introDryas1
 	.byte EndText
 	
 introDryas2
-
 	
 	.byte right_slot
 	.word LoadPortrait
@@ -451,6 +450,382 @@ introDryas2
 	.byte WaitForA
 	
 	.byte EndText
+
+introDryas3
+
+	.byte right_slot
+	.word LoadPortrait
+	.word XavierPortrait
+	.text "Lieutenant Ranz. General Dryas."
+	.byte NewLine
+	.text "Good morning, gentlemen."
+	.byte WaitForA
+
+	.byte Left_Slot
+	.word LoadPortrait
+	.word RonanPortrait
+	.text "Sergeant Placeholder. Many thanks for"
+	.byte NewLine
+	.text "for your efforts in preparing todays"
+	.byte NewLine
+	.text "trials. Efficient as always."
+	.byte WaitForA
+	.byte ScrollText
+
+	.byte right_slot
+	.byte ScrollText
+	.text "Aye, Sir. If it's for the kingdom,"
+	.byte NewLine
+	.text "it is not only my duty, but absolute pleasure."
+	.byte NewLine
+	.text "General Dryas?"
+	.byte WaitForA
+
+	.byte Left_Slot
+	.word ClearPortrait
+	.word LoadPortrait
+	.word dorias_portrait	
+	.text "Hmmph."
+	.byte NewLine
+	.text "Is that boy over there a recruit?"
+	.byte WaitForA
+
+	.byte right_slot
+	.byte ScrollText
+	.text "Yes, Sir. He's a quiet one, but I can"
+	.byte NewLine
+	.text "see the fire in his eyes. He arrived here"
+	.byte NewLine
+	.text "first, even before myself."
+	.byte WaitForA
+
+	.byte Left_Slot
+	.byte ScrollText
+	.text "Seargant, I don't ever want an official of"
+	.byte NewLine
+	.text "my company to be humiliated by a sickly"
+	.byte NewLine
+	.text "looking runt again. Arrive earlier next time."
+	.byte WaitForA
+
+	.byte right_slot
+	.byte ScrollText
+	.text "My apologies, Sir..."
+	.byte NewLine
+	.text "It won't happen again."
+	.byte WaitForA
+
+	.byte Left_Slot
+	.byte ScrollText
+	.text "Right."
+	.byte NewLine
+	.text "Now, where are the rest of my recruits?"
+	.byte WaitForA
+
+	.byte right_slot
+	.byte ScrollText
+	.word LoadPortrait
+	.word Ronanportrait
+	.text "They're about to summit as we speak, sir."
+	.byte NewLine
+	.text "I see them now."
+	.byte WaitForA
+
+	.byte EndText
+
+introDryas4
+
+	.byte Right_slot
+    .word LoadPortrait
+    .word XavierPortrait
+	.text "Is that everyone?"
+
+	.byte Left_Slot
+	.word LoadPortrait
+    .word RonanPortrait
+	.text "According to this list, we seem"
+	.byte NewLine
+	.text "to be one short."
+	.byte WaitForA
+
+	.byte EndText
+
+
+introDryas5
+
+	.byte Right_slot
+    .word LoadPortrait
+    .word FinnPortrait
+	.text "That would be Glade, Sir."
+	.byte NewLine
+	.text "Lord Lurvin? That's his son."
+	.byte WaitForA
+	.byte ScrollText
+	.text "His manor is quite a distance from here."
+	.byte NewLine
+	.text "He should be on his way as we speak."
+	.byte WaitForA
+
+	.byte EndText
+
+introDryas6
+
+	.byte Right_slot
+    .word LoadPortrait
+    .word dorias_portrait	
+	.text "Lurvin's kid? Why am I not surprised?"
+	.byte NewLine
+	.text "The apple doesn't fall too far from the tree,"
+	.byte NewLine
+	.text "does it?"
+	.byte WaitForA
+	.byte ScrollText
+	.text "Very well. We're starting soon,"
+	.byte NewLine
+	.text "with or without him."
+	.byte NewLine
+	.text "How much he misses is on him."
+	.byte WaitForA
+
+	.byte EndText
+
+introDryas7
+
+	.byte Right_slot
+    .word LoadPortrait
+    .word FinnPortrait
+	.text "(Glade, you fool...)"
+	.byte WaitForA
+
+	.byte EndText
+
+introFinal1
+
+	.byte Right_slot
+    .word LoadPortrait
+    .word dorias_portrait
+	.text "Now then."
+	.byte NewLine
+	.text "Let's cut the nonsense and get to the point."
+	.byte WaitForA
+	.byte ScrollText
+	
+	.text "If you're here today, it means you've demonstrated"
+	.byte NewLine
+	.text "yourself as a promising youth, ready and willing"
+	.byte NewLine
+	.text "to dedicate your lives in honor of House Leonster."
+	.byte WaitForA
+	.byte ScrollText
+
+	.text "In spite of your age, you've already set yourself"
+	.byte NewLine
+	.text "apart from the average recruit, some of which are"
+	.byte NewLine
+	.text "nearly a decade older than you."
+	.byte WaitForA
+	.byte ScrollText
+
+	.text "To my left stands Lieutenant Ranz of the 2nd division"
+	.byte NewLine
+	.text "company of the Lanzenritter. He's had plenty of"
+	.byte NewLine
+	.text "experience, quelling skirmishes at the Thracian border."
+	.byte WaitForA
+
+	.byte EndText
+
+introFinal2
+
+	.byte Right_slot
+    .word LoadPortrait
+    .word Ronan_portrait
+	.text "Good morning, gentlemen."
+	.byte NewLine
+	.text "I'm eager to see your performances today."
+	.byte WaitForA
+
+	.byte EndText
+	
+introFinal3
+
+	.byte Right_slot
+    .word LoadPortrait
+    .word dorias_portrait
+	.text "Now, to my right is Seargant Xavier of the"
+	.byte NewLine
+	.text "18th division of Leonster's Armor Company."
+	.byte NewLine
+	.text "He's a cornerstone of the Queen's Private Guard."
+	.byte WaitForA
+
+	.byte EndText
+
+introFinal4
+	
+	.byte Right_slot
+    .word LoadPortrait
+    .word Xavier_portrait
+	.text "It's a pleasure to meet the faces of those"
+	.byte NewLine
+	.text "the next generation, who will lead our Leonster"
+	.byte NewLine
+	.text "into greatness, far after we old men have faded."
+	.byte WaitForA
+	.byte ScrollText
+
+	.text "May Njorun's Light guide the way."
+	.byte WaitForA
+
+	.byte EndText
+
+introFinal5
+
+	.byte Right_slot
+    .word LoadPortrait
+    .word dorias_portrait
+
+	.text "As you may have noticed, the area in which"
+	.byte NewLine
+	.text "we've brought you to today is fairly quiet."
+	.byte NewLine
+	.text "Perfect for a battle or two."
+	.byte WaitForA
+	.byte ScrollText
+
+	.text "We will be conducting several excersizes,"
+	.byte NewLine
+	.text "testing your ability to adapt to the ever"
+	.byte NewLine
+	.text "changing battlefield. War sits idle for no one."
+	.byte WaitForA
+	.byte ScrollText
+
+	.text "To warm ourselves up, let's begin with a simple"
+	.byte NewLine
+	.text "test of might between yourselves. Expect plenty"
+	.byte NewLine
+	.text "of teamwork and coordination in later drills."
+	.byte WaitForA
+	.byte ScrollText
+
+	.text "We'll begin in pairs. Those not selected,"
+	.byte NewLine
+	.text "clear this plateau, and observe your peers"
+	.byte NewLine
+	.text "tactics, and possible flaws. Help correct them."
+	.byte WaitForA
+	.byte ScrollText
+
+	.text "The winner between the pair will have a chance"
+	.byte NewLine
+	.text "to swing lances with myself. Do not expect this"
+	.byte NewLine
+	.text "old man to hold back!"
+	.byte WaitForA
+	.byte ScrollText
+
+	.text "Should any of you somehow best me..."
+	.byte NewLine
+	.text "Well, we may just have ourselves a new"
+	.byte NewLine
+	.text "Lanzenritter 1st Division contender on our hands."
+	.byte WaitForA
+	.byte ScrollText
+
+	.text "Lieutenant Ranz will now distribute the only"
+	.byte NewLine
+	.text "equipment we shall provide directly. You'll need"
+	.byte NewLine
+	.text "to find more on your own, down the line."
+	.byte WaitForA
+
+	.byte EndText
+
+introFinal6
+
+	.text "You two."
+	.byte NewLine
+	.text "Step there, and there."
+	.byte WaitForA
+	.byte ScrollText
+	.byte NewLine
+	.text "When I blow the whistle, begin your battle."
+	.byte WaitForA
+
+	.byte EndText
+
+introFinal7
+
+	.text "And last, you two."
+	.byte NewLine
+	.text "Prepare yourselves."
+	.byte ScrollText
+	.text "Ready?"
+	.byte WaitForA
+	.byte ScrollText
+
+introFinal8
+
+	.text "Well done."
+	.byte NewLine
+	.text "Now, show me what you've got!"
+	.byte WaitForA
+
+	.byte EndText
+
+introFinal8
+
+	.text "Ugh... "
+	.byte NewLine
+	.text "Hah, just a s-scratch..."
+	.byte WaitForA
+	.byte ScrollText
+
+	.text "You've got more arm than you let on, boy."
+	.byte NewLine
+	.text "But, can you keep up in the long run?"
+	.byte WaitForA
+	.byte ScrollText
+
+	.text "Alright, everyone. Off the summit, and"
+	.byte NewLine
+	.text "down into the forts!"
+	.byte WaitForA
+
+UnusedText1
+
+	.byte NewLine
+	.text ""
+	.byte NewLine
+	.text ""
+	.byte WaitForA
+	.byte ScrollText
+
+	.text ""
+	.byte NewLine
+	.text ""
+	.byte NewLine
+	.text ""
+	.byte WaitForA
+	.byte ScrollText
+
+	.text ""
+	.byte NewLine
+	.text ""
+	.byte NewLine
+	.text ""
+	.byte WaitForA
+	.byte ScrollText
+
+	.text ""
+	.byte NewLine
+	.text ""
+	.byte NewLine
+	.text ""
+	.byte WaitForA
+	.byte ScrollText
+
 	
 ch1wm6
 
@@ -459,3 +834,11 @@ ch1wm6
 	
 	.byte EndText
 	
+
+	;.text ""
+	;.byte NewLine
+	;.text ""
+	;.byte NewLine
+	;.text ""
+	;.byte WaitForA
+	;.byte ScrollText

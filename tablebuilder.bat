@@ -45,4 +45,3 @@ for %%t in (*.csv) do (
     python "%c2a%" "%%t" "%%~nt.casm"
 )
 
-pause
