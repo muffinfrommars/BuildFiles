@@ -62,6 +62,9 @@ eventChapter1Events ; FD/8000
 
 		CALL_ASM_LOOP rlASMCDialogueWithBGEndFadeOut, $0000
 
+		ADD_WORD wCurrentChapter, Chapter2 - Chapter1 - 1
+		YIELD_UNK
+
 		STORE_BYTE bBuf_INIDISP, INIDISP_Setting(False, 0)
 		PLAY_SOUND_WORD $00E7
 		FADE_OUT $01
@@ -434,15 +437,6 @@ eventChapter1Events ; FD/8000
 		MOVE_UNIT Dryas, [18, 12], [13, 13], 3, None
 		YIELD_UNK
 
-		MOVE_UNIT Finn, [19, 15], [21, 15], 1, None
-		YIELD_UNK
-
-		MOVE_UNIT Xavier, [16, 12], [20, 19], 1, None
-		YIELD_UNK
-
-		MOVE_UNIT None, [16, 15], [17, 14], 1, None
-		YIELD_UNK
-
 		WAIT_MOVE
 		YIELD
 
@@ -458,6 +452,18 @@ eventChapter1Events ; FD/8000
 		MOVE_UNIT None, [18, 15], [20, 24], 1, None
 		YIELD_UNK
 
+		MOVE_UNIT None, [20, 15], [20, 26], 1, None
+		YIELD_UNK
+
+		MOVE_UNIT Finn, [19, 15], [21, 15], 1, None
+		YIELD_UNK
+
+		MOVE_UNIT None, [16, 15], [17, 14], 1, None
+		YIELD_UNK
+
+		MOVE_UNIT Xavier, [16, 12], [20, 19], 1, None
+		YIELD_UNK
+
 		WAIT_MOVE
 		YIELD
 
@@ -465,22 +471,20 @@ eventChapter1Events ; FD/8000
 		YIELD
 
 		FADE_OUT $02
+
+		PAUSE_SKIPPABLE 15
 		YIELD
 
-		PAUSE_SKIPPABLE 60
-		YIELD
-
-		WARP_UNIT Finn, [19, 15], [11, 8]
-		WARP_UNIT Dryas, [13, 13], [3, 6]
-		WARP_UNIT LeonsterSoldier, [17, 14], [7, 7]
-		WARP_UNIT Xavier, [16, 12], [10, 12]
-
-		PAUSE_SKIPPABLE 60
-		YIELD
+		macroRemoveUnit Finn
+		macroRemoveUnit Dryas
+		macroRemoveUnit LeonsterSoldier
+		macroRemoveUnit Xavier
 
 		cmacroChangeMap Chapter2x
 
 		CALL_ASM_SKIPPABLE rlEventEngineCancelFading, $0000
+
+		macroASMCLoadUnitGroup eventChapter1Data._ch1FinalGroup
 
 		macroSetAllCharacterByte structCharacterDataRAM.Fatigue, 0
 
@@ -494,6 +498,9 @@ eventChapter1Events ; FD/8000
 		
 		CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog, $0000
 		YIELD
+
+		ADD_WORD wCurrentChapter, Chapter2 - 1
+		YIELD_UNK
 
 		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, $0F
 

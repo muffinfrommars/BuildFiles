@@ -684,6 +684,7 @@ introFinal5
 	.byte Right_slot
     .word LoadPortrait
     .word dorias_portrait
+	.byte $09
 
 	.text "As you may have noticed, the area in which"
 	.byte NewLine
@@ -744,6 +745,11 @@ introFinal5
 
 introFinal6
 
+	.byte Right_slot
+    .word LoadPortrait
+    .word dorias_portrait
+	.byte $09
+
 	.text "You two."
 	.byte NewLine
 	.text "Step there, and there."
@@ -757,6 +763,11 @@ introFinal6
 
 introFinal7
 
+	.byte Right_slot
+    .word LoadPortrait
+    .word dorias_portrait
+	.byte $09
+
 	.text "And last, you two."
 	.byte NewLine
 	.text "Prepare yourselves."
@@ -767,6 +778,11 @@ introFinal7
 
 introFinal8
 
+	.byte Right_slot
+    .word LoadPortrait
+    .word dorias_portrait
+	.byte $09
+
 	.text "Well done."
 	.byte NewLine
 	.text "Now, show me what you've got!"
@@ -774,7 +790,12 @@ introFinal8
 
 	.byte EndText
 
-introFinal8
+introEnding1
+
+	.byte Right_slot
+    .word LoadPortrait
+    .word dorias_portrait
+	.byte $09
 
 	.text "Ugh... "
 	.byte NewLine
@@ -793,8 +814,50 @@ introFinal8
 	.text "down into the forts!"
 	.byte WaitForA
 
+introEnding2
+
+	.byte Right_slot
+    .word LoadPortrait
+    .word xavier_portrait
+	.byte $09
+
+	.text "Terrific start, Finn."
+
+	.byte Left_slot
+    .word LoadPortrait
+    .word FinnPortrait
+	.text "Thank you, Sir."
+
+	.text "Try not to let the old man's words"
+	.byte NewLine
+	.text "get to ya."
+	.byte WaitForA
+	.byte ScrollText
+
+	.text "He's got a temper, but he means well."
+	.byte NewLine
+	.text "Anyway, we've got a long day ahead of us."
+	.byte NewLine
+	.text "Shall we?"
+	.byte WaitForA
+
+	.byte ScrollText
+	.word ClearPortrait
+    .word RetractBox
+
+	.byte Left_slot
+	.text "...sigh..."
+	.byte WaitForA
+	.byte ScrollText
+
+	.text "(Where in the world is Glade?)"
+	.byte WaitForA
+
+	.byte EndText
+
 UnusedText1
 
+	.text ""
 	.byte NewLine
 	.text ""
 	.byte NewLine

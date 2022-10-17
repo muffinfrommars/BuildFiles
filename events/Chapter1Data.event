@@ -23,7 +23,7 @@ eventChapter1Data ; B1/FB37
 	UNIT
 
 	_XavierGroup ; B1/FB9F
-		UNIT Xavier, NPC, [13, 13], [13, 13], Quan, [MasterLance], 13, True, [$01, $03, $00, $80]
+		UNIT Xavier, NPC, [13, 13], [13, 13], Quan, [GreatLance], 13, True, [$01, $03, $00, $80]
 		UNIT Dryas, NPC, [32, 26], [32, 26], Xavier, [Javelin], 3, True, [$01, $03, $00, $80]
 	UNIT
 		
@@ -53,7 +53,14 @@ eventChapter1Data ; B1/FB37
 	UNIT
 
 	_Finn1; B1/FC2
-		UNIT Finn, Player, [19, 14], [19, 14], Xavier, [IronLance, GaeBolg, Vulnerary], 1, False, [$00, $00, $00, $00]
+		UNIT Finn, Player, [19, 14], [19, 14], Xavier, [IronLance], 1, False, [$00, $00, $00, $00]
+	UNIT
+
+	_ch1FinalGroup
+		UNIT Finn, Player, [11, 8], [11, 8], Xavier, [IronLance, GaeBolg, Vulnerary], 1, False, [$00, $00, $00, $00]
+		UNIT Xavier, NPC, [10, 12], [10, 12], Quan, [GreatLance], 13, True, [$01, $03, $00, $80]
+		UNIT Dryas, NPC, [3, 6], [3, 6], Xavier, [Javelin], 3, True, [$01, $03, $00, $80]
+		UNIT LeonsterSoldier, NPC, [7, 7], [7, 7], Xavier, [IronLance], 2, False, [$01, $03, $00, $80]
 	UNIT
 
 	_PrepGroups ; B1/FD05
