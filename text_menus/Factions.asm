@@ -11,7 +11,7 @@ leader_sets				.block
 .word $00ED
 .word <>leader_text._LeonsterLeader
 
-.word $0019
+.word $0034
 .word <>leader_text._LeonsterLeader
 
 .word $0033
@@ -176,7 +176,7 @@ leader_sets				.block
 .word $006B
 .word <>leader_text._KolkhoLeader
 
-.word $0018
+.word $004C
 .word <>leader_text._DryasLeader
 
 .word $0017
@@ -341,7 +341,7 @@ _KolkhoLeader
 .word $0000
 
 _DryasLeader
-	.text "Leonster Trainee"
+	.text "Leonster Recruit"
 .word $0000
 
 _MercenaryLeader

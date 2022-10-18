@@ -59,7 +59,7 @@ eventChapter1Data ; B1/FB37
 	_ch1FinalGroup
 		UNIT Finn, Player, [11, 8], [11, 8], Dryas, [IronLance, GaeBolg, Vulnerary], 1, False, [$00, $00, $00, $00]
 		UNIT Xavier, NPC, [10, 12], [10, 12], Quan, [GreatLance], 8, True, [$01, $03, $00, $80]
-		UNIT Dryas, NPC, [3, 6], [3, 6], Dryas, [Javelin], 3, True, [$01, $03, $00, $80]
+		UNIT Dryas, NPC, [3, 6], [3, 6], Quan, [Javelin], 3, True, [$01, $03, $00, $80]
 		UNIT LeonsterSoldier, NPC, [7, 7], [7, 7], Dryas, [IronLance], 2, False, [$01, $03, $00, $80]
 	UNIT
 
