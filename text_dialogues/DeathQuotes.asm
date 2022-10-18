@@ -313,10 +313,10 @@ robertdeath
 .byte WaitForA
 .byte EndText
 
-weismanndeath
-.text "D-Damn... You'll...live to regret"
+dryasdeath
+.text "I-I..."
 .byte NewLine
-.text "this, all of you..."
+.text "I lost...?"
 .byte WaitForA
 .byte EndText
 

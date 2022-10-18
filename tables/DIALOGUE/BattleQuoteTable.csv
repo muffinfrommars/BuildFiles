@@ -58,7 +58,7 @@ CohenBattleQuote,Cohen,AnyChapter,None,cohenboss
 SaiasBattleQuote2,Saias,AnyChapter,None,saiasboss
 CoulterBattleQuote,Coulter,AnyChapter,None,coulterboss
 RaydrikChp24BattleQuote,RaydrikChp24,AnyChapter,None,raydrikboss
-DryasBattleQuote,Dryas,AnyChapter,None,dryasboss
+DryasBattleQuote,Dryas,Chapter2,None,dryasboss
 BeowolfBattleQuote,Beowolf,AnyChapter,None,beowolfboss
 ArdenBattleQuote,Arden,AnyChapter,None,ardenboss
 QuanBattleQuote,Quan,AnyChapter,None,quanboss

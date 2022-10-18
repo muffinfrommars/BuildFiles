@@ -177,7 +177,7 @@ leader_sets				.block
 .word <>leader_text._KolkhoLeader
 
 .word $0018
-.word <>leader_text._DandelionLeader
+.word <>leader_text._DryasLeader
 
 .word $0017
 .word <>leader_text._MercenaryLeader
@@ -340,8 +340,8 @@ _KolkhoLeader
 	.text "Colho's Boys"
 .word $0000
 
-_DandelionLeader
-	.text "Dandelion "
+_DryasLeader
+	.text "Leonster Trainee"
 .word $0000
 
 _MercenaryLeader

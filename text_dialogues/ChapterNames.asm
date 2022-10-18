@@ -1,9 +1,9 @@
 ch1titlename
-.text "Chapter One"
+.text "The Twin Lances"
 .byte $01
 
 ch2titlename
-.text "Chapter Two"
+.text "Prologue 1"
 .byte $01
 
 ch2xtitlename

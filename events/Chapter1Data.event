@@ -24,17 +24,17 @@ eventChapter1Data ; B1/FB37
 
 	_XavierGroup ; B1/FB9F
 		UNIT Xavier, NPC, [13, 13], [13, 13], Quan, [GreatLance], 13, True, [$01, $03, $00, $80]
-		UNIT Dryas, NPC, [32, 26], [32, 26], Xavier, [Javelin], 3, True, [$01, $03, $00, $80]
+		UNIT Dryas, NPC, [32, 26], [32, 26], Dryas, [Javelin], 3, True, [$01, $03, $00, $80]
 	UNIT
 		
 
 	_RanzGroup ; B1/FBA1
-		UNIT Ranz, NPC, [21, 22], [21, 22], Xavier, [IronLance], 2, False, [$01, $03, $00, $80]
-		UNIT LeonsterSoldier, NPC, [22, 21], [22, 21], Xavier, [IronLance], 2, False, [$01, $03, $00, $80]
-		UNIT LeonsterSoldier, NPC, [21, 21], [21, 21], Xavier, [IronLance], 2, False, [$01, $03, $00, $80]
-		UNIT LeonsterSoldier, NPC, [22, 23], [22, 23], Xavier, [IronLance], 2, False, [$01, $03, $00, $80]
-		UNIT LeonsterSoldier, NPC, [21, 23], [21, 23], Xavier, [IronLance], 2, False, [$01, $03, $00, $80]
-		UNIT LeonsterSoldier, NPC, [23, 22], [23, 22], Xavier, [IronLance], 2, False, [$01, $03, $00, $80]
+		UNIT Ranz, NPC, [21, 22], [21, 22], Dryas, [IronLance], 2, False, [$01, $03, $00, $80]
+		UNIT LeonsterSoldier, NPC, [22, 21], [22, 21], Dryas, [IronLance], 2, False, [$01, $03, $00, $80]
+		UNIT LeonsterSoldier, NPC, [21, 21], [21, 21], Dryas, [IronLance], 2, False, [$01, $03, $00, $80]
+		UNIT LeonsterSoldier, NPC, [22, 23], [22, 23], Dryas, [IronLance], 2, False, [$01, $03, $00, $80]
+		UNIT LeonsterSoldier, NPC, [21, 23], [21, 23], Dryas, [IronLance], 2, False, [$01, $03, $00, $80]
+		UNIT LeonsterSoldier, NPC, [23, 22], [23, 22], Dryas, [IronLance], 2, False, [$01, $03, $00, $80]
 	UNIT
 
 	_Opening1CameraCoordinates ; B1/FBDF
@@ -48,19 +48,19 @@ eventChapter1Data ; B1/FB37
 	UNIT
 
 	_FinnGlade1 ; B1/FC0D
-		UNIT Finn, Player, [9, 9], [9, 9], Xavier, [IronLance, Vulnerary], 1, False, [$00, $00, $00, $00]
-		UNIT Glade, Player, [5, 9], [5, 9], Xavier, [Javelin, SlimLance, Vulnerary], 1, False, [$00, $00, $00, $00]
+		UNIT Finn, Player, [9, 9], [9, 9], Dryas, [IronLance, Vulnerary], 1, False, [$00, $00, $00, $00]
+		UNIT Glade, Player, [5, 9], [5, 9], Dryas, [Javelin, SlimLance, Vulnerary], 1, False, [$00, $00, $00, $00]
 	UNIT
 
 	_Finn1; B1/FC2
-		UNIT Finn, Player, [19, 14], [19, 14], Xavier, [IronLance], 1, False, [$00, $00, $00, $00]
+		UNIT Finn, Player, [19, 14], [19, 14], Dryas, [IronLance], 1, False, [$00, $00, $00, $00]
 	UNIT
 
 	_ch1FinalGroup
-		UNIT Finn, Player, [11, 8], [11, 8], Xavier, [IronLance, GaeBolg, Vulnerary], 1, False, [$00, $00, $00, $00]
-		UNIT Xavier, NPC, [10, 12], [10, 12], Quan, [GreatLance], 13, True, [$01, $03, $00, $80]
-		UNIT Dryas, NPC, [3, 6], [3, 6], Xavier, [Javelin], 3, True, [$01, $03, $00, $80]
-		UNIT LeonsterSoldier, NPC, [7, 7], [7, 7], Xavier, [IronLance], 2, False, [$01, $03, $00, $80]
+		UNIT Finn, Player, [11, 8], [11, 8], Dryas, [IronLance, GaeBolg, Vulnerary], 1, False, [$00, $00, $00, $00]
+		UNIT Xavier, NPC, [10, 12], [10, 12], Quan, [GreatLance], 8, True, [$01, $03, $00, $80]
+		UNIT Dryas, NPC, [3, 6], [3, 6], Dryas, [Javelin], 3, True, [$01, $03, $00, $80]
+		UNIT LeonsterSoldier, NPC, [7, 7], [7, 7], Dryas, [IronLance], 2, False, [$01, $03, $00, $80]
 	UNIT
 
 	_PrepGroups ; B1/FD05

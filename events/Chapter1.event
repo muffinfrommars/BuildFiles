@@ -207,7 +207,7 @@ eventChapter1Events ; FD/8000
 		macroRemoveUnit ThraciaDracoknight1
 		macroRemoveUnit ThraciaDracoknight1
 
-		cmacroChangeMapSkippable Chapter2
+		cmacroChangeMapSkippable Chapter24
 
 		CALL_ASM_SKIPPABLE rlEventEngineCancelFading, $0000
 
@@ -477,10 +477,14 @@ eventChapter1Events ; FD/8000
 
 		macroRemoveUnit Finn
 		macroRemoveUnit Dryas
-		macroRemoveUnit LeonsterSoldier
 		macroRemoveUnit Xavier
+		macroRemoveUnit LeonsterSoldier
+		macroRemoveUnit LeonsterSoldier
+		macroRemoveUnit LeonsterSoldier
+		macroRemoveUnit LeonsterSoldier
+		macroRemoveUnit LeonsterSoldier
 
-		cmacroChangeMap Chapter2x
+		cmacroChangeMap Chapter2
 
 		CALL_ASM_SKIPPABLE rlEventEngineCancelFading, $0000
 
@@ -498,9 +502,6 @@ eventChapter1Events ; FD/8000
 		
 		CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog, $0000
 		YIELD
-
-		ADD_WORD wCurrentChapter, Chapter2 - 1
-		YIELD_UNK
 
 		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, $0F
 

@@ -22,8 +22,6 @@ GUARD_FE5_PICK_PHASE_MUSIC :?= false
 
     .section PickPhaseMusicSection
 
-      startCode
-
         rlPickPhaseMusic ; 83/A5B2
 
           .autsiz
@@ -43,10 +41,53 @@ GUARD_FE5_PICK_PHASE_MUSIC :?= false
           ;     else: the chapter's phase music for Player phase
           ;   else: the chapter's phase music for the phase
 
-          ; TODO: music definitions
+          BaseMusicID         := $0001
+          AdvanceAMusicID     := $0002
+          AdvanceBMusicID     := $0003
+          AdversityMusicID    := $0004
+          VictoryMusicID      := $0005
+          SadMusicID          := $0006
+          GaidenMusicID       := $0007
+          LeifMusicID         := $0008
 
-          VictoryMusicID := $0005
-          SadMusicID     := $0006
+          BaseAMusicID        := $0009
+          BaseBMusicID        := $000A
+          AssaultMusicID      := $000B
+          DarkBishopsMusicID  := $000C
+          EnemyGaidenMusicID  := $000D
+          EndgameMusicID      := $000E
+
+          ; The following are exclusive to Min's FE4 Music Patch
+
+          PrologueMusicID     := $005D
+          Chapter1MusicID     := $005E
+          Chapter2MusicID     := $005F
+          Chapter3MusicID     := $0060
+          Chapter4MusicID     := $0061
+          Chapter5MusicID     := $0063
+          Chapter6MusicID     := $0068
+          Chapter7MusicID     := $0069
+          Chapter8MusicID     := $006A
+          Chapter9MusicID     := $006B
+          Chapter10MusicID    := $006C
+          EpilogueMusicID     := $006E
+
+          VictoryFE4MusicID   := $0073
+          
+          VerdaneMusicID      := $0074
+          AugustMusicID       := $0075
+          PirateMusicID       := $0076
+          SilesseMusicID      := $0077
+          AedMusicID          := $0078
+          IsaachMusicID       := $0079
+          MunsterMusicID      := $007A
+          ThraciaMusicID      := $007B
+          MiletosMusicID      := $007C
+          Grannvale1MusicID   := $007D
+          Grannvale2MusicID   := $007E
+          AlliedArmyMusicID   := $007F
+          NeutralArmyMusicID  := $0080
+
 
           php
           phb
@@ -107,8 +148,6 @@ GUARD_FE5_PICK_PHASE_MUSIC :?= false
 
           .databank 0
 
-      endCode
-
-    .endsection
+    .endsection PickPhaseMusicSection
 
 .endif ; GUARD_FE5_PICK_PHASE_MUSIC

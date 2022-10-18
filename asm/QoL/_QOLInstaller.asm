@@ -59,6 +59,8 @@ GUARD_ZQOL_INSTALLER :?= false
         .dsection RenderTallMapSpriteAndStatusLoopSection
         .dsection MissSpriteFrameSection
         .dsection ObjectiveMarkerHPBarEditsSection
+
+        .dsection PickPhaseMusicSection ; custom code
         
     .here
 

@@ -75,7 +75,7 @@ SaraDeathQuote,Sara,AnyChapter,FlagPlayerDeath,sarahdeath
 SaiasDeathQuote,Saias,AnyChapter,FlagPlayerDeath,saiasdeath
 GalzusDeathQuote,Galzus,AnyChapter,FlagPlayerDeath,galzusdeath
 ShivaDeathQuote,Shiva,AnyChapter,FlagPlayerDeath,shivadeath
-WeissmannDeathQuote,Weissmann,AnyChapter,None,weismanndeath
+WeissmannDeathQuote,Weissmann,AnyChapter,None,None
 BucksDeathQuote,Bucks,AnyChapter,None,bucksdeath
 LifisDeathQuote2,Lifis,AnyChapter,None,lithisdeath
 LobosDeathQuote,Blume,AnyChapter,None,lobosdeath

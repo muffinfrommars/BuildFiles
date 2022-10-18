@@ -4,7 +4,7 @@ objectivech1
 
 
 objectivech2
-	.text "Seize the manor's gate."
+	.text "Defeat General Dryas."
 .byte EndTextNoPortraitFade
 
 

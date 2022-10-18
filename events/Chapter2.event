@@ -11,31 +11,22 @@ eventChapter2Events ; 99/81B4
 		EVENT FlagAlliedDeath, eventMapDeathQuoteDummyEvent
 			TEST_FLAG_SET FlagPlayerDeath
 		END_DEFINITION
-		EVENT FlagAlwaysZero, _GladeIntro
-			CMP_WORD wCurrentTurn, 3
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
 	END_DEFINITION_ARRAY
 
 	_TalkEventDefinitions ; 99/820A
 	END_DEFINITION_ARRAY
 
 	_LocationEventDefinitions ; 99/820C
-		EVENT FlagAlwaysZero, _EndingEvent
-			macroEventConditionCheckCoords [11, 7]
-			CMP_WORD wCurrentPhase, Player
-			CMP_WORD aSelectedCharacterBuffer.Character, Finn
-		END_DEFINITION
 	END_DEFINITION_ARRAY
 
 	_BeforeActionEventDefinitions ; 99/8301
+		EVENT $02, eventMapDeathQuoteDummyEvent
+			CHECK_DEAD Dryas
+			CMP_WORD wCurrentPhase, Enemy
+		END_DEFINITION
 	END_DEFINITION_ARRAY
 
 	_AfterActionEventDefinitions ; 99/8303
-		EVENT $24, _NorthernCave
-			macroEventConditionCheckCoords [1, 1]
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
 		EVENT $02, eventMapDeathQuoteDummyEvent
 			CHECK_DEAD Dryas
 			CMP_WORD wCurrentPhase, Enemy
@@ -43,144 +34,33 @@ eventChapter2Events ; 99/81B4
 		EVENT $00, _EndingEvent
 			TEST_FLAG_UNSET $06
 			TEST_FLAG_SET $02
-			CMP_WORD_RANGE wCurrentTurn, 3, $FFFF
+			CMP_WORD_RANGE wCurrentTurn, 1, $FFFF
 		END_DEFINITION
 		EVENT $00, _EndingEvent
 			CMP_WORD wCurrentPhase, Player
 			TEST_FLAG_SET $02
-			CMP_WORD wCurrentTurn, 3
+			CMP_WORD wCurrentTurn, 1
 		END_DEFINITION
 	END_DEFINITION_ARRAY
 
 	_BattleEventDefinitions ; 99/8305
-		macroBossQuoteDefinition $07, Weissmann
+		macroBossQuoteDefinition $07, Dryas
 	END_DEFINITION_ARRAY
 
 	_ShopEventDefinitions ; 99/830F
 		macroShopDefinition eventChapter2Data._Vendor
 	END_DEFINITION_ARRAY
 
-	_NorthernCave ; 99/8324
-		STORE_WORD wEventEngineParameter1, TurnStatusDead
-		CALL_ASM_LOOP rlASMCActiveUnitTestTurnStatus, $0000
-		JUMP_TRUE +
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $32
-		YIELD
-
-		macroItemHouse ch1northerncave, GaeBolg, [16, 14], $03F0
-		CALL_ASM_LOOP rlASMCSaveActiveUnitData, $0000
-
-		+
-	END2
-
-	_GladeIntro ; 99/835B
-		SET_ACTIVE_COORDS
-		YIELD
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $01
-		YIELD
-
-		SCROLL_CAMERA_ADDRESS eventChapter2Data._GladeArriveCameraCoordinates
-		YIELD
-
-		LOAD1 eventChapter2Data._GladeArrive
-		WAIT_MOVE
-		YIELD
-
-		MOVE_UNIT Glade, [14, 4], [14, 4], 1, None
-		YIELD_UNK
-		PAUSE_SKIPPABLE $60
-
-	END2
-
-	_SpeedRingHouseVisit ; 99/8364
-	END2
-
-	_SpeedRingHouseVisitVillageAttacked ; 99/83C7
-	END2
-
-	_VulneraryHouseVisit ; 99/83D0
-	END2
-
-	_VulneraryHouseVisitVillageAttacked ; 99/8433
-	END2
-
-	_UnusedHouseVisit ; 99/843C
-	END2
-
-	_OpeningHouseDestroy ; 99/84AC
-	END1
-
-	_UnusedHouseDestroy ; 99/84DB
-	END1
-
-	_RonanHouseDestroy ; 99/850A
-	END1
-
-	_SpeedRingHouseDestroy ; 99/853D
-	END1
-
-	_VulneraryHouseDestroy
-	END1
-
-	_BottomPirateReinforcements ; 99/85A3
-	END2
-
-	_MiddlePirateReinforcements ; 99/85B0
-	END2
-
 	_PrepGroups ; 99/85BD
 	.word $0000
 
 	_OpeningEvent ; 99/85CA
-		SET_CAMERA [2, 2]
-		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, INIDISP_Setting(False, 15)
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $32
-		YIELD
-
-		macroChapterTitlePopup ch2titlename 
-
-		macroSetAllCharacterTurnStatus (TurnStatusUnknown1 | TurnStatusHidden)
-
-		macroUnsetAllCharacterTurnStatus (TurnStatusGrayed | TurnStatusMovementStar | TurnStatusMoved)
-
 		STORE_WORD lEventEngineUnitGroupPointer, $0002
 		CALL_ASM_LOOP rlASMCGetStartingPositionsArrayPointerAndLength, $0000
-
 		CALL_ASM_LOOP rlASMCLoadPlayerUnitsByStartingPositions, $0000
 		YIELD
 
-		LOAD1 eventChapter2Data._PracticeFortBoss
-		WAIT_MOVE
-		YIELD
-
-		LOAD1 eventChapter2Data._PrisonerGuardsGroup
-		WAIT_MOVE
-		YIELD
-
-		LOAD1 eventChapter2Data._EnemyGroup1
-		WAIT_MOVE
-
-		LOAD1 eventChapter2Data._EnemyGroup2
-		WAIT_MOVE
-		YIELD
-
 		CALL_ASM_LOOP $83ACEA, $0000
-
 	END2
 
 	_EndingEvent ; 99/870A
