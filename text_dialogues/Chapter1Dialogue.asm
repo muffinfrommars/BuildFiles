@@ -776,6 +776,8 @@ introFinal7
 	.byte WaitForA
 	.byte ScrollText
 
+	.byte EndText
+
 introFinal8
 
 	.byte Right_slot
@@ -814,6 +816,8 @@ introEnding1
 	.text "down into the forts!"
 	.byte WaitForA
 
+	.byte EndText
+
 introEnding2
 
 	.byte Right_slot
@@ -828,6 +832,8 @@ introEnding2
     .word FinnPortrait
 	.text "Thank you, Sir."
 
+	.byte Right_slot
+	.byte ScrollText
 	.text "Try not to let the old man's words"
 	.byte NewLine
 	.text "get to ya."
@@ -841,11 +847,16 @@ introEnding2
 	.text "Shall we?"
 	.byte WaitForA
 
-	.byte ScrollText
-	.word ClearPortrait
-    .word RetractBox
+	.byte EndText
 
-	.byte Left_slot
+introEnding3
+
+	.byte Right_slot
+    .word LoadPortrait
+    .word Finn_portrait
+	.byte $09
+
+	.byte Right_slot
 	.text "...sigh..."
 	.byte WaitForA
 	.byte ScrollText
@@ -855,23 +866,7 @@ introEnding2
 
 	.byte EndText
 
-UnusedText1
-
-	.text ""
-	.byte NewLine
-	.text ""
-	.byte NewLine
-	.text ""
-	.byte WaitForA
-	.byte ScrollText
-
-	.text ""
-	.byte NewLine
-	.text ""
-	.byte NewLine
-	.text ""
-	.byte WaitForA
-	.byte ScrollText
+ch1Unused1
 
 	.text ""
 	.byte NewLine

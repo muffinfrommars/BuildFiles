@@ -25,20 +25,6 @@ eventChapter2xEvents ; 97/805A
 	END_DEFINITION_ARRAY
 
 	_AfterActionEventDefinitions ; 97/811E
-		EVENT $02, eventMapDeathQuoteDummyEvent
-			CHECK_DEAD Dryas
-			CMP_WORD wCurrentPhase, NPC
-		END_DEFINITION
-		EVENT $00, _EndingEvent
-			TEST_FLAG_UNSET $06
-			TEST_FLAG_SET $02
-			CMP_WORD_RANGE wCurrentTurn, 1, $FFFF
-		END_DEFINITION
-		EVENT $00, _EndingEvent
-			CMP_WORD wCurrentPhase, Player
-			TEST_FLAG_SET $02
-			CMP_WORD wCurrentTurn, 1
-		END_DEFINITION
 	END_DEFINITION_ARRAY
 
 	_BattleEventDefinitions ; 97/814A
@@ -46,117 +32,47 @@ eventChapter2xEvents ; 97/805A
 
 	_ShopEventDefinitions ; 97/815C
 	END_DEFINITION_ARRAY
-
-	_LeifEyvelTalk ; 97/815E
-	END2
-
-	_MyrmidonWarriorReinforcements ; 98/8167
-	END2
-
-	_ShivaAIChange ; 97/81A5
-	END2
-
+	
 	_PrepGroups ; 97/8206
 	.word $0000
 
 	_OpeningEvent ; 97/8208
+
+		CALL_ASM_SKIPPABLE rlEventEngineCancelFading, $0000
+		
 		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, INIDISP_Setting(False, 15)
 
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
+		CALL_ASM_LOOP $83ACEA, $0000
+
+		cmacroChangeMapSkippable Chapter24x
+
+		SET_CAMERA [15, 23]
+		
+		PAUSE_SKIPPABLE 5
 		YIELD
-
-		SET_MUSIC $08
-		YIELD
-
-		macroChapterTitlePopup ch2xtitlename
-
-		macroAddCharacterByte Leif, structCharacterDataRAM.LeadershipStars, 1
-
-		macroSetAllCharacterTurnStatus (TurnStatusUnknown1 | TurnStatusHidden)
-
-		macroUnsetAllCharacterTurnStatus (TurnStatusGrayed | TurnStatusMovementStar | TurnStatusMoved)
 
 		STORE_WORD lEventEngineUnitGroupPointer, $000002
 		CALL_ASM_LOOP rlASMCGetStartingPositionsArrayPointerAndLength, $0000
 
 		CALL_ASM_LOOP rlASMCLoadPlayerUnitsByStartingPositions, $0000
 
-		macroDialogueWithBackground ch2xop1, 1
-
-		CALL_ASM_LOOP rlASMCDialogueWithBGEnd, $0000
+		PAUSE_SKIPPABLE 5
 		YIELD
 
-		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, INIDISP_Setting(False, 15)
+		WARP_UNIT Finn, [0, 0], [17, 26]
+		macroSetUnitPosition Finn, [17, 26]
 
-		LOAD1 eventChapter2xData._PreGate
-		WAIT_MOVE
+		PAUSE_SKIPPABLE 5
 		YIELD
 
-		LOAD1 eventChapter2xData._TactitianGroup
-		WAIT_MOVE
-		YIELD
+		macroASMCLoadUnitGroup eventChapter2xData._ch2IntroGroup
 
-		STORE_LONG lEventEngineUnitGroupPointer, eventChapter2xData._EnemyGroup3
-		CALL_ASM_LOOP rlASMCLoadUnitGroup, $0000
-		YIELD_UNK
+		CALL_ASM_SKIPPABLE rlUpdateVisibilityMap, $0000
+		CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog, $0000
 
-		PLAY_SOUND_WORD $00E7
+		
 
-		SCROLL_CAMERA_SPEED [9, 11], 3
-		YIELD
-
-		DIALOGUE ch2xop2
-		YIELD
-	END2
-
-	_TopIslandReinforcements ; 97/82F6
-	END2
-
-	_UnusedReinforcements1 ; 97/8309
-	END2
-
-	_UnusedReinforcements2 ; 97/8310
-	END2
-
-	_LowerRightIslandReinforcements ; 97/8317
-	END2
-
-	_UnusedReinforcements3 ; 97/8330
-	END2
-
-	_UnusedReinforcements4 ; 97/8337
-	END2
-
-	_UnusedReinforcements5 ; 97/833E
-	END2
-
-	_LowerLeftIslandReinforcements ; 97/8345
-	END2
-
-	_DrawBridge ; 97/8352
-		STORE_WORD wEventEngineParameter1, TurnStatusDead
-		CALL_ASM_LOOP rlASMCActiveUnitTestTurnStatus, $0000
-		JUMP_TRUE +
-
-		PAUSE_SKIPPABLE 64
-		YIELD
-
-		PLAY_SOUND_BYTE $45
-		macroSingleTileChangeByCoordinates [11, 5], $027F
-
-		DIALOGUE ch2xGate
-		YIELD
-
-		CALL_ASM_LOOP rlASMCSaveActiveUnitData, $0000
-
-		SET_FLAG $07
-		YIELD
-
-		+
-	END2
-
-	_TorchPickup ; 97/8359
+		FADE_IN $02
 	END2
 
 	_EndingEvent ; 97/8398
@@ -203,10 +119,6 @@ eventChapter2xEvents ; 97/805A
 		CALL_ASM_LOOP rlASMCDialogueWithBGEndFadeOut, $0000
 
 		STORE_BYTE bBuf_INIDISP, INIDISP_Setting(False, 0)
-
-		STORE_LONG lEventEngineUnitGroupPointer, eventChapter2xData._SafyGroup
-		CALL_ASM_LOOP rlASMCLoadUnitGroup, $0000
-		YIELD_UNK
 
 		STORE_LONG lEventEngineLongParameter, $000000
 		STORE_WORD lEventEngineUnitGroupPointer, $0002

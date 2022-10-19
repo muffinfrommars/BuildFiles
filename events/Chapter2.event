@@ -64,6 +64,9 @@ eventChapter2Events ; 99/81B4
 	END2
 
 	_EndingEvent ; 99/870A
+
+		STORE_BYTE bBuf_INIDISP, INIDISP_Setting(False, 15)
+
 		PLAY_SOUND_WORD $00E0
 		PAUSE_SKIPPABLE 16
 		YIELD
@@ -74,25 +77,47 @@ eventChapter2Events ; 99/81B4
 		PAUSE_SKIPPABLE 32
 		YIELD
 
-		SET_MUSIC $41
+		SET_MUSIC $4B
 		YIELD
 
 		CALL_ASM_LOOP rlASMCSaveChapterAndTurncount, $0000
 
-		EVENT_TEST_FLAG_SET $0A
-		JUMP_FALSE +
+		DIALOGUE introEnding1
+		YIELD
 
-		macroDialogueWithBackground ch2endingreg, 3
+		macroSingleTileChangeByCoordinates [9, 10], $0041
+		macroSingleTileChangeByCoordinates [10, 10], $0041
+		macroSingleTileChangeByCoordinates [9, 11], $0041
+		macroSingleTileChangeByCoordinates [10, 11], $0041
 
-		
+		WARP_UNIT Finn, [0, 0], [7, 7]
+		WARP_UNIT Xavier, [10, 12], [8, 7]
+
+		DIALOGUE introEnding2
+		YIELD
+
+		MOVE_UNIT Xavier, [8, 7], [10, 12], 1, None
 		YIELD_UNK
 
-		JUMP ++
+		WAIT_MOVE
+		YIELD
 
-		+
-		macroDialogueWithBackground ch2endinggaiden, 3
+		PAUSE_SKIPPABLE 40
+		YIELD
+		
+		WARP_UNIT Xavier, [10, 12], [17, 17]
 
-		+
+		DIALOGUE introEnding3
+		YIELD
+
+		MOVE_UNIT None, [7, 7], [10, 12], 1, None
+		YIELD_UNK
+
+		WAIT_MOVE
+		YIELD
+
+		WARP_UNIT Finn, [10, 12], [17, 18]
+
 		FADE_OUT $01
 		YIELD
 
