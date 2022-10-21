@@ -222,6 +222,7 @@ Resistance
 Silesse
 Tahra
 Thracia
+Leonster Recruit
 
 //-Archer
 //-Ballistician

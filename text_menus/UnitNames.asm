@@ -134,8 +134,8 @@ char_name_pointers		.block
 
 	.word	<>char_names._ThraciaName
 
-	.word	<>char_names._LeonsterName
-	.word	<>char_names._LeonsterName
+	.word	<>char_names._LeonsterRecruitName
+	.word	<>char_names._LeonsterRecruitName
 
 	.word	<>char_names._ArionName
 	.word	<>char_names._McCloyName
@@ -239,10 +239,10 @@ char_name_pointers		.block
 
 	.word	<>char_names._HiredSwordName	; Unused
 
-	.word	<>char_names._MagiName
-	.word	<>char_names._MagiName
-	.word	<>char_names._MagiName
-	.word	<>char_names._MagiName
+	.word	<>char_names._LeonsterRecruitName
+	.word	<>char_names._LeonsterRecruitName
+	.word	<>char_names._LeonsterRecruitName
+	.word	<>char_names._LeonsterRecruitName
 
 	.word	<>char_names._DracoriderName	; Unused
 	.word	<>char_names._BishopName		; Unused
@@ -340,7 +340,7 @@ char_name_pointers		.block
 
 	.word	<>char_names._FriegeName
 
-	.word	<>char_names._LeonsterName
+	.word	<>char_names._LeonsterRecruitName
 
 	.word	<>char_names._FriegeName
 
@@ -1062,8 +1062,8 @@ _TolmanName
 	.text "Tol[man "
 	.word $0000
 
-_MagiName
-	.text "(Magi "
+_LeonsterRecruitName
+	.text "Trainee "
 	.word $0000
 
 _BishopName

@@ -866,23 +866,18 @@ introEnding3
 
 	.byte EndText
 
-ch1Unused1
+dummydialogue
 
-	.text ""
-	.byte NewLine
-	.text ""
-	.byte NewLine
-	.text ""
-	.byte WaitForA
-	.byte ScrollText
+	.byte Right_slot
+    .word LoadPortrait
+    .word Ronan_portrait
+	.byte $09
 
-	.text ""
-	.byte NewLine
-	.text ""
-	.byte NewLine
-	.text ""
+	.byte Right_slot
+	.text "sus"
 	.byte WaitForA
-	.byte ScrollText
+
+	.byte EndText
 
 	
 ch1wm6
@@ -891,6 +886,24 @@ ch1wm6
 	.byte WaitForA
 	
 	.byte EndText
+
+unuseddialogue1	
+
+	.text ""
+	.byte NewLine
+	.text ""
+	.byte NewLine
+	.text ""
+	.byte WaitForA
+	.byte ScrollText
+
+	.text ""
+	.byte NewLine
+	.text ""
+	.byte NewLine
+	.text ""
+	.byte WaitForA
+	.byte ScrollText
 	
 
 	;.text ""

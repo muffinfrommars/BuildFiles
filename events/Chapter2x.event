@@ -10,12 +10,7 @@ eventChapter2xEvents ; 97/805A
 	_TurnEventDefinitions ; 97/8067
 	END_DEFINITION_ARRAY
 
-	_LocationEventDefinitions ; 97/80F3
-		EVENT FlagAlwaysZero, _EndingEvent
-			macroEventConditionCheckCoords [14, 1]
-			CMP_WORD wCurrentPhase, Player
-			CMP_WORD aSelectedCharacterBuffer.Character, Finn
-		END_DEFINITION
+	_LocationEventDefinitions
 	END_DEFINITION_ARRAY
 
 	_TalkEventDefinitions ; 97/8110
@@ -25,6 +20,10 @@ eventChapter2xEvents ; 97/805A
 	END_DEFINITION_ARRAY
 
 	_AfterActionEventDefinitions ; 97/811E
+		EVENT $24, _NorthernCave
+			macroEventConditionCheckCoords [1, 1]
+			CMP_WORD wCurrentPhase, Player
+		END_DEFINITION
 	END_DEFINITION_ARRAY
 
 	_BattleEventDefinitions ; 97/814A
@@ -36,15 +35,33 @@ eventChapter2xEvents ; 97/805A
 	_PrepGroups ; 97/8206
 	.word $0000
 
+	_NorthernCave ; 99/8324
+		STORE_WORD wEventEngineParameter1, TurnStatusDead
+		CALL_ASM_LOOP rlASMCActiveUnitTestTurnStatus, $0000
+		JUMP_TRUE +
+
+		PLAY_SOUND_WORD $00E0
+		PAUSE_SKIPPABLE 32
+		YIELD
+
+		SET_MUSIC $32
+		YIELD
+
+		macroItemHouse ch1northerncave, Gungnir, [16, 14], $03F0
+		CALL_ASM_LOOP rlASMCSaveActiveUnitData, $0000
+
+		+
+	END2
+
 	_OpeningEvent ; 97/8208
 
-		CALL_ASM_SKIPPABLE rlEventEngineCancelFading, $0000
-		
 		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, INIDISP_Setting(False, 15)
+
+		CALL_ASM_SKIPPABLE rlEventEngineCancelFading, $0000
 
 		CALL_ASM_LOOP $83ACEA, $0000
 
-		cmacroChangeMapSkippable Chapter24x
+		;cmacroChangeMapSkippable Chapter24x
 
 		SET_CAMERA [15, 23]
 		
@@ -59,18 +76,20 @@ eventChapter2xEvents ; 97/805A
 		PAUSE_SKIPPABLE 5
 		YIELD
 
-		WARP_UNIT Finn, [0, 0], [17, 26]
-		macroSetUnitPosition Finn, [17, 26]
+		;WARP_UNIT Finn, [0, 0], [17, 26]
+		;macroSetUnitPosition Finn, [17, 26]
 
 		PAUSE_SKIPPABLE 5
 		YIELD
 
+		macroASMCLoadUnitGroup eventChapter2xData._ch2MainGroup1
 		macroASMCLoadUnitGroup eventChapter2xData._ch2IntroGroup
+
+		macroDismountUnit LeonsterLanceKnight
+		macroDismountUnit LeonsterBowKnight
 
 		CALL_ASM_SKIPPABLE rlUpdateVisibilityMap, $0000
 		CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog, $0000
-
-		
 
 		FADE_IN $02
 	END2

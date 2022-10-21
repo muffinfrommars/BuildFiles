@@ -13,11 +13,6 @@ eventChapter6Events ; 99/A346
 			CMP_WORD wCurrentTurn, 5
 			CMP_WORD wCurrentPhase, NPC
 		END_DEFINITION
-		EVENT FlagAlwaysZero, _CedFlee
-			RUN_ASM _rlChapter4xCheck
-			CMP_WORD wCurrentTurn, 9
-			CMP_WORD wCurrentPhase, NPC
-		END_DEFINITION
 		EVENT FlagAlwaysZero, _SaiasGalzus
 			TEST_FLAG_UNSET FlagMareetaDiedInChp5
 			TEST_FLAG_UNSET FlagGalzusDead
@@ -392,31 +387,6 @@ eventChapter6Events ; 99/A346
 
 		DIALOGUE ch6cedarrive
 		YIELD
-	END2
-
-	_CedFlee ; 99/ABD5
-		PLAY_SOUND_WORD $00F7
-		SCROLL_CAMERA_CHAR CedChp4x
-		SET_CAMERA_SPEED 4
-		YIELD
-
-		DIALOGUE ch6cedleave
-		YIELD
-
-		macroSetCharacterByte CedChp4x, structCharacterDataRAM.AI2, $0B
-		macroSetCharacterByte CedChp4x, structCharacterDataRAM.Unknown3E, $00
-
-		macroSetCharacterByte MagiSquadMyrmidon2, structCharacterDataRAM.AI2, $0B
-		macroSetCharacterByte MagiSquadMyrmidon2, structCharacterDataRAM.Unknown3E, $00
-
-		macroSetCharacterByte MagiSquadMyrmidon1, structCharacterDataRAM.AI2, $0B
-		macroSetCharacterByte MagiSquadMyrmidon1, structCharacterDataRAM.Unknown3E, $00
-
-		macroSetCharacterByte MagiSquadFighter, structCharacterDataRAM.AI2, $0B
-		macroSetCharacterByte MagiSquadFighter, structCharacterDataRAM.Unknown3E, $00
-
-		macroSetCharacterByte MagiSquadArcher, structCharacterDataRAM.AI2, $0B
-		macroSetCharacterByte MagiSquadArcher, structCharacterDataRAM.Unknown3E, $00
 	END2
 
 	_SaiasGalzus ; 99/ACD3

@@ -1,15 +1,26 @@
 
-eventChapter2xData ; B1/F66D
+eventChapter2xData
 
-	_ch2IntroGroup ; B1/F66F
+	_ch2IntroGroup
 		UNIT Dryas, NPC, [16, 25], [16, 25], Quan, [Javelin], 3, True, [$02, $08, $00, $00]
 		UNIT Xavier, NPC, [18, 25], [18, 25], Dryas, [ShortLance], 2, False, [$02, $08, $00, $00]
 		UNIT Ranz, NPC, [17, 25], [17, 25], Dryas, [ShortLance], 2, False, [$02, $08, $00, $00]
 	UNIT
 
+	_ch2MainGroup1
+		UNIT LeonsterSoldier, NPC, [4, 4], [4, 4], Dryas, [IronLance], 2, False, [$01, $03, $00, $80]
+		UNIT LeonsterMyrmidon, NPC, [7, 5], [7, 5], Dryas, [IronBlade], 2, False, [$01, $03, $00, $80]
+		UNIT LeonsterArcher, NPC, [9, 7], [9, 7], Dryas, [IronBow], 2, False, [$01, $03, $00, $80]
+		UNIT LeonsterHero, NPC, [3, 12], [3, 12], Dryas, [IronAxe], 2, False, [$01, $03, $00, $80]
+		UNIT LeonsterBowKnight, NPC, [1, 8], [1, 8], Dryas, [ShortBow], 2, False, [$01, $03, $00, $80]
+		UNIT LeonsterLanceKnight, NPC, [7, 11], [7, 11], Dryas, [SlimLance,SlimSword], 2, False, [$01, $03, $00, $80]
+	UNIT
+
+
+
 	_PrepGroups
 	UNIT
 	
 	_StartingPositions
-		.byte 7, 7
+		.byte 14, 3
 	.byte $FF

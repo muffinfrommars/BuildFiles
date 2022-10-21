@@ -190,7 +190,7 @@ aEpilogueTitleTable ; 8F/DFB9
 	.long $000000 ; MansterSoldier1
 	.long $000000 ; BanditBerserker
 	.long $000000 ; MercenaryMyrmidon4
-	.long $000000 ; MagiSquadMyrmidon1
+	.long $000000 ; MagiSquadMyrmidon1 ;Magi -> Leonster
 	.long $000000 ; MagiSquadFighter
 	.long $000000 ; MagiSquadArcher
 	.long $000000 ; MagiSquadMyrmidon2
