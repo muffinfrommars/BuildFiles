@@ -7,7 +7,11 @@ eventChapter1Events ; FD/8000
 		END_DEFINITION
 	END_DEFINITION_ARRAY
 
-	_TurnEventDefinitions ; FD/800D
+	_TurnEventDefinitions
+	EVENT $07, _Music
+			CMP_WORD wCurrentPhase, Player
+			CMP_WORD_RANGE wCurrentTurn, 1, $FFFF
+		END_DEFINITION
 	END_DEFINITION_ARRAY
 
 	_TalkEventDefinitions ; FD/8027
@@ -17,6 +21,10 @@ eventChapter1Events ; FD/8000
 	END_DEFINITION_ARRAY
 
 	_BeforeActionEventDefinitions ; FD/80E5
+	EVENT $07, _Music
+			CMP_WORD wCurrentPhase, Player
+			CMP_WORD_RANGE wCurrentTurn, 1, $FFFF
+		END_DEFINITION
 	END_DEFINITION_ARRAY
 
 	_AfterActionEventDefinitions ; FD/80E7
@@ -51,6 +59,11 @@ eventChapter1Events ; FD/8000
 	_ShopEventDefinitions ; FD/80F3
 		macroShopDefinition eventChapter1Data._Vendor
 	END_DEFINITION_ARRAY
+
+	_Music
+		RESET_PHASE_MUSIC $01
+		YIELD
+	END2
 
 	_EndingEvent ; FD/8536
 
