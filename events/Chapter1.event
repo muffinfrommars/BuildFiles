@@ -44,11 +44,11 @@ eventChapter1Events ; FD/8000
 		END_DEFINITION
 	END_DEFINITION_ARRAY
 
-	_BattleEventDefinitions ; FD/80E9
+	_BattleEventDefinitions
 		macroBossQuoteDefinition $07, Weissmann
 	END_DEFINITION_ARRAY
 
-	_EthlynDeathScriptedBattle ; FD/823A
+	_EthlynDeathScriptedBattle
 		.byte $02, $01, $00, $10
 	.word $FFFF, $FFFF
 
@@ -120,25 +120,7 @@ eventChapter1Events ; FD/8000
 
 		macroASMCLoadUnitGroup eventChapter1Data._AedCutscene2
 
-		CALL_ASM_SKIPPABLE rlClearHDMAArray, $0000
-
-		STORE_LONG lEventEngineLongParameter, _EthlynDeathScriptedBattle
-		CALL_ASM_SKIPPABLE $9A8D0F, $0000
-
-		STORE_WORD wEventEngineParameter1, None
-		STORE_WORD wEventEngineParameter2, IronLance
-		STORE_WORD wEventEngineXCoordinate, 10
-		STORE_WORD wEventEngineYCoordinate, 7
-		STORE_WORD wEventEngineXCoordinateAlt, 10
-		STORE_WORD wEventEngineYCoordinateAlt, 8
-		CALL_ASM_SKIPPABLE $9A8E50, $0000
-
-		CALL_ASM_SKIPPABLE $84B719, $0000
-
-		HALT_UNTIL_WORD_SKIPPABLE $7FAA14, $0000
-
-		CALL_ASM_SKIPPABLE rlUpdateUnitMaps, $0000
-		CALL_ASM_SKIPPABLE rlUpdateVisibilityMap, $0000
+		cmacroCustomBattleAnimOFF _EthlynDeathScriptedBattle, None, IronLance, [10, 7], [10, 8]
 
 		PAUSE_SKIPPABLE 10
 		YIELD
@@ -240,16 +222,7 @@ eventChapter1Events ; FD/8000
 		PAUSE_SKIPPABLE 32
 		YIELD
 
-		STORE_WORD_FROM wEventEngineParameter1, wCurrentChapter
-		STORE_WORD wEventEngineParameter2, 4
-		CALL_ASM_SKIPPABLE $9A98E6, $0000
-
-		STORE_BYTE $7E41AC, $00
-		HALT_UNTIL_WORD_SKIPPABLE $7FAA14, $0000
-
-		STORE_WORD_FROM wCurrentChapter, wEventEngineParameter1
-
-		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, $0F
+		cmacroCustomBattleAnimON 4
 
 		SET_CAMERA [7, 10]
 
