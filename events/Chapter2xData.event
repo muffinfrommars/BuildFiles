@@ -2,9 +2,9 @@
 eventChapter2xData
 
 	_ch2IntroGroup
-		UNIT Dryas, NPC, [16, 25], [16, 25], Quan, [Javelin], 3, True, [$02, $08, $00, $00]
-		UNIT Xavier, NPC, [18, 25], [18, 25], Dryas, [ShortLance], 2, False, [$02, $08, $00, $00]
-		UNIT Ranz, NPC, [17, 25], [17, 25], Dryas, [ShortLance], 2, False, [$02, $08, $00, $00]
+		UNIT Dryas, NPC, [16, 24], [16, 24], Quan, [Javelin], 3, True, [$02, $08, $00, $00]
+		UNIT Xavier, NPC, [18, 24], [18, 24], Dryas, [ShortLance], 2, False, [$02, $08, $00, $00]
+		UNIT Ranz, NPC, [17, 24], [17, 24], Dryas, [ShortLance], 2, False, [$02, $08, $00, $00]
 	UNIT
 
 	_ch2MainGroup1

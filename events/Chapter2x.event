@@ -61,10 +61,8 @@ eventChapter2xEvents ; 97/805A
 
 		CALL_ASM_LOOP $83ACEA, $0000
 
-		;cmacroChangeMapSkippable Chapter24x
+		cmacroChangeMapSkippable Chapter24x
 
-		SET_CAMERA [15, 23]
-		
 		PAUSE_SKIPPABLE 5
 		YIELD
 
@@ -73,25 +71,32 @@ eventChapter2xEvents ; 97/805A
 
 		CALL_ASM_LOOP rlASMCLoadPlayerUnitsByStartingPositions, $0000
 
-		PAUSE_SKIPPABLE 5
-		YIELD
-
-		;WARP_UNIT Finn, [0, 0], [17, 26]
-		;macroSetUnitPosition Finn, [17, 26]
-
-		PAUSE_SKIPPABLE 5
-		YIELD
-
-		macroASMCLoadUnitGroup eventChapter2xData._ch2MainGroup1
 		macroASMCLoadUnitGroup eventChapter2xData._ch2IntroGroup
 
-		macroDismountUnit LeonsterLanceKnight
-		macroDismountUnit LeonsterBowKnight
+		SET_CAMERA [17, 14]
+
+		PAUSE_SKIPPABLE 5
+		YIELD
 
 		CALL_ASM_SKIPPABLE rlUpdateVisibilityMap, $0000
 		CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog, $0000
 
+		WARP_UNIT Finn, [0, 0], [21, 21]
+
 		FADE_IN $02
+		YIELD
+
+		MOVE_UNIT None, [21, 21], [19, 26], 1, None
+		YIELD_UNK
+
+		SCROLL_CAMERA_SPEED [17, 25], 2
+		YIELD
+
+		WAIT_MOVE
+		YIELD
+
+		DIALOGUE dummydialogue
+		YIELD
 	END2
 
 	_EndingEvent ; 97/8398

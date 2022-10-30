@@ -811,6 +811,8 @@ introEnding1
 	.byte WaitForA
 	.byte ScrollText
 
+	.text "Fuff..."
+	.byte NewLine
 	.text "Alright, everyone. Off the summit, and"
 	.byte NewLine
 	.text "down into the forts!"

@@ -42,5 +42,5 @@ aChapter20ObjectiveMarkers ; 97/8045
 aChapter21xObjectiveMarkers ; 97/8047
 	.dstruct structObjectiveMarkerArray, ObjectiveMarkerRed, [[[5, 28], ObjectiveMarkerDown], [[6, 28], ObjectiveMarkerDown], [[24, 28], ObjectiveMarkerDown], [[25, 28], ObjectiveMarkerDown]]
 
-aChapter24xObjectiveMarkers ; 97/8055
-	.dstruct structObjectiveMarkerArray, ObjectiveMarkerRed, [[[13, 19], ObjectiveMarkerUp]]
+;aChapter24xObjectiveMarkers ; 97/8055
+;	.dstruct structObjectiveMarkerArray, ObjectiveMarkerRed, [[[13, 19], ObjectiveMarkerUp]]
