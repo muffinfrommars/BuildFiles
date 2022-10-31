@@ -54,40 +54,27 @@ eventChapter2xEvents ; 97/805A
 	END2
 
 	_OpeningEvent ; 97/8208
-
-		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, INIDISP_Setting(False, 15)
-
+		
 		CALL_ASM_SKIPPABLE rlEventEngineCancelFading, $0000
-
-		CALL_ASM_LOOP $83ACEA, $0000
-
-		cmacroChangeMapSkippable Chapter24x
-
-		PAUSE_SKIPPABLE 5
-		YIELD
 
 		STORE_WORD lEventEngineUnitGroupPointer, $000002
 		CALL_ASM_LOOP rlASMCGetStartingPositionsArrayPointerAndLength, $0000
 
 		CALL_ASM_LOOP rlASMCLoadPlayerUnitsByStartingPositions, $0000
 
-		macroASMCLoadUnitGroup eventChapter2xData._ch2IntroGroup
-
-		SET_CAMERA [17, 14]
-
-		PAUSE_SKIPPABLE 5
-		YIELD
-
+		CALL_ASM_LOOP $83ACEA, $0000
 		CALL_ASM_SKIPPABLE rlUpdateVisibilityMap, $0000
 		CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog, $0000
-
-		WARP_UNIT Finn, [0, 0], [21, 21]
 
 		FADE_IN $02
 		YIELD
 
-		MOVE_UNIT None, [21, 21], [19, 26], 1, None
-		YIELD_UNK
+		cmacroChangeMapSkippable Chapter24x
+
+		macroASMCLoadUnitGroup eventChapter2xData._ch2IntroGroup
+
+		WAIT_MOVE
+		YIELD
 
 		SCROLL_CAMERA_SPEED [17, 25], 2
 		YIELD

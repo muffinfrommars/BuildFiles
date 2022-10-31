@@ -1,7 +1,5 @@
 cmacroChangeMap .macro Chapter
-		CALL_ASM_SKIPPABLE rlUnknown8C9E22, $0000
-		CALL_ASM_SKIPPABLE $83FBDC, $0000
-
+		
 		STORE_WORD wCurrentChapter, \Chapter
 
 		CALL_ASM_LOOP $849485, $0000
@@ -12,8 +10,6 @@ cmacroChangeMap .macro Chapter
 	.endm
 
 cmacroChangeMapSkippable .macro Chapter
-		CALL_ASM_SKIPPABLE rlUnknown8C9E22, $0000
-		CALL_ASM_SKIPPABLE $83FBDC, $0000
 
 		STORE_WORD wCurrentChapter, \Chapter
 
@@ -47,7 +43,6 @@ cmacroCustomBattleAnimOFF .segment EventPointer, Weapon1, Weapon2, Coords, Coord
 	.endsegment
 
 cmacroCustomBattleAnimON .macro BattleID
-
 		STORE_WORD_FROM wEventEngineParameter1, wCurrentChapter
 		STORE_WORD wEventEngineParameter2, \BattleID
 		CALL_ASM_SKIPPABLE $9A98E6, $0000
@@ -60,3 +55,8 @@ cmacroCustomBattleAnimON .macro BattleID
 
 		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, $0F
 	.endm
+
+cmacroClearMap .macro
+	CALL_ASM_SKIPPABLE rlUnknown8C9E22, $0000
+	.endm
+
