@@ -57,6 +57,8 @@ eventChapter2xEvents ; 97/805A
 		
 		CALL_ASM_SKIPPABLE rlEventEngineCancelFading, $0000
 
+		cmacroChangeMapSkippable Chapter24x
+
 		STORE_WORD lEventEngineUnitGroupPointer, $000002
 		CALL_ASM_LOOP rlASMCGetStartingPositionsArrayPointerAndLength, $0000
 
@@ -66,24 +68,97 @@ eventChapter2xEvents ; 97/805A
 		CALL_ASM_SKIPPABLE rlUpdateVisibilityMap, $0000
 		CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog, $0000
 
-		FADE_IN $02
-		YIELD
-
-		cmacroChangeMapSkippable Chapter24x
+		SET_CAMERA [17, 14]
 
 		macroASMCLoadUnitGroup eventChapter2xData._ch2IntroGroup
 
-		WAIT_MOVE
+		WARP_UNIT Finn, [0, 0], [20, 19]
+
+		FADE_IN $02
 		YIELD
 
-		SCROLL_CAMERA_SPEED [17, 25], 2
+		PAUSE_SKIPPABLE 80
 		YIELD
+
+		SCROLL_CAMERA_SPEED [17, 25], 1
+
+		MOVE_UNIT Finn, [20, 19], [19, 26], 1, None
+		YIELD_UNK
 
 		WAIT_MOVE
 		YIELD
 
 		DIALOGUE dummydialogue
 		YIELD
+
+		SCROLL_CAMERA_SPEED [11, 26], 2
+		YIELD
+
+		MOVE_UNIT Finn, [19, 26], [15, 22], 1, None
+		YIELD_UNK
+
+		MOVE_UNIT Ranz, [17, 24], [11, 26], 3, None
+		YIELD_UNK
+
+		WAIT_MOVE
+		YIELD
+
+		PAUSE_SKIPPABLE 10
+		YIELD
+
+		macroDismountUnit Ranz
+
+		WAIT_MOVE
+		YIELD
+
+		DIALOGUE dummydialogue
+		YIELD
+
+		SCROLL_CAMERA_SPEED [1, 25], 1
+		YIELD
+
+		MOVE_UNIT LeonsterSoldier, [15, 25], [17, 25], 1, None
+		YIELD_UNK
+
+		MOVE_UNIT None, [15, 26], [18, 25], 1, None
+		YIELD_UNK
+
+		WAIT_MOVE
+		YIELD
+
+		PAUSE_SKIPPABLE 30
+		YIELD
+
+		FADE_OUT $02
+		YIELD
+
+		CALL_ASM_SKIPPABLE rlEventEngineCancelFading, $0000
+
+		cmacroChangeMapSkippable Chapter2x
+
+		cmacroClearMap
+
+		STORE_WORD lEventEngineUnitGroupPointer, $000002
+		CALL_ASM_SKIPPABLE rlASMCGetStartingPositionsArrayPointerAndLength, $0000
+
+		CALL_ASM_SKIPPABLE rlASMCLoadPlayerUnitsByStartingPositions, $0000
+
+		macroASMCLoadUnitGroup eventChapter2xData._ch2MainGroup1
+
+		macroDismountUnit Ranz
+
+		SET_CAMERA [1, 1]
+
+		WARP_UNIT Finn, [0, 0], [14, 3]
+
+		CALL_ASM_LOOP $83ACEA, $0000
+		CALL_ASM_SKIPPABLE rlUpdateVisibilityMap, $0000
+		CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog, $0000
+
+		FADE_IN $02
+		YIELD
+
+
 	END2
 
 	_EndingEvent ; 97/8398
