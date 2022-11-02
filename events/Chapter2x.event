@@ -47,11 +47,22 @@ eventChapter2xEvents ; 97/805A
 		SET_MUSIC $32
 		YIELD
 
-		macroItemHouse ch1northerncave, Gungnir, [16, 14], $03F0
+		macroItemHouse ch1northerncave, Gungnir, [20, 20], $03F0
 		CALL_ASM_LOOP rlASMCSaveActiveUnitData, $0000
 
 		+
 	END2
+
+	_EndingEvent ; 97/8398
+	
+		CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd, $0000
+		CALL_ASM_LOOP rlASMCSaveChapterAndTurncount, $0000
+
+		FADE_OUT $01
+		YIELD
+
+		CALL_ASM_LOOP rlASMCChapterEnd, $0000
+	END1
 
 	_OpeningEvent ; 97/8208
 		
@@ -68,22 +79,32 @@ eventChapter2xEvents ; 97/805A
 		CALL_ASM_SKIPPABLE rlUpdateVisibilityMap, $0000
 		CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog, $0000
 
-		SET_CAMERA [17, 14]
-
 		macroASMCLoadUnitGroup eventChapter2xData._ch2IntroGroup
 
-		WARP_UNIT Finn, [0, 0], [20, 19]
+		WARP_UNIT Finn, [0, 0], [20, 20]
 
 		FADE_IN $02
 		YIELD
 
-		PAUSE_SKIPPABLE 80
+		SET_CAMERA[17, 14], 1
+		YIELD
+
+		CALL_ASM_SKIPPABLE rlUpdateVisibilityMap, $0000
+		CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog, $0000
+
+		PAUSE_SKIPPABLE 50
 		YIELD
 
 		SCROLL_CAMERA_SPEED [17, 25], 1
 
 		MOVE_UNIT Finn, [20, 19], [19, 26], 1, None
 		YIELD_UNK
+
+		PAUSE_SKIPPABLE 20
+		YIELD
+
+		CALL_ASM_SKIPPABLE rlUpdateVisibilityMap, $0000
+		CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog, $0000
 
 		WAIT_MOVE
 		YIELD
@@ -94,10 +115,19 @@ eventChapter2xEvents ; 97/805A
 		SCROLL_CAMERA_SPEED [11, 26], 2
 		YIELD
 
-		MOVE_UNIT Finn, [19, 26], [15, 22], 1, None
+		MOVE_UNIT Ranz, [17, 24], [11, 26], 3, None
 		YIELD_UNK
 
-		MOVE_UNIT Ranz, [17, 24], [11, 26], 3, None
+		PAUSE_SKIPPABLE 15
+		YIELD
+
+		MOVE_UNIT LeonsterSoldier, [15, 25], [18, 25], 1, None
+		YIELD_UNK
+
+		PAUSE_SKIPPABLE 20
+		YIELD
+
+		MOVE_UNIT None, [15, 26], [16, 25], 1, None
 		YIELD_UNK
 
 		WAIT_MOVE
@@ -108,19 +138,21 @@ eventChapter2xEvents ; 97/805A
 
 		macroDismountUnit Ranz
 
-		WAIT_MOVE
-		YIELD
-
 		DIALOGUE dummydialogue
 		YIELD
 
-		SCROLL_CAMERA_SPEED [1, 25], 1
-		YIELD
+		SCROLL_CAMERA_SPEED [1, 26], 1
 
-		MOVE_UNIT LeonsterSoldier, [15, 25], [17, 25], 1, None
+		MOVE_UNIT Dryas, [0, 0], [15, 26], 1, None
 		YIELD_UNK
 
-		MOVE_UNIT None, [15, 26], [18, 25], 1, None
+		MOVE_UNIT Xavier, [0, 0], [15, 25], 1, None
+		YIELD_UNK
+
+		PAUSE_SKIPPABLE 5
+		YIELD
+
+		MOVE_UNIT Finn, [19, 26], [14, 22], 1, None
 		YIELD_UNK
 
 		WAIT_MOVE
@@ -129,89 +161,58 @@ eventChapter2xEvents ; 97/805A
 		PAUSE_SKIPPABLE 30
 		YIELD
 
-		FADE_OUT $02
+		FADE_OUT $01
 		YIELD
+
+		PAUSE_SKIPPABLE 15
+		YIELD
+
+		macroRemoveUnit Xavier
+		macroRemoveUnit Dryas
+		macroRemoveUnit LeonsterSoldier
+		macroRemoveUnit LeonsterSoldier
+		macroRemoveUnit LeonsterSoldier
+		macroRemoveUnit LeonsterSoldier
+		macroRemoveUnit LeonsterSoldier
+		macroRemoveUnit LeonsterSoldier
+
+		cmacroChangeMapChapter2x
 
 		CALL_ASM_SKIPPABLE rlEventEngineCancelFading, $0000
 
-		cmacroChangeMapSkippable Chapter2x
-
-		cmacroClearMap
-
-		STORE_WORD lEventEngineUnitGroupPointer, $000002
-		CALL_ASM_SKIPPABLE rlASMCGetStartingPositionsArrayPointerAndLength, $0000
-
-		CALL_ASM_SKIPPABLE rlASMCLoadPlayerUnitsByStartingPositions, $0000
+		WARP_UNIT Finn, [0, 0], [14, 3]
+		WARP_UNIT Ranz, [0, 0], [11, 7]
 
 		macroASMCLoadUnitGroup eventChapter2xData._ch2MainGroup1
+		macroASMCLoadUnitGroup eventChapter2xData._ch2MainGroup2
 
-		macroDismountUnit Ranz
+		WAIT_MOVE
+		YIELD
+
+		macroSetCharacterWord Ranz, structCharacterDataRAM.Skills2, Skill2Anchor
+		macroSetCharacterWord Finn, structCharacterDataRAM.Leader, Dryas
+
+		macroDismountUnit LeonsterBowKnight
+		macroDismountUnit LeonsterLanceKnight
+
+		WAIT_MOVE
+		YIELD
 
 		SET_CAMERA [1, 1]
-
-		WARP_UNIT Finn, [0, 0], [14, 3]
 
 		CALL_ASM_LOOP $83ACEA, $0000
 		CALL_ASM_SKIPPABLE rlUpdateVisibilityMap, $0000
 		CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog, $0000
-
-		FADE_IN $02
 		YIELD
 
+		FADE_IN $01
+		YIELD
+
+		macroSetAllCharacterByte structCharacterDataRAM.Fatigue, 0
+
+		DIALOGUE dummydialogue
+		YIELD
 
 	END2
 
-	_EndingEvent ; 97/8398
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 16
-		YIELD
 
-		CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd, $0000
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $43
-		YIELD
-
-		CALL_ASM_LOOP rlASMCSaveChapterAndTurncount, $0000
-
-		macroSubtractCharacterByte Leif, structCharacterDataRAM.LeadershipStars, 1
-
-		FADE_OUT $01
-		YIELD
-
-		STORE_BYTE bBuf_INIDISP, INIDISP_Setting(False, 0)
-
-		STORE_WORD wEventEngineCharacterTarget, Lifis
-		CALL_ASM_LOOP rlASMCChangeAllegianceToPlayerIfCaptured, $0000
-
-		macroDialogueWithBackground ch2xend1, 1
-
-		JUMP_FALSE +
-
-		STORE_LONG lEventEngineLongParameter, ch2xend2
-		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
-
-		+
-		YIELD
-
-		HALT_UNTIL_WORD_SKIPPABLE wUnknown0017E9, $0000
-
-		FADE_OUT $01
-		YIELD
-
-		CALL_ASM_LOOP rlASMCDialogueWithBGEndFadeOut, $0000
-
-		STORE_BYTE bBuf_INIDISP, INIDISP_Setting(False, 0)
-
-		STORE_LONG lEventEngineLongParameter, $000000
-		STORE_WORD lEventEngineUnitGroupPointer, $0002
-		CALL_ASM_LOOP rlASMCPrepareCapturedUnitsForRescue, $0000
-
-		FADE_OUT $01
-		YIELD
-
-		CALL_ASM_LOOP rlASMCChapterEnd, $0000
-	END1

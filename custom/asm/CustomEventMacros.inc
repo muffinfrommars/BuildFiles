@@ -59,4 +59,3 @@ cmacroCustomBattleAnimON .macro BattleID
 cmacroClearMap .macro
 	CALL_ASM_SKIPPABLE rlUnknown8C9E22, $0000
 	.endm
-
