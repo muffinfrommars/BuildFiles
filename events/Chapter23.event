@@ -193,9 +193,6 @@ eventChapter23Events ; FD/F056
 		EVENT $05, eventBattleQuoteDummyEvent
 			CHECK_SINGLE Alphand
 		END_DEFINITION
-		EVENT $06, eventBattleQuoteDummyEvent
-			CHECK_SINGLE Coulter
-		END_DEFINITION
 		EVENT $07, eventBattleQuoteDummyEvent
 			CHECK_SINGLE Faden
 		END_DEFINITION

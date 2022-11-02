@@ -17,6 +17,10 @@ eventChapter2xEvents ; 97/805A
 	END_DEFINITION_ARRAY
 
 	_BeforeActionEventDefinitions ; 97/811C
+		EVENT $02, eventMapDeathQuoteDummyEvent
+			CHECK_DEAD Ranz
+			CMP_WORD wCurrentPhase, Enemy
+		END_DEFINITION
 	END_DEFINITION_ARRAY
 
 	_AfterActionEventDefinitions ; 97/811E
@@ -24,9 +28,24 @@ eventChapter2xEvents ; 97/805A
 			macroEventConditionCheckCoords [1, 1]
 			CMP_WORD wCurrentPhase, Player
 		END_DEFINITION
+		EVENT $02, eventMapDeathQuoteDummyEvent
+			CHECK_DEAD Ranz
+			CMP_WORD wCurrentPhase, Enemy
+		END_DEFINITION
+		EVENT $00, _EndingEvent
+			TEST_FLAG_UNSET $06
+			TEST_FLAG_SET $02
+			CMP_WORD_RANGE wCurrentTurn, 1, $FFFF
+		END_DEFINITION
+		EVENT $00, _EndingEvent
+			CMP_WORD wCurrentPhase, Player
+			TEST_FLAG_SET $02
+			CMP_WORD wCurrentTurn, 1
+		END_DEFINITION
 	END_DEFINITION_ARRAY
 
 	_BattleEventDefinitions ; 97/814A
+		macroBossQuoteDefinition $07, Ranz
 	END_DEFINITION_ARRAY
 
 	_ShopEventDefinitions ; 97/815C
@@ -176,7 +195,7 @@ eventChapter2xEvents ; 97/805A
 		macroRemoveUnit LeonsterSoldier
 		macroRemoveUnit LeonsterSoldier
 
-		cmacroChangeMapChapter2x
+		cmacroChangeMap Chapter2x
 
 		CALL_ASM_SKIPPABLE rlEventEngineCancelFading, $0000
 

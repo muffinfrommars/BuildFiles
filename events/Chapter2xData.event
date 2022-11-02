@@ -19,12 +19,12 @@ eventChapter2xData
 	UNIT
 
 	_ch2MainGroup2
-		UNIT LeonsterSoldier, NPC, [4, 4], [4, 4], Dryas, [IronLance], 2, False, [$01, $03, $00, $80]
-		UNIT LeonsterMyrmidon, NPC, [7, 5], [7, 5], Dryas, [IronBlade], 2, False, [$01, $03, $00, $80]
-		UNIT LeonsterArcher, NPC, [9, 7], [9, 7], Dryas, [IronBow], 2, False, [$01, $03, $00, $80]
-		UNIT LeonsterHero, NPC, [3, 12], [3, 12], Dryas, [IronAxe], 2, False, [$01, $03, $00, $80]
-		UNIT LeonsterBowKnight, NPC, [1, 8], [1, 8], Dryas, [ShortBow], 2, False, [$01, $03, $00, $80]
-		UNIT LeonsterLanceKnight, NPC, [7, 11], [7, 11], Dryas, [SlimSword], 2, False, [$01, $03, $00, $80]
+		UNIT LeonsterSoldier, NPC, [4, 4], [4, 4], Dryas, [IronLance], 2, False, [$00, $01, $00, $00]
+		UNIT LeonsterMyrmidon, NPC, [7, 5], [7, 5], Dryas, [IronBlade], 2, False, [$00, $01, $00, $00]
+		UNIT LeonsterArcher, NPC, [9, 7], [9, 7], Dryas, [IronBow], 2, False, [$00, $01, $00, $00]
+		UNIT LeonsterHero, NPC, [3, 12], [3, 12], Dryas, [IronAxe], 2, False, [$00, $01, $00, $00]
+		UNIT LeonsterBowKnight, NPC, [1, 8], [1, 8], Dryas, [ShortBow], 2, False, [$00, $01, $00, $00]
+		UNIT LeonsterLanceKnight, NPC, [7, 11], [7, 11], Dryas, [SlimSword], 2, False, [$00, $01, $00, $00]
 	UNIT
 
 	_PrepGroups

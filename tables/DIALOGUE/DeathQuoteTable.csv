@@ -108,8 +108,8 @@ SeimetzDeathQuote,Seimetz,AnyChapter,None,seimetzdeath
 ZaunDeathQuote,Zaun,AnyChapter,None,zaundeath
 CohenDeathQuote,Cohen,AnyChapter,None,cohendeath
 ReinhardtDeathQuote,Reinhardt,AnyChapter,None,reinhardtdeath
-CoulterDeathQuote,Coulter,AnyChapter,$0F,coulterdeath
-AlphandDeathQuote,Alphand,AnyChapter,None,alphanddeath
+RanzDeathQuote,Ranz,Chapter2x,None,ranz2xdeath
+DryasDeathQuote,Dryas,Chapter2,None,dryas2death
 FadenDeathQuote,Faden,AnyChapter,None,fadendeath
 VeldDeathQuote,Veld,AnyChapter,None,velddeath
 RomeoChapter3DeathQuote,Veld,Chapter3,FlagAlliedDeath,None
@@ -126,7 +126,7 @@ EmilyChapter5DeathQuote,Veld,AnyChapter,FlagAlliedDeath,None
 MurphyChapter5DeathQuote,Veld,Chapter5,FlagAlliedDeath,None
 BellaChapter5DeathQuote,Veld,Chapter5,FlagAlliedDeath,None
 CliffChapter5DeathQuote,Veld,Chapter5,FlagAlliedDeath,None
-BowieChapter5DeathQuote,Veld,Chapter5,FlagAlliedDeath,None
-LeenaChapter5DeathQuote,Veld,Chapter5,FlagAlliedDeath,None
+Dryas2DeathQuote,Dryas,Chapter2,None,dryas2death
+Ranz2xDeathQuote,Ranz,Chapter2x,None,ranz2xdeath
 UlsterCavalier2Chapter16ADeathQuote,UlsterCavalier2,Chapter16A,$0E,None
 LeonsterSoldierChapter18DeathQuote,LeonsterSoldier,Chapter18,$09,None

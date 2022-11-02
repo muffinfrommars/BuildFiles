@@ -408,12 +408,10 @@ cohenboss
 .byte WaitForA
 .byte EndText
 
-coulterboss
-.text "Heh, heh, heh..."
+ranz2xboss
+.text "You've made it this far - good!"
 .byte NewLine
-.text "You've only got yourself to blame!"
-.byte NewLine
-.text "You're dead!"
+.text "But can you pass me?"
 .byte WaitForA
 .byte EndText
 
@@ -430,7 +428,7 @@ beowolfboss
 .byte EndText
 
 ardenboss
-.text "I'm strong, I'm tough... but I ain't slow!"
+.text "I'm strong and you're toast!"
 .byte WaitForA
 .byte EndText
 

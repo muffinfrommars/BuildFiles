@@ -313,7 +313,7 @@ robertdeath
 .byte WaitForA
 .byte EndText
 
-dryasdeath
+dryas2death
 .text "I-I..."
 .byte NewLine
 .text "I lost...?"
@@ -669,16 +669,16 @@ reinhardtdeath
 .byte WaitForA
 .byte EndText
 
-coulterdeath
-.text "Glory...to...Thracia!"
+ranz2xdeath
+.text "What skill...!"
 .byte NewLine
-.text "Ugh..."
+.text "Thank you for the breath of fresh air."
+.byte NewLine
+.text "I'll be keeping an eye on you!"
 .byte WaitForA
 .byte EndText
 
-alphanddeath
-.text "Ugh..."
-.byte NewLine
+dryasdeath
 .text "Not yet..."
 .byte NewLine
 .text "I won't...die...yet..."

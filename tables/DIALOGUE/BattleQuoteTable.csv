@@ -56,7 +56,7 @@ SeimetzBattleQuote,Seimetz,AnyChapter,None,seimetzboss
 ZaunBattleQuote,Zaun,AnyChapter,None,zaunboss
 CohenBattleQuote,Cohen,AnyChapter,None,cohenboss
 SaiasBattleQuote2,Saias,AnyChapter,None,saiasboss
-CoulterBattleQuote,Coulter,AnyChapter,None,coulterboss
+RanzBattleQuote,Ranz,Chapter2x,None,ranz2xboss
 RaydrikChp24BattleQuote,RaydrikChp24,AnyChapter,None,raydrikboss
 DryasBattleQuote,Dryas,Chapter2,None,dryasboss
 BeowolfBattleQuote,Beowolf,AnyChapter,None,beowolfboss
